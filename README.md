@@ -2,6 +2,12 @@
 
 A simple, modern React + TypeScript application for managing university amphitheater seat assignments with CSV data integration.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Application](https://amphitheatre-booking-git-main-mritunjai-singhs-projects.vercel.app/)**
+
+Deployed on Vercel with automatic CI/CD from GitHub.
+
 ## ✨ Features
 
 ### 🎯 **Simple & Direct**
