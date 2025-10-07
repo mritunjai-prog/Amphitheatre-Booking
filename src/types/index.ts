@@ -5,7 +5,12 @@ export interface User {
   name: string;
   email: string;
   phone: string;
-  category: "Students" | "Guests" | "Parents" | "Faculty" | "Alumni";
+  category:
+    | "VIP"
+    | "Guests"
+    | "Faculty"
+    | "Degree Students"
+    | "College Students";
 }
 
 export interface Seat {
@@ -14,11 +19,11 @@ export interface Seat {
   row: number;
   section: "left" | "right";
   categoryReserved:
-    | "Students"
+    | "VIP"
     | "Guests"
-    | "Parents"
     | "Faculty"
-    | "Alumni"
+    | "Degree Students"
+    | "College Students"
     | "General";
   status: "available" | "booked";
   assignedUser?: User;

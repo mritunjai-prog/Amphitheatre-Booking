@@ -9,13 +9,21 @@ interface SeatProps {
 
 const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
   const baseClass =
-    "relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 text-xs font-semibold uppercase tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 hover:scale-[1.05] hover:shadow-lg";
+    "relative flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-[10px] font-semibold uppercase tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 hover:scale-[1.05] hover:shadow-lg";
 
   const palette =
     seat.status === "booked"
       ? "bg-gradient-to-br from-rose-500 to-rose-600 text-white shadow-rose-500/30"
+      : seat.categoryReserved === "VIP"
+      ? "bg-gradient-to-br from-purple-500 to-purple-700 text-white shadow-purple-500/40"
       : seat.categoryReserved === "Guests"
-      ? "bg-gradient-to-br from-amber-200 to-amber-400 text-amber-900 shadow-amber-400/40"
+      ? "bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-amber-400/40"
+      : seat.categoryReserved === "Faculty"
+      ? "bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-blue-500/40"
+      : seat.categoryReserved === "Degree Students"
+      ? "bg-gradient-to-br from-green-400 to-green-600 text-white shadow-green-500/40"
+      : seat.categoryReserved === "College Students"
+      ? "bg-gradient-to-br from-cyan-400 to-cyan-600 text-white shadow-cyan-500/40"
       : "bg-gradient-to-br from-emerald-400 to-teal-500 text-emerald-950 shadow-emerald-500/30";
 
   const highlightClass = isHighlighted

@@ -224,11 +224,11 @@ const App: React.FC = () => {
 
   const categorySummary = useMemo(() => {
     const categories: Record<User["category"], number> = {
-      Students: 0,
+      VIP: 0,
       Guests: 0,
-      Parents: 0,
       Faculty: 0,
-      Alumni: 0,
+      "Degree Students": 0,
+      "College Students": 0,
     };
 
     users.forEach((user) => {
@@ -458,6 +458,39 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        {/* Color Legend */}
+        <section className="glass-card">
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Category Colors
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700"></div>
+              <span className="text-sm text-slate-300">VIP</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500"></div>
+              <span className="text-sm text-slate-300">Guests</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600"></div>
+              <span className="text-sm text-slate-300">Faculty</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-green-400 to-green-600"></div>
+              <span className="text-sm text-slate-300">Degree Students</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600"></div>
+              <span className="text-sm text-slate-300">College Students</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-rose-500 to-rose-600"></div>
+              <span className="text-sm text-slate-300">Booked</span>
+            </div>
+          </div>
+        </section>
+
         <section className="glass-card">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -465,8 +498,9 @@ const App: React.FC = () => {
                 Amphitheater Layout
               </h2>
               <p className="text-sm text-slate-300">
-                Two mirrored sections with a central aisle. Guest-exclusive row
-                highlighted.
+                29 rows with category-specific seating. VIP Row 1, Guests Row 2,
+                Faculty Rows 3-5, Degree Students Rows 6-9, College Students
+                Rows 10-29.
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-slate-300">
@@ -482,7 +516,7 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-col gap-3">
-              {Array.from({ length: 15 }, (_, index) => {
+              {Array.from({ length: 29 }, (_, index) => {
                 const rowNumber = index + 1;
                 const rowData = seatsByRow[rowNumber];
 

@@ -5,30 +5,6 @@ import { User, Seat, BookedSeatRecord } from "../types";
 const normalizeSeatNumber = (seatNumber: string) =>
   seatNumber.trim().toLowerCase();
 
-const seatSuffixFromIndex = (index: number) => {
-  let n = index;
-  let suffix = "";
-
-  while (n > 0) {
-    n--;
-    suffix = String.fromCharCode(97 + (n % 26)) + suffix;
-    n = Math.floor(n / 26);
-  }
-
-  return suffix;
-};
-
-const seatSuffixToValue = (suffix: string) => {
-  let value = 0;
-  const normalized = suffix.toLowerCase();
-
-  for (let i = 0; i < normalized.length; i++) {
-    value = value * 26 + (normalized.charCodeAt(i) - 96);
-  }
-
-  return value;
-};
-
 // Parse CSV data
 export const parseCSVData = (csvText: string): User[] => {
   const results = Papa.parse<User>(csvText, {
@@ -95,20 +71,52 @@ export const loadBookedSeatData = async (
 // Generate all seats for the amphitheater
 export const generateSeats = (): Seat[] => {
   const seats: Seat[] = [];
+  const seatsPerRow = 50; // 25 left + 25 right
+  const seatsPerSection = 25;
 
-  for (let row = 1; row <= 15; row++) {
-    const seatsInRow = row <= 10 ? 70 : 60;
-    const seatsPerSection = Math.floor(seatsInRow / 2);
+  // Counter for different seat number schemes
+  let guestCounter = 1;
+  let facultyCounter = 1;
+  let degreeCounter = 1;
+  let studentCounter = 1;
 
-    for (let position = 1; position <= seatsInRow; position++) {
-      const suffix = seatSuffixFromIndex(position);
-      const seatNumber = `${row}${suffix}`;
+  for (let row = 1; row <= 29; row++) {
+    for (let position = 1; position <= seatsPerRow; position++) {
+      let seatNumber = "";
+      let category: Seat["categoryReserved"] = "General";
+
+      // Row 1: VIP (numbered VIP-1 to VIP-50)
+      if (row === 1) {
+        seatNumber = `VIP-${position}`;
+        category = "VIP";
+      }
+      // Row 2: Guests (G1 to G50)
+      else if (row === 2) {
+        seatNumber = `G${guestCounter++}`;
+        category = "Guests";
+      }
+      // Rows 3-5: Faculty (F1 to F150)
+      else if (row >= 3 && row <= 5) {
+        seatNumber = `F${facultyCounter++}`;
+        category = "Faculty";
+      }
+      // Rows 6-9: Degree Students (D1 to D200)
+      else if (row >= 6 && row <= 9) {
+        seatNumber = `D${degreeCounter++}`;
+        category = "Degree Students";
+      }
+      // Rows 10-29: College Students (1 to 1000)
+      else {
+        seatNumber = `${studentCounter++}`;
+        category = "College Students";
+      }
+
       seats.push({
         id: `seat-${seatNumber}`,
         seatNumber,
         row,
         section: position <= seatsPerSection ? "left" : "right",
-        categoryReserved: row === 1 ? "Guests" : "General",
+        categoryReserved: category,
         status: "available",
       });
     }
@@ -132,9 +140,10 @@ export const groupSeatsByRow = (seats: Seat[]) => {
   Object.keys(seatsByRow).forEach((row) => {
     const rowNum = parseInt(row, 10);
     const sorter = (a: Seat, b: Seat) => {
-      const suffixA = a.seatNumber.replace(/^\d+/, "");
-      const suffixB = b.seatNumber.replace(/^\d+/, "");
-      return seatSuffixToValue(suffixA) - seatSuffixToValue(suffixB);
+      // Extract numbers from seat labels (VIP-1 -> 1, G1 -> 1, F1 -> 1, D1 -> 1, 1 -> 1)
+      const numA = parseInt(a.seatNumber.replace(/^[A-Z]+-?/, ""), 10);
+      const numB = parseInt(b.seatNumber.replace(/^[A-Z]+-?/, ""), 10);
+      return numA - numB;
     };
     seatsByRow[rowNum].left.sort(sorter);
     seatsByRow[rowNum].right.sort(sorter);

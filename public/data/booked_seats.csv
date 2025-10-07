@@ -1,9 +1,11 @@
 seatNumber,userId,ticketGenerated,notes
-1a,1,TRUE,Chief Guest
-1b,3,FALSE,Faculty representative
-1aa,6,TRUE,Student Council Lead
-2ad,10,FALSE,Alumni speaker
-3c,12,FALSE,Distinguished guest
-5af,15,TRUE,Alumni donor
-8z,17,FALSE,Faculty mentor
-12aa,19,TRUE,Parent coordinator
+VIP-1,1,TRUE,Chief Guest - Mritunjai Singh
+VIP-2,2,TRUE,Chief Guest - Dr. Rajesh Kumar
+VIP-5,18,FALSE,Special VIP Guest
+G5,4,FALSE,Distinguished Guest - Anita Verma
+G10,12,TRUE,Guest Speaker
+F10,5,TRUE,Faculty - Amit Patel
+F25,13,FALSE,Faculty Coordinator
+D15,8,TRUE,Degree Student Representative
+100,3,FALSE,College Student - Priya Sharma
+
