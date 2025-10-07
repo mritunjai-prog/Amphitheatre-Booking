@@ -9,7 +9,7 @@ interface SeatProps {
 
 const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
   const baseClass =
-    "relative flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-[10px] font-semibold uppercase tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 hover:scale-[1.05] hover:shadow-lg";
+    "relative flex h-5 w-5 items-center justify-center rounded text-[8px] font-semibold uppercase tracking-tight transition focus:outline-none focus-visible:ring-1 focus-visible:ring-primary-300 hover:scale-[1.08] hover:shadow-md cursor-pointer";
 
   const palette =
     seat.status === "booked"
@@ -27,7 +27,7 @@ const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
       : "bg-gradient-to-br from-emerald-400 to-teal-500 text-emerald-950 shadow-emerald-500/30";
 
   const highlightClass = isHighlighted
-    ? "animate-pulse-glow ring-2 ring-primary-200 ring-offset-2 ring-offset-slate-950"
+    ? "animate-pulse-glow ring-2 ring-primary-200"
     : "";
 
   const tooltip = (() => {
@@ -63,20 +63,20 @@ const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
     >
       {seat.importedFromCsv && (
         <span
-          className="absolute left-1 top-1 inline-flex h-2 w-2 animate-pulse rounded-full bg-white/90 shadow"
+          className="absolute left-0.5 top-0.5 inline-flex h-1 w-1 animate-pulse rounded-full bg-white/90"
           title="Imported from CSV"
         />
       )}
       {seat.ticketGenerated && (
         <span
-          className="absolute right-1 top-1 text-[10px]"
+          className="absolute right-0 top-0 text-[6px]"
           role="img"
           aria-label="Ticket generated"
         >
           🎫
         </span>
       )}
-      <span>{seatLabel}</span>
+      <span className="leading-none">{seatLabel}</span>
     </button>
   );
 };

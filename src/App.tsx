@@ -12,6 +12,7 @@ import SeatRow from "./components/SeatRow";
 import SeatModal from "./components/SeatModal";
 import Notification from "./components/Notification";
 import ImportedAssignments from "./components/ImportedAssignments.tsx";
+import DataViewer from "./components/DataViewer";
 
 interface NotificationState {
   message: string;
@@ -38,6 +39,10 @@ const App: React.FC = () => {
   );
   const [loading, setLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [showDataViewer, setShowDataViewer] = useState(false);
+  const [dataViewerTab, setDataViewerTab] = useState<"users" | "booked">(
+    "users"
+  );
 
   const showNotification = useCallback(
     (message: string, type: NotificationState["type"]) => {
@@ -222,6 +227,59 @@ const App: React.FC = () => {
     [seats]
   );
 
+  // Save edited users from DataViewer
+  const handleUsersSaveFromViewer = (editedUsers: User[]) => {
+    setUsers(editedUsers);
+    showNotification("Users updated in memory.", "success");
+  };
+
+  // Save edited booked assignments from DataViewer
+  const handleBookedSaveFromViewer = (
+    records: {
+      userId: number | null;
+      seatNumber: string;
+      ticketGenerated?: boolean;
+      notes?: string;
+    }[]
+  ) => {
+    setSeats((prevSeats) =>
+      prevSeats.map((s) => {
+        const rec = records.find(
+          (r) => r.seatNumber.toLowerCase() === s.seatNumber.toLowerCase()
+        );
+        if (!rec) return s;
+
+        if (rec.userId) {
+          const user = users.find((u) => u.id === rec.userId);
+          return {
+            ...s,
+            status: user
+              ? s.status === "booked" || user
+                ? "booked"
+                : s.status
+              : s.status,
+            assignedUser: user ?? undefined,
+            ticketGenerated: !!rec.ticketGenerated,
+            importedFromCsv: !!s.importedFromCsv,
+            importNotes: rec.notes || s.importNotes,
+          };
+        }
+
+        // unassigned
+        return {
+          ...s,
+          status: "available",
+          assignedUser: undefined,
+          ticketGenerated: false,
+          importedFromCsv: false,
+          importNotes: undefined,
+        };
+      })
+    );
+
+    showNotification("Booked seat assignments updated in memory.", "success");
+  };
+
   const categorySummary = useMemo(() => {
     const categories: Record<User["category"], number> = {
       VIP: 0,
@@ -268,23 +326,23 @@ const App: React.FC = () => {
         <div className="absolute bottom-[-120px] left-[-120px] h-[420px] w-[420px] rounded-full bg-emerald-500/10 blur-3xl"></div>
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-12 lg:px-10">
-        <header className="rounded-3xl border border-white/10 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-800 p-10 shadow-soft">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6">
+        <header className="rounded-3xl border border-white/10 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-800 p-6 shadow-soft">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                 Annual Function 2025
               </p>
-              <h1 className="mt-4 flex items-center gap-3 text-3xl font-semibold text-white md:text-4xl">
+              <h1 className="mt-2 flex items-center gap-3 text-2xl font-semibold text-white md:text-3xl">
                 🎭 University Amphitheater Command Center
               </h1>
-              <p className="mt-3 max-w-2xl text-sm text-white/80 md:text-base">
+              <p className="mt-2 max-w-2xl text-xs text-white/80 md:text-sm">
                 Orchestrate seating for guests, students, faculty, alumni, and
                 parents with live statistics, CSV-driven reservations, and
                 on-the-spot ticket generation.
               </p>
             </div>
-            <div className="rounded-3xl border border-white/20 bg-white/10 px-6 py-4 text-center text-sm text-white/80 backdrop-blur-xl">
+            <div className="rounded-3xl border border-white/20 bg-white/10 px-4 py-3 text-center text-xs text-white/80 backdrop-blur-xl">
               <p className="font-semibold text-white">
                 {users.length} attendees loaded
               </p>
@@ -293,7 +351,7 @@ const App: React.FC = () => {
           </div>
         </header>
 
-        <section className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {[
             {
               label: "Total Seats",
@@ -326,18 +384,18 @@ const App: React.FC = () => {
           ].map((card) => (
             <div
               key={card.label}
-              className="glass-card flex items-center justify-between overflow-hidden p-6 transition hover:border-primary-400/60 hover:shadow-lg"
+              className="glass-card flex items-center justify-between overflow-hidden p-4 transition hover:border-primary-400/60 hover:shadow-lg"
             >
               <div>
                 <p className="text-xs uppercase tracking-wide text-slate-400">
                   {card.label}
                 </p>
-                <p className={`mt-3 text-3xl font-semibold ${card.highlight}`}>
+                <p className={`mt-2 text-2xl font-semibold ${card.highlight}`}>
                   {card.value}
                 </p>
               </div>
               <div
-                className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${card.accent} text-3xl`}
+                className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${card.accent} text-2xl`}
               >
                 {card.icon}
               </div>
@@ -345,21 +403,21 @@ const App: React.FC = () => {
           ))}
         </section>
 
-        <section className="grid gap-6 lg:grid-cols-[1.35fr_1fr]">
-          <div className="glass-card space-y-6">
-            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <section className="grid gap-4 lg:grid-cols-[1.35fr_1fr]">
+          <div className="glass-card space-y-4">
+            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div>
-                <h2 className="text-xl font-semibold text-white">
+                <h2 className="text-lg font-semibold text-white">
                   Operations Console
                 </h2>
-                <p className="text-sm text-slate-300">
+                <p className="text-xs text-slate-300">
                   Refresh CSV inputs, export allocations, and spotlight any seat
                   instantly.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
-              <div className="flex flex-1 flex-wrap items-center gap-3">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+              <div className="flex flex-1 flex-wrap items-center gap-2">
                 <button
                   className="btn-gradient"
                   onClick={handleRefreshData}
@@ -372,6 +430,12 @@ const App: React.FC = () => {
                   onClick={handleExportAssignments}
                 >
                   📥 Export Assignments
+                </button>
+                <button
+                  className="btn-gradient"
+                  onClick={() => setShowDataViewer(true)}
+                >
+                  📊 View CSV Data
                 </button>
                 <button
                   className="btn-outline"
@@ -391,7 +455,7 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-2">
               {[
                 {
                   label: "Available Seat",
@@ -412,12 +476,12 @@ const App: React.FC = () => {
               ].map((entry) => (
                 <div
                   key={entry.label}
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                  className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2"
                 >
                   <span
-                    className={`h-10 w-10 rounded-xl bg-gradient-to-br ${entry.color}`}
+                    className={`h-6 w-6 rounded-lg bg-gradient-to-br ${entry.color}`}
                   ></span>
-                  <p className="text-sm font-medium text-slate-200">
+                  <p className="text-xs font-medium text-slate-200">
                     {entry.label}
                   </p>
                 </div>
@@ -425,10 +489,10 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card space-y-4">
+          <div className="glass-card space-y-3">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-base font-semibold text-white">
                   Audience Mix
                 </h3>
                 <p className="text-xs uppercase tracking-wide text-slate-400">
@@ -439,11 +503,11 @@ const App: React.FC = () => {
                 {users.length} total
               </span>
             </div>
-            <div className="grid grid-cols-2 gap-3 text-sm text-slate-200">
+            <div className="grid grid-cols-2 gap-2 text-xs text-slate-200">
               {Object.entries(categorySummary).map(([category, count]) => (
                 <div
                   key={category}
-                  className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                  className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-3 py-2"
                 >
                   <span className="font-medium">{category}</span>
                   <span className="text-white/80">{count}</span>
@@ -459,63 +523,62 @@ const App: React.FC = () => {
         </section>
 
         {/* Color Legend */}
-        <section className="glass-card">
-          <h3 className="text-lg font-semibold text-white mb-4">
+        <section className="glass-card py-3 px-4">
+          <h3 className="text-sm font-semibold text-white mb-2">
             Category Colors
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700"></div>
-              <span className="text-sm text-slate-300">VIP</span>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+            <div className="flex items-center gap-1.5">
+              <div className="h-4 w-4 rounded bg-gradient-to-br from-purple-500 to-purple-700"></div>
+              <span className="text-xs text-slate-300">VIP</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500"></div>
-              <span className="text-sm text-slate-300">Guests</span>
+            <div className="flex items-center gap-1.5">
+              <div className="h-4 w-4 rounded bg-gradient-to-br from-amber-400 to-orange-500"></div>
+              <span className="text-xs text-slate-300">Guests</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600"></div>
-              <span className="text-sm text-slate-300">Faculty</span>
+            <div className="flex items-center gap-1.5">
+              <div className="h-4 w-4 rounded bg-gradient-to-br from-blue-400 to-blue-600"></div>
+              <span className="text-xs text-slate-300">Faculty</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-green-400 to-green-600"></div>
-              <span className="text-sm text-slate-300">Degree Students</span>
+            <div className="flex items-center gap-1.5">
+              <div className="h-4 w-4 rounded bg-gradient-to-br from-green-400 to-green-600"></div>
+              <span className="text-xs text-slate-300">Degree</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600"></div>
-              <span className="text-sm text-slate-300">College Students</span>
+            <div className="flex items-center gap-1.5">
+              <div className="h-4 w-4 rounded bg-gradient-to-br from-cyan-400 to-cyan-600"></div>
+              <span className="text-xs text-slate-300">College</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-rose-500 to-rose-600"></div>
-              <span className="text-sm text-slate-300">Booked</span>
+            <div className="flex items-center gap-1.5">
+              <div className="h-4 w-4 rounded bg-gradient-to-br from-rose-500 to-rose-600"></div>
+              <span className="text-xs text-slate-300">Booked</span>
             </div>
           </div>
         </section>
 
-        <section className="glass-card">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <section className="glass-card py-4 px-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-xl font-semibold text-white">
+              <h2 className="text-lg font-semibold text-white">
                 Amphitheater Layout
               </h2>
-              <p className="text-sm text-slate-300">
-                29 rows with category-specific seating. VIP Row 1, Guests Row 2,
-                Faculty Rows 3-5, Degree Students Rows 6-9, College Students
-                Rows 10-29.
+              <p className="text-xs text-slate-300">
+                29 rows · VIP Row 1 · Guests Row 2 · Faculty Rows 3-5 · Degree
+                6-9 · College 10-29
               </p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-slate-300">
-              Stage orientation · Main entrance at base
+            <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-wide text-slate-300">
+              Stage orientation
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-12">
+          <div className="mt-6 flex flex-col gap-6">
             <div className="flex justify-center">
-              <div className="rounded-full border border-amber-400/40 bg-gradient-to-br from-amber-300/30 to-amber-500/20 px-12 py-4 text-sm font-medium uppercase tracking-[0.3em] text-amber-100">
+              <div className="rounded-full border border-amber-400/40 bg-gradient-to-br from-amber-300/30 to-amber-500/20 px-8 py-2 text-xs font-medium uppercase tracking-[0.2em] text-amber-100">
                 🎭 Stage
               </div>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-0.5">
               {Array.from({ length: 29 }, (_, index) => {
                 const rowNumber = index + 1;
                 const rowData = seatsByRow[rowNumber];
@@ -534,7 +597,7 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex justify-center">
-              <div className="rounded-full border border-white/10 bg-white/5 px-10 py-3 text-xs uppercase tracking-[0.4em] text-slate-300">
+              <div className="rounded-full border border-white/10 bg-white/5 px-8 py-2 text-xs uppercase tracking-[0.3em] text-slate-300">
                 🚪 Main Entrance
               </div>
             </div>
@@ -561,6 +624,19 @@ const App: React.FC = () => {
             message={notification.message}
             type={notification.type}
             onClose={() => setNotification(null)}
+          />
+        )}
+
+        {/* CSV Data Viewer */}
+        {showDataViewer && (
+          <DataViewer
+            users={users}
+            seats={seats}
+            activeTab={dataViewerTab}
+            onTabChange={setDataViewerTab}
+            onClose={() => setShowDataViewer(false)}
+            onUsersSave={handleUsersSaveFromViewer}
+            onBookedSave={handleBookedSaveFromViewer}
           />
         )}
       </div>
