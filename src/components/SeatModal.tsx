@@ -5,25 +5,36 @@ import { canUserAccessSeat } from "../utils";
 interface SeatModalProps {
   seat: Seat | null;
   users: User[];
+  seats: Seat[];
   onClose: () => void;
   onAssign: (seatId: string, userId: number) => void;
   onRemove: (seatId: string) => void;
-  onGenerateTicket: (seatId: string) => void;
 }
 
 const SeatModal: React.FC<SeatModalProps> = ({
   seat,
   users,
+  seats,
   onClose,
   onAssign,
   onRemove,
-  onGenerateTicket,
 }) => {
   const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
 
   if (!seat) return null;
 
-  const eligibleUsers = users.filter((user) => canUserAccessSeat(seat, user));
+  // Filter out users who already have seats assigned
+  const usersWithSeats = new Set(
+    seats
+      .filter((s) => s.assignedUser && s.id !== seat.id)
+      .map((s) => s.assignedUser!.id)
+  );
+
+  const availableUsers = users.filter((user) => !usersWithSeats.has(user.id));
+
+  const eligibleUsers = availableUsers.filter((user) =>
+    canUserAccessSeat(seat, user)
+  );
 
   const handleAssign = () => {
     if (selectedUserId) {
@@ -123,11 +134,6 @@ const SeatModal: React.FC<SeatModalProps> = ({
                     <span className="badge border-white/10 bg-white/5 text-white/80">
                       {seat.assignedUser.phone}
                     </span>
-                    {seat.ticketGenerated && (
-                      <span className="badge border-emerald-400/40 bg-emerald-500/15 text-emerald-100">
-                        Ticket Generated
-                      </span>
-                    )}
                     {seat.importedFromCsv && (
                       <span className="badge border-amber-400/40 bg-amber-500/15 text-amber-100">
                         Imported from CSV
@@ -177,22 +183,12 @@ const SeatModal: React.FC<SeatModalProps> = ({
               Close
             </button>
             {seat.assignedUser ? (
-              <div className="flex flex-1 flex-col gap-3 sm:flex-row sm:justify-end">
-                {!seat.ticketGenerated && (
-                  <button
-                    className="btn-secondary"
-                    onClick={() => onGenerateTicket(seat.id)}
-                  >
-                    🎫 Generate Ticket
-                  </button>
-                )}
-                <button
-                  className="btn-gradient bg-gradient-to-r from-rose-500 via-rose-600 to-rose-700"
-                  onClick={() => onRemove(seat.id)}
-                >
-                  🗑 Remove Assignment
-                </button>
-              </div>
+              <button
+                className="btn-gradient bg-gradient-to-r from-rose-500 via-rose-600 to-rose-700"
+                onClick={() => onRemove(seat.id)}
+              >
+                🗑 Remove Assignment
+              </button>
             ) : (
               <button
                 className="btn-gradient"

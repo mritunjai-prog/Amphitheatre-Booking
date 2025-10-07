@@ -4,7 +4,6 @@ import { User, Seat } from "../types";
 interface BookedRecord {
   userId: number | null;
   seatNumber: string;
-  ticketGenerated?: boolean;
   notes?: string;
 }
 
@@ -37,7 +36,6 @@ const DataViewer: React.FC<DataViewerProps> = ({
     bookedSeats.map((s) => ({
       userId: s.assignedUser?.id ?? null,
       seatNumber: s.seatNumber,
-      ticketGenerated: !!s.ticketGenerated,
       notes: s.importNotes || "",
     }))
   );
@@ -52,7 +50,6 @@ const DataViewer: React.FC<DataViewerProps> = ({
       bookedSeats.map((s) => ({
         userId: s.assignedUser?.id ?? null,
         seatNumber: s.seatNumber,
-        ticketGenerated: !!s.ticketGenerated,
         notes: s.importNotes || "",
       }))
     );
@@ -99,7 +96,6 @@ const DataViewer: React.FC<DataViewerProps> = ({
       bookedSeats.map((s) => ({
         userId: s.assignedUser?.id ?? null,
         seatNumber: s.seatNumber,
-        ticketGenerated: !!s.ticketGenerated,
         notes: s.importNotes || "",
       }))
     );
@@ -131,10 +127,9 @@ const DataViewer: React.FC<DataViewerProps> = ({
                     bookedState.map((r) => ({
                       userId: r.userId ?? "",
                       seatNumber: r.seatNumber,
-                      ticketGenerated: r.ticketGenerated ? "true" : "false",
                       notes: r.notes || "",
                     })),
-                    ["userId", "seatNumber", "ticketGenerated", "notes"],
+                    ["userId", "seatNumber", "notes"],
                     "booked_seats.csv"
                   );
               }}
@@ -268,7 +263,6 @@ const DataViewer: React.FC<DataViewerProps> = ({
                     <th className="px-4 py-3 font-medium">User Name</th>
                     <th className="px-4 py-3 font-medium">Email</th>
                     <th className="px-4 py-3 font-medium">Category</th>
-                    <th className="px-4 py-3 font-medium">Ticket</th>
                     <th className="px-4 py-3 font-medium">Notes</th>
                   </tr>
                 </thead>
@@ -310,25 +304,6 @@ const DataViewer: React.FC<DataViewerProps> = ({
                         <td className="px-4 py-3">{user?.name ?? "—"}</td>
                         <td className="px-4 py-3">{user?.email ?? "—"}</td>
                         <td className="px-4 py-3">{user?.category ?? "—"}</td>
-                        <td className="px-4 py-3">
-                          <label className="inline-flex items-center gap-2">
-                            <input
-                              type="checkbox"
-                              checked={!!rec.ticketGenerated}
-                              onChange={(e) => {
-                                const copy = [...bookedState];
-                                copy[idx] = {
-                                  ...copy[idx],
-                                  ticketGenerated: e.target.checked,
-                                };
-                                setBookedState(copy);
-                              }}
-                            />
-                            <span className="text-xs text-slate-300">
-                              Generated
-                            </span>
-                          </label>
-                        </td>
                         <td className="px-4 py-3">
                           <input
                             value={rec.notes || ""}

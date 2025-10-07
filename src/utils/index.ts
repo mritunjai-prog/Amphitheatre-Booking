@@ -163,13 +163,11 @@ export const getSeatStatistics = (seats: Seat[]) => {
   const total = seats.length;
   const booked = seats.filter((seat) => seat.status === "booked").length;
   const available = total - booked;
-  const ticketsGenerated = seats.filter((seat) => seat.ticketGenerated).length;
 
   return {
     total,
     booked,
     available,
-    ticketsGenerated,
   };
 };
 
@@ -185,7 +183,6 @@ export const exportAssignments = (seats: Seat[]) => {
     userEmail: seat.assignedUser?.email,
     userPhone: seat.assignedUser?.phone,
     userCategory: seat.assignedUser?.category,
-    ticketGenerated: seat.ticketGenerated ? "Yes" : "No",
   }));
 
   const csv = Papa.unparse(csvData);
@@ -196,6 +193,50 @@ export const exportAssignments = (seats: Seat[]) => {
   link.download = `seat-assignments-${
     new Date().toISOString().split("T")[0]
   }.csv`;
+  link.click();
+  window.URL.revokeObjectURL(url);
+};
+
+// Export/download booked seats in the exact CSV format
+export const exportBookedSeatsCSV = (seats: Seat[]) => {
+  const bookedSeats = seats.filter((seat) => seat.assignedUser);
+
+  // Group by category
+  const categorized: Record<string, Seat[]> = {
+    Guests: [],
+    Faculty: [],
+    "Degree Students": [],
+    "College Students": [],
+  };
+
+  bookedSeats.forEach((seat) => {
+    const category = seat.assignedUser?.category;
+    if (category && categorized[category]) {
+      categorized[category].push(seat);
+    }
+  });
+
+  // Build CSV content with category headers
+  let csvContent = "category,seatNumber,userId,userName,email,phone,notes\n";
+
+  Object.entries(categorized).forEach(([category, seats]) => {
+    if (seats.length > 0) {
+      csvContent += `\n# ${category.toUpperCase()}\n`;
+      seats.forEach((seat) => {
+        const user = seat.assignedUser;
+        const row = `${user?.category},${seat.seatNumber},${user?.id},${
+          user?.name
+        },${user?.email},${user?.phone},${seat.importNotes || ""}`;
+        csvContent += row + "\n";
+      });
+    }
+  });
+
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = window.URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "booked_seats.csv";
   link.click();
   window.URL.revokeObjectURL(url);
 };

@@ -42,7 +42,6 @@ const ImportedAssignments: React.FC<ImportedAssignmentsProps> = ({ seats }) => {
                 <th className="px-5 py-3">Seat</th>
                 <th className="px-5 py-3">Name</th>
                 <th className="px-5 py-3">Category</th>
-                <th className="px-5 py-3">Ticket</th>
                 <th className="px-5 py-3">Notes</th>
               </tr>
             </thead>
@@ -63,17 +62,6 @@ const ImportedAssignments: React.FC<ImportedAssignmentsProps> = ({ seats }) => {
                   <td className="px-5 py-4">
                     <span className="badge border-white/10 bg-white/10 text-white/80">
                       {seat.assignedUser?.category}
-                    </span>
-                  </td>
-                  <td className="px-5 py-4">
-                    <span
-                      className={`badge ${
-                        seat.ticketGenerated
-                          ? "border-emerald-400/40 bg-emerald-500/15 text-emerald-100"
-                          : "border-amber-400/40 bg-amber-500/10 text-amber-100"
-                      }`}
-                    >
-                      {seat.ticketGenerated ? "Generated" : "Pending"}
                     </span>
                   </td>
                   <td className="px-5 py-4 text-xs text-slate-300">

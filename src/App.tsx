@@ -7,6 +7,7 @@ import {
   groupSeatsByRow,
   getSeatStatistics,
   exportAssignments,
+  exportBookedSeatsCSV,
 } from "./utils";
 import SeatRow from "./components/SeatRow";
 import SeatModal from "./components/SeatModal";
@@ -19,14 +20,6 @@ interface NotificationState {
   type: "success" | "error" | "info";
   id: number;
 }
-
-const parseBoolean = (value: string | boolean | undefined): boolean => {
-  if (typeof value === "boolean") return value;
-  if (!value) return false;
-
-  const normalized = value.toString().trim().toLowerCase();
-  return ["true", "yes", "y", "1"].includes(normalized);
-};
 
 const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -71,7 +64,6 @@ const App: React.FC = () => {
       if (seat && user) {
         seat.status = "booked";
         seat.assignedUser = user;
-        seat.ticketGenerated = parseBoolean(record.ticketGenerated);
         seat.importedFromCsv = true;
         seat.importNotes = record.notes;
       } else {
@@ -131,20 +123,22 @@ const App: React.FC = () => {
     }
 
     let assignedSeatNumber = "";
-    setSeats((prevSeats) =>
-      prevSeats.map((seat) =>
+    let updatedSeats: Seat[] = [];
+
+    setSeats((prevSeats) => {
+      updatedSeats = prevSeats.map((seat) =>
         seat.id === seatId
           ? {
               ...seat,
               status: "booked" as const,
               assignedUser: user,
-              ticketGenerated: false,
               importedFromCsv: false,
               importNotes: undefined,
             }
           : seat
-      )
-    );
+      );
+      return updatedSeats;
+    });
 
     const seat = seats.find((s) => s.id === seatId);
     assignedSeatNumber = seat ? seat.seatNumber.toUpperCase() : "";
@@ -158,21 +152,22 @@ const App: React.FC = () => {
 
   const handleRemoveAssignment = (seatId: string) => {
     const seat = seats.find((s) => s.id === seatId);
+    let updatedSeats: Seat[] = [];
 
-    setSeats((prevSeats) =>
-      prevSeats.map((s) =>
+    setSeats((prevSeats) => {
+      updatedSeats = prevSeats.map((s) =>
         s.id === seatId
           ? {
               ...s,
               status: "available" as const,
               assignedUser: undefined,
-              ticketGenerated: false,
               importedFromCsv: false,
               importNotes: undefined,
             }
           : s
-      )
-    );
+      );
+      return updatedSeats;
+    });
 
     setSelectedSeat(null);
     showNotification(
@@ -180,22 +175,6 @@ const App: React.FC = () => {
         seat?.seatNumber.toUpperCase() || seatId
       }!`,
       "info"
-    );
-  };
-
-  const handleGenerateTicket = (seatId: string) => {
-    const seat = seats.find((s) => s.id === seatId);
-
-    setSeats((prevSeats) =>
-      prevSeats.map((s) =>
-        s.id === seatId ? { ...s, ticketGenerated: true } : s
-      )
-    );
-
-    setSelectedSeat(null);
-    showNotification(
-      `Ticket generated for seat ${seat?.seatNumber.toUpperCase() || seatId}!`,
-      "success"
     );
   };
 
@@ -238,7 +217,6 @@ const App: React.FC = () => {
     records: {
       userId: number | null;
       seatNumber: string;
-      ticketGenerated?: boolean;
       notes?: string;
     }[]
   ) => {
@@ -259,7 +237,6 @@ const App: React.FC = () => {
                 : s.status
               : s.status,
             assignedUser: user ?? undefined,
-            ticketGenerated: !!rec.ticketGenerated,
             importedFromCsv: !!s.importedFromCsv,
             importNotes: rec.notes || s.importNotes,
           };
@@ -270,7 +247,6 @@ const App: React.FC = () => {
           ...s,
           status: "available",
           assignedUser: undefined,
-          ticketGenerated: false,
           importedFromCsv: false,
           importNotes: undefined,
         };
@@ -374,13 +350,6 @@ const App: React.FC = () => {
               accent: "from-emerald-400/40 via-emerald-400/15 to-transparent",
               highlight: "text-emerald-100",
             },
-            {
-              label: "Tickets Generated",
-              value: statistics.ticketsGenerated,
-              icon: "🎫",
-              accent: "from-amber-400/40 via-amber-400/15 to-transparent",
-              highlight: "text-amber-100",
-            },
           ].map((card) => (
             <div
               key={card.label}
@@ -424,6 +393,13 @@ const App: React.FC = () => {
                   disabled={isRefreshing}
                 >
                   {isRefreshing ? "Refreshing…" : "🔄 Refresh CSV Data"}
+                </button>
+                <button
+                  className="btn-gradient bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500"
+                  onClick={() => exportBookedSeatsCSV(seats)}
+                  title="Download updated booked_seats.csv file"
+                >
+                  💾 Save to CSV
                 </button>
                 <button
                   className="btn-secondary"
@@ -611,10 +587,10 @@ const App: React.FC = () => {
           <SeatModal
             seat={selectedSeat}
             users={users}
+            seats={seats}
             onClose={() => setSelectedSeat(null)}
             onAssign={handleAssignSeat}
             onRemove={handleRemoveAssignment}
-            onGenerateTicket={handleGenerateTicket}
           />
         )}
 

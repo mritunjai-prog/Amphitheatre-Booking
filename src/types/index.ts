@@ -27,7 +27,6 @@ export interface Seat {
     | "General";
   status: "available" | "booked";
   assignedUser?: User;
-  ticketGenerated?: boolean;
   importedFromCsv?: boolean;
   importNotes?: string;
 }
@@ -45,6 +44,5 @@ export interface BookedSeatRecord {
   userName?: string;
   email?: string;
   phone?: string;
-  ticketGenerated?: string | boolean;
   notes?: string;
 }

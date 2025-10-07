@@ -35,9 +35,6 @@ const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
 
     if (seat.assignedUser) {
       title += ` · Assigned to ${seat.assignedUser.name}`;
-      if (seat.ticketGenerated) {
-        title += " · Ticket Generated";
-      }
     } else if (seat.categoryReserved !== "General") {
       title += ` · Reserved for ${seat.categoryReserved}`;
     } else {
@@ -66,15 +63,6 @@ const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
           className="absolute left-0.5 top-0.5 inline-flex h-1 w-1 animate-pulse rounded-full bg-white/90"
           title="Imported from CSV"
         />
-      )}
-      {seat.ticketGenerated && (
-        <span
-          className="absolute right-0 top-0 text-[6px]"
-          role="img"
-          aria-label="Ticket generated"
-        >
-          🎫
-        </span>
       )}
       <span className="leading-none">{seatLabel}</span>
     </button>

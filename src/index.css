@@ -65,6 +65,17 @@ body,
     @apply w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/90 placeholder-white/40 shadow-inner transition focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/40;
   }
 
+  /* Dropdown option styling for better visibility */
+  .input-field option {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    padding: 8px;
+  }
+
+  .input-field option:hover {
+    background-color: #334155;
+  }
+
   .badge {
     @apply inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide;
   }
