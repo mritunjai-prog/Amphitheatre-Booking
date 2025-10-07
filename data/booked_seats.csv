@@ -1,9 +1,14 @@
-seatNumber,userId,ticketGenerated,notes
-1a,1,TRUE,Chief Guest
-1b,3,FALSE,Faculty representative
-1aa,6,TRUE,Student Council Lead
-2ad,10,FALSE,Alumni speaker
-3c,12,FALSE,Distinguished guest
-5af,15,TRUE,Alumni donor
-8z,17,FALSE,Faculty mentor
-12aa,19,TRUE,Parent coordinator
+category,seatNumber,userId,userName,email,phone,notes
+
+# GUESTS
+Guests,G1,1,Mritunjai Singh,mritunjai.singh@university.edu,+91-9876543210,Chief Guest
+
+# FACULTY
+Faculty,F10,3,Dr. Rajesh Kumar,rajesh.kumar@university.edu,+91-9876543212,Faculty Representative
+
+# DEGREE STUDENTS
+Degree Students,D50,8,Rahul Sharma,rahul.sharma@university.edu,+91-9876543217,Degree Student Representative
+
+# COLLEGE STUDENTS
+College Students,150,6,Sneha Gupta,sneha.gupta@university.edu,+91-9876543215,Student Council Lead
+

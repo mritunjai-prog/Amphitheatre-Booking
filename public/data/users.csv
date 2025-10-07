@@ -1,22 +1,12 @@
 id,name,email,phone,category
-1,Mritunjai Singh,mritunjai.singh@university.edu,+91-9876543210,VIP
-2,Dr. Rajesh Kumar,rajesh.kumar@university.edu,+91-9876543212,VIP
-3,Priya Sharma,priya.sharma@university.edu,+91-9876543211,College Students
+1,Mritunjai Singh,mritunjai.singh@university.edu,+91-9876543210,Guests
+2,Priya Sharma,priya.sharma@university.edu,+91-9876543211,College Students
+3,Dr. Rajesh Kumar,rajesh.kumar@university.edu,+91-9876543212,Faculty
 4,Anita Verma,anita.verma@gmail.com,+91-9876543213,Guests
 5,Amit Patel,amit.patel@alumni.edu,+91-9876543214,Faculty
 6,Sneha Gupta,sneha.gupta@university.edu,+91-9876543215,College Students
 7,Prof. Sunita Rao,sunita.rao@university.edu,+91-9876543216,Faculty
 8,Rahul Sharma,rahul.sharma@university.edu,+91-9876543217,Degree Students
 9,Meera Joshi,meera.joshi@gmail.com,+91-9876543218,Guests
-10,Arjun Kapoor,arjun.kapoor@alumni.edu,+91-9876543219,College Students
-11,Kavya Reddy,kavya.reddy@university.edu,+91-9876543220,Degree Students
-12,Sanjay Kumar,sanjay.kumar@gmail.com,+91-9876543221,Guests
-13,Pooja Singh,pooja.singh@university.edu,+91-9876543222,Faculty
-14,Ravi Patel,ravi.patel@gmail.com,+91-9876543223,Guests
-15,Nisha Agarwal,nisha.agarwal@alumni.edu,+91-9876543224,College Students
-16,Vikram Mehta,vikram.mehta@university.edu,+91-9876543225,Degree Students
-17,Dr. Priya Gupta,priya.gupta@university.edu,+91-9876543226,Faculty
-18,Suresh Verma,suresh.verma@gmail.com,+91-9876543227,VIP
-19,Deepika Rao,deepika.rao@gmail.com,+91-9876543228,Guests
-20,Manish Jain,manish.jain@alumni.edu,+91-9876543229,College Students
+
 

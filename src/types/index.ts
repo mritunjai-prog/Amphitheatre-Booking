@@ -39,8 +39,12 @@ export interface SeatAssignment {
 }
 
 export interface BookedSeatRecord {
+  category?: string;
   seatNumber: string;
   userId: number;
+  userName?: string;
+  email?: string;
+  phone?: string;
   ticketGenerated?: string | boolean;
   notes?: string;
 }
