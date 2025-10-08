@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Amphitheatre Project Report</title>
+<style>
+body{font-family: Arial, Helvetica, sans-serif; color:#0b0b0b; line-height:1.4}
+h1{color:#0b3f6b}
+h2{color:#0b558a}
+code{background:#f3f4f6;padding:2px 4px;border-radius:4px}
+.section{margin-bottom:20px}
+.key{font-weight:700}
+</style>
+</head>
+<body>
+<h1>Amphitheatre Booking System — Comprehensive Project Report</h1>
+<p>Generated: October 8, 2025</p>
+<hr/>
+<div class="section">
+<h2>1. Executive summary</h2>
+<p>This document is a full project report for the Amphitheatre Booking application located at <code>react-amphitheater-admin</code>. It captures architecture, feature set, data model, implementation notes, seat allocation logic, recent changes, and operational guidance to run, test, or extend the system. It consolidates development history and configuration from the active workspace and the recent interactive session.</p>
+</div>
+
+<div class="section">
+<h2>2. Project location & repository</h2>
+<ul>
+<li>Local workspace: <code>C:\Users\IAMRO-PC\Downloads\react-amphitheater-admin-complete\react-amphitheater-admin</code></li>
+<li>Repository: <strong>Amphitheatre-Booking</strong> (owner: <code>mritunjai-prog</code>)</li>
+<li>Branch: <code>main</code></li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Technology stack</h2>
+<ul>
+<li>React 18 + TypeScript</li>
+<li>Vite (dev server)</li>
+<li>TailwindCSS for styling</li>
+<li>Papa Parse for CSV parsing</li>
+<li>Git for version control</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. How to run the project (developer)</h2>
+<ol>
+<li>Install dependencies: <code>npm install</code></li>
+<li>Start dev server: <code>npm run dev</code> (default: http://localhost:3000/)</li>
+<li>Open the URL in a browser and interact with the UI (seat grid, CSV save/load)</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>5. Data files & location</h2>
+<p>Two datasets are used (also mirrored in <code>public/data</code>):</p>
+<ul>
+<li><code>data/users.csv</code> — user list (id,name,email,phone,category)</li>
+<li><code>data/booked_seats.csv</code> — booked seat records (category,seatNumber,userId,userName,email,phone,notes)</li>
+</ul>
+<p>Note: per recent operation, both CSVs have been cleared of sample rows and now contain only headers. This helps start with an empty production-ready dataset.</p>
+</div>
+
+<div class="section">
+<h2>6. Key source files and responsibilities</h2>
+<ul>
+<li><code>src/utils/index.ts</code> — core seat generation, CSV parsing helpers, and seat grouping logic.</li>
+<li><code>src/components/SeatRow.tsx</code> — renders an individual row with left/right seat containers and category labels.</li>
+<li><code>src/components/Seat.tsx</code> — single seat UI, colors per category, click/hover handlers.</li>
+<li><code>src/App.tsx</code> — main application, seatCategorySummary, CSV save/load UI, modal integration.</li>
+<li><code>public/data/*</code> — copies of CSVs for static serving.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. Seating allocation & V-shape tapering rules</h2>
+<p>The seating grid follows a V-shaped (stadium) tapering design: narrowest rows are closest to stage, widest at the back. Key points:</p>
+<ul>
+<li>Rows capped at 25 (no row 26+).</li>
+<li>Last row (row 25) is the widest. Recent update sets it to full 50 seats (25 left + 25 right).</li>
+<li>Tapering rule: Every 2 rows going up, remove 2 seats total (1 from each side). That produces pairs of rows with the same width: e.g. row 25-24 = 50 seats, row 23-22 = 48 seats, row 21-20 = 46 seats, etc.</li>
+<li>All rows maintain even seat counts to ensure left/right symmetry.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>8. Seat categories and allocation</h2>
+<p>Categories and row assignments in final configuration:</p>
+<ul>
+<li>Row 1: VIP (purple)</li>
+<li>Rows 2-3: Guests (amber) — 100 seats</li>
+<li>Rows 4-5: Faculty (blue) — 100 seats</li>
+<li>Row 6: Parents (pink) — 50 seats</li>
+<li>Rows 7-12: Degree Students (green)</li>
+<li>Rows 13-25: College Students (cyan) — recently increased cap to 650 to populate full last rows)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>9. Recent changes (chronology & purpose)</h2>
+<ul>
+<li>Removed special-case row calculation (row 25) and standardized tapering calculation for consistency.</li>
+<li>Adjusted seat counts and taper direction so back rows are widest (V-shape).</li>
+<li>Simplified category labels to show only on the first row of each category (rows 1,2,4,6,7,13).</li>
+<li>Aligned final rows (24 & 25) so center divider and seats vertically line up; later updated to full last row with 50 seats.</li>
+<li>Increased <code>maxStudents</code> from 566 → 650 to allow filling the full seat plan.</li>
+<li>Cleared sample CSV data in <code>data/</code> and <code>public/data/</code> (headers retained).</li>
+<li>Committed and pushed changes to <code>origin/main</code>.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>10. Notable code excerpts</h2>
+<h3>Seat per row calculation (pseudo/summary)</h3>
+<pre><code>const getSeatsPerRow = (row) => {
+  if (row === 25) return 50;
+  const rowsFromBack = 25 - row;
+  const reductionPairs = Math.floor(rowsFromBack / 2);
+  return Math.max( even(50 - reductionPairs * 2), 10 );
+};
+</code></pre>
+<p>Note: function ensures even seat counts and a minimum of 10 seats per row.</p>
+</div>
+
+<div class="section">
+<h2>11. How seat IDs are assigned</h2>
+<ul>
+<li>Guests: G1..G100</li>
+<li>Faculty: F1..F100</li>
+<li>Parents: P1..P50</li>
+<li>Degree students: D1..</li>
+<li>College students: numeric IDs starting at 1 (1..N)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>12. UI behavior & features</h2>
+<ul>
+<li>Compact seat size for density (small square components).</li>
+<li>Hover and click interactions show seat details and open modals for booking/editing.</li>
+<li>CSV import & manual save/export supported (Papa Parse used client-side).</li>
+<li>Total seat counts by category displayed in the UI.</li>
+<li>Category labels shown on right side of first row of each category to reduce visual clutter.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>13. Files changed in the most recent commits</h2>
+<p>Example files modified during the alignment and tapering fixes:</p>
+<ul>
+<li><code>src/utils/index.ts</code> — seat logic & limits</li>
+<li><code>src/components/SeatRow.tsx</code> — layout: fixed containers for symmetry</li>
+<li><code>src/components/Seat.tsx</code> — seat visuals
+<li><code>data/*</code> and <code>public/data/*</code> — CSVs cleared</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>14. Git activity</h2>
+<ul>
+<li>Recent commits (examples):
+  <ul>
+    <li>"Fix row 25 alignment: Full 50-seat last row with proper V-shape tapering and increased College student capacity to 650"</li>
+    <li>"Clear sample data: keep CSV headers only for users and booked_seats"</li>
+  </ul>
+</li>
+<li>All changes pushed to <code>origin/main</code> successfully.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>15. Operational checks (quick smoke tests)</h2>
+<ol>
+<li>Start dev server and verify no TS errors: <code>npm run dev</code></li>
+<li>Open http://localhost:3000/ — ensure seating grid renders (25 rows max) and total counts display</li>
+<li>Load CSVs (users/booked_seats) if needed — remember they are currently headers-only</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>16. Next steps & recommendations</h2>
+<ul>
+<li>Seed real dataset: populate <code>data/users.csv</code> and <code>data/booked_seats.csv</code> with production records or provide an import UI in admin flows.</li>
+<li>Add automated e2e tests (Cypress/playwright) to validate seat alignment and booking flows.</li>
+<li>Consider storing booked seats server-side or in a DB for persistence and multi-user coordination.</li>
+<li>Optionally implement an export that creates a download-ready CSV automatically after save.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>17. Appendix</h2>
+<p>Full file list (top-level of project):</p>
+<pre>
+index.html
+package.json
+postcss.config.cjs
+README.md
+vite.config.ts
+src/
+  App.tsx
+  main.tsx
+  components/
+    SeatRow.tsx
+    Seat.tsx
+    SeatModal.tsx
+  utils/
+    index.ts
+  types/
+    index.ts
+data/
+  users.csv (headers only)
+  booked_seats.csv (headers only)
+public/data/
+  users.csv (headers only)
+  booked_seats.csv (headers only)
+</pre>
+</div>
+
+<hr/>
+<p>If you want this as a true <code>.docx</code> file I can either:</p>
+<ol>
+<li>Generate a Markdown file and (on your machine) convert using <code>pandoc report.md -o report.docx</code></li>
+<li>Install a Node package to generate .docx directly inside the project (I can add sample script and dependency if you want)</li>
+</ol>
+
+<p>Tell me if you'd like me to:</p>
+<ul>
+<li>Commit this report into the repo</li>
+<li>Attempt to produce a binary <code>.docx</code> in the workspace (I can create a .doc or HTML-based .doc file that Word opens directly)</li>
+<li>Customize the report further (add screenshots, timeline, exact git logs)</li>
+</ul>
+
+</body>
+</html>
