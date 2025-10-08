@@ -71,51 +71,124 @@ export const loadBookedSeatData = async (
 // Generate all seats for the amphitheater
 export const generateSeats = (): Seat[] => {
   const seats: Seat[] = [];
-  const seatsPerRow = 50; // 25 left + 25 right
-  const seatsPerSection = 25;
 
   // Counter for different seat number schemes
   let guestCounter = 1;
   let facultyCounter = 1;
+  let parentsCounter = 1;
   let degreeCounter = 1;
   let studentCounter = 1;
 
-  for (let row = 1; row <= 29; row++) {
-    for (let position = 1; position <= seatsPerRow; position++) {
+  // Total seats to allocate
+  const maxGuests = 100; // 2 rows of Guests (row 2 and row 3)
+  const maxFaculty = 100; // 2 rows of Faculty (rows 4-5)
+  const maxParents = 50; // 1 row of Parents (row 6)
+  const maxStudents = 650; // College Students (enough to fill all rows including full row 25)
+
+  // V-SHAPE TAPERING (REVERSE TAPERING)
+  // Last row = 50 seats (widest, back)
+  // Row 1 = narrowest (front, closest to stage)
+  // Every 2 rows going UP (towards row 1), remove 2 seats TOTAL (1 from each side)
+
+  // Calculate total rows needed for students
+  let estimatedRows = 0;
+  let estimatedSeats = 0;
+  let testRow = 0;
+
+  // Start from widest (50) and work backwards to see how many rows we need
+  while (estimatedSeats < 800 && estimatedRows < 25) {
+    const reductionPairs = Math.floor(testRow / 2);
+    const seatsRemoved = reductionPairs * 2;
+    const seatsInRow = Math.max(50 - seatsRemoved, 10);
+    if (seatsInRow < 10) break;
+    estimatedSeats += seatsInRow;
+    estimatedRows++;
+    testRow++;
+  }
+
+  const totalStudentRows = estimatedRows;
+  const firstStudentRow = 7; // Degree Students start at row 7
+  const lastStudentRow = firstStudentRow + totalStudentRows - 1;
+  const totalRows = Math.min(lastStudentRow, 25); // Limit to row 25 max (remove row 26)
+
+  // Function to get seats per row - V-SHAPE (reverse tapering)
+  // Last row (row 25) = 50 seats (WIDEST, FULL)
+  // Row 1 (closest to stage) = narrowest
+  // Going UP towards row 1, remove 2 seats TOTAL (1 from each side) every 2 rows
+  const getSeatsPerRow = (row: number): number => {
+    // Row 25 gets FULL 50 seats (widest)
+    if (row === 25) return 50;
+
+    // For other rows, calculate from the BACK
+    const rowsFromBack = 25 - row; // 0 for row 25, 1 for row 24, 2 for row 23, etc.
+    const reductionPairs = Math.floor(rowsFromBack / 2); // Remove 2 seats every 2 rows
+    const seatsRemoved = reductionPairs * 2; // Always even (1 from each side)
+    const calculatedSeats = 50 - seatsRemoved;
+    // Ensure even number and minimum of 10
+    return Math.max(
+      calculatedSeats % 2 === 0 ? calculatedSeats : calculatedSeats - 1,
+      10
+    );
+  };
+
+  // Degree Students fill rows 8-13
+
+  // Now generate the actual seats
+  for (let row = 1; row <= totalRows; row++) {
+    const seatsInThisRow = getSeatsPerRow(row);
+    const seatsPerSide = Math.floor(seatsInThisRow / 2);
+    const hasOddSeat = seatsInThisRow % 2 === 1;
+
+    for (let position = 1; position <= seatsInThisRow; position++) {
       let seatNumber = "";
       let category: Seat["categoryReserved"] = "General";
+      let section: "left" | "right" =
+        position <= seatsPerSide ? "left" : "right";
+
+      if (hasOddSeat && position === seatsPerSide + 1) {
+        section = "left"; // Middle seat goes to left
+      }
 
       // Row 1: VIP (numbered VIP-1 to VIP-50)
       if (row === 1) {
         seatNumber = `VIP-${position}`;
         category = "VIP";
       }
-      // Row 2: Guests (G1 to G50)
-      else if (row === 2) {
+      // Rows 2-3: Guests (G1 to G100, 2 rows)
+      else if (row >= 2 && row <= 3 && guestCounter <= maxGuests) {
         seatNumber = `G${guestCounter++}`;
         category = "Guests";
       }
-      // Rows 3-5: Faculty (F1 to F150)
-      else if (row >= 3 && row <= 5) {
+      // Rows 4-5: Faculty (F1 to F100, exactly 100 seats, 2 rows)
+      else if (row >= 4 && row <= 5 && facultyCounter <= maxFaculty) {
         seatNumber = `F${facultyCounter++}`;
         category = "Faculty";
       }
-      // Rows 6-9: Degree Students (D1 to D200)
-      else if (row >= 6 && row <= 9) {
+      // Row 6: Parents (P1 to P50, exactly 50 seats, 1 row)
+      else if (row === 6 && parentsCounter <= maxParents) {
+        seatNumber = `P${parentsCounter++}`;
+        category = "Parents";
+      }
+      // Rows 7-12: Degree Students (all seats in these rows)
+      else if (row >= 7 && row <= 12) {
         seatNumber = `D${degreeCounter++}`;
         category = "Degree Students";
       }
-      // Rows 10-29: College Students (1 to 1000)
-      else {
+      // Rows 13+: College Students with tapering (max 600)
+      else if (row >= 13 && studentCounter <= maxStudents) {
         seatNumber = `${studentCounter++}`;
         category = "College Students";
+      }
+      // Skip any remaining seats after limits reached
+      else {
+        continue;
       }
 
       seats.push({
         id: `seat-${seatNumber}`,
         seatNumber,
         row,
-        section: position <= seatsPerSection ? "left" : "right",
+        section,
         categoryReserved: category,
         status: "available",
       });

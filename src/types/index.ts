@@ -9,6 +9,7 @@ export interface User {
     | "VIP"
     | "Guests"
     | "Faculty"
+    | "Parents"
     | "Degree Students"
     | "College Students";
 }
@@ -22,6 +23,7 @@ export interface Seat {
     | "VIP"
     | "Guests"
     | "Faculty"
+    | "Parents"
     | "Degree Students"
     | "College Students"
     | "General";

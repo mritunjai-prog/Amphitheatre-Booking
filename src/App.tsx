@@ -261,6 +261,7 @@ const App: React.FC = () => {
       VIP: 0,
       Guests: 0,
       Faculty: 0,
+      Parents: 0,
       "Degree Students": 0,
       "College Students": 0,
     };
@@ -271,6 +272,27 @@ const App: React.FC = () => {
 
     return categories;
   }, [users]);
+
+  // Calculate total seats per category
+  const seatCategorySummary = useMemo(() => {
+    const categories: Record<string, number> = {
+      VIP: 0,
+      Guests: 0,
+      Faculty: 0,
+      Parents: 0,
+      "Degree Students": 0,
+      "College Students": 0,
+    };
+
+    seats.forEach((seat) => {
+      const category = seat.categoryReserved;
+      if (category in categories) {
+        categories[category] += 1;
+      }
+    });
+
+    return categories;
+  }, [seats]);
 
   if (loading) {
     return (
@@ -442,12 +464,28 @@ const App: React.FC = () => {
                   color: "from-rose-500 to-rose-600",
                 },
                 {
-                  label: "Guest Reservation",
-                  color: "from-amber-400 to-amber-500",
+                  label: "VIP Seats",
+                  color: "from-purple-500 to-purple-700",
                 },
                 {
-                  label: "Highlighted Seat",
-                  color: "from-primary-400 to-primary-600",
+                  label: "Guest Seats",
+                  color: "from-amber-400 to-orange-500",
+                },
+                {
+                  label: "Faculty Seats",
+                  color: "from-blue-400 to-blue-600",
+                },
+                {
+                  label: "Parents Seats",
+                  color: "from-pink-400 to-pink-600",
+                },
+                {
+                  label: "Degree Students",
+                  color: "from-green-400 to-green-600",
+                },
+                {
+                  label: "College Students",
+                  color: "from-cyan-400 to-cyan-600",
                 },
               ].map((entry) => (
                 <div
@@ -490,6 +528,29 @@ const App: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            {/* Total Seats Per Category */}
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <h3 className="text-base font-semibold text-white mb-2">
+                Total Seats by Category
+              </h3>
+              <div className="grid grid-cols-2 gap-2 text-xs text-slate-200">
+                {Object.entries(seatCategorySummary).map(
+                  ([category, count]) => (
+                    <div
+                      key={category}
+                      className="flex items-center justify-between rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-3 py-2"
+                    >
+                      <span className="font-medium">{category}</span>
+                      <span className="text-emerald-200 font-semibold">
+                        {count} seats
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+
             <p className="text-xs text-slate-400">
               Tip: Click on any seat to assign an eligible guest based on
               reserved categories. Guest-row seats enforce category constraints
@@ -555,21 +616,23 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-col gap-0.5">
-              {Array.from({ length: 29 }, (_, index) => {
-                const rowNumber = index + 1;
-                const rowData = seatsByRow[rowNumber];
+              {Object.keys(seatsByRow)
+                .map(Number)
+                .sort((a, b) => a - b)
+                .map((rowNumber) => {
+                  const rowData = seatsByRow[rowNumber];
 
-                return (
-                  <SeatRow
-                    key={rowNumber}
-                    rowNumber={rowNumber}
-                    leftSeats={rowData?.left || []}
-                    rightSeats={rowData?.right || []}
-                    highlightedSeat={highlightedSeat}
-                    onSeatClick={handleSeatClick}
-                  />
-                );
-              })}
+                  return (
+                    <SeatRow
+                      key={rowNumber}
+                      rowNumber={rowNumber}
+                      leftSeats={rowData?.left || []}
+                      rightSeats={rowData?.right || []}
+                      highlightedSeat={highlightedSeat}
+                      onSeatClick={handleSeatClick}
+                    />
+                  );
+                })}
             </div>
 
             <div className="flex justify-center">

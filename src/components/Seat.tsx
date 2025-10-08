@@ -20,6 +20,8 @@ const Seat: React.FC<SeatProps> = ({ seat, isHighlighted, onClick }) => {
       ? "bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-amber-400/40"
       : seat.categoryReserved === "Faculty"
       ? "bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-blue-500/40"
+      : seat.categoryReserved === "Parents"
+      ? "bg-gradient-to-br from-pink-400 to-pink-600 text-white shadow-pink-500/40"
       : seat.categoryReserved === "Degree Students"
       ? "bg-gradient-to-br from-green-400 to-green-600 text-white shadow-green-500/40"
       : seat.categoryReserved === "College Students"
