@@ -1,11 +1,2 @@
 category,seatNumber,userId,userName,email,phone,notes
 
-# FACULTY
-Faculty,F10,3,Dr. Rajesh Kumar,rajesh.kumar@university.edu,+91-9876543212,Faculty Representative
-
-# DEGREE STUDENTS
-Degree Students,D50,8,Rahul Sharma,rahul.sharma@university.edu,+91-9876543217,Degree Student Representative
-
-# COLLEGE STUDENTS
-College Students,150,6,Sneha Gupta,sneha.gupta@university.edu,+91-9876543215,Student Council Lead
-
