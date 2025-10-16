@@ -171,4 +171,4 @@ If you'd like this converted to a proper `.docx` I can either:
 1. Generate a `.docx` using an npm package (add dependency and script), or
 2. Provide a command you can run locally to convert the `REPORT.md` to `report.docx` using `pandoc`.
 
-Tell me which option you'd prefer and whether to commit the new report files to the repo. 
+Tell me which option you'd prefer and whether to commit the new report files to the repo.
