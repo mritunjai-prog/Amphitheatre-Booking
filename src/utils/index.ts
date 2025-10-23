@@ -10,8 +10,8 @@ export const parseCSVData = (csvText: string): User[] => {
   const results = Papa.parse<User>(csvText, {
     header: true,
     skipEmptyLines: true,
-    transform: (value, field) => {
-      if (field === "id") return parseInt(value);
+    transform: (value) => {
+      // Keep id as string since it can be "D1", "C1", etc.
       return value;
     },
   });
@@ -36,18 +36,14 @@ export const parseBookedSeatsData = (csvText: string): BookedSeatRecord[] => {
   const results = Papa.parse<BookedSeatRecord>(csvText, {
     header: true,
     skipEmptyLines: true,
-    transform: (value, field) => {
-      if (field === "userId") {
-        return parseInt(value, 10);
-      }
+    transform: (value) => {
+      // Keep userId as string since it can be "D1", "C1", etc.
       return value;
     },
   });
 
   return results.data
-    .filter(
-      (record) => Boolean(record.seatNumber) && !Number.isNaN(record.userId)
-    )
+    .filter((record) => Boolean(record.seatNumber) && Boolean(record.userId))
     .map((record) => ({
       ...record,
       seatNumber: normalizeSeatNumber(record.seatNumber as string),
@@ -79,52 +75,50 @@ export const generateSeats = (): Seat[] => {
   let degreeCounter = 1;
   let studentCounter = 1;
 
-  // Total seats to allocate
-  const maxGuests = 100; // 2 rows of Guests (row 2 and row 3)
-  const maxFaculty = 100; // 2 rows of Faculty (rows 4-5)
-  const maxParents = 50; // 1 row of Parents (row 6)
-  const maxStudents = 650; // College Students (enough to fill all rows including full row 25)
+  // Total seats to allocate (actual capacity per user requirements)
+  const maxGuests = 56; // 2 rows of Guests (28 + 28)
+  const maxFaculty = 60; // 2 rows of Faculty (30 + 30)
+  const maxParents = 290; // Parents section (rows 13-19, with tapering)
+  const maxStudents = 388; // College Students (rows 20-27, with tapering for symmetry)
 
   // V-SHAPE TAPERING (REVERSE TAPERING)
   // Last row = 50 seats (widest, back)
   // Row 1 = narrowest (front, closest to stage)
   // Every 2 rows going UP (towards row 1), remove 2 seats TOTAL (1 from each side)
 
-  // Calculate total rows needed for students
-  let estimatedRows = 0;
-  let estimatedSeats = 0;
-  let testRow = 0;
+  // Total rows configuration:
+  // Row 1: VIP (26 seats)
+  // Rows 2-3: Guests (28 seats each)
+  // Rows 4-5: Faculty (30 seats each)
+  // Row 6: REMOVED (0 seats)
+  // Rows 7-12: Degree Students (210 seats)
+  // Rows 13-19: Parents (290 seats)
+  // Rows 20-27: College Students (388 seats)
+  const totalRows = 27; // Fixed to row 27 to accommodate all sections
 
-  // Start from widest (50) and work backwards to see how many rows we need
-  while (estimatedSeats < 800 && estimatedRows < 25) {
-    const reductionPairs = Math.floor(testRow / 2);
-    const seatsRemoved = reductionPairs * 2;
-    const seatsInRow = Math.max(50 - seatsRemoved, 10);
-    if (seatsInRow < 10) break;
-    estimatedSeats += seatsInRow;
-    estimatedRows++;
-    testRow++;
-  }
-
-  const totalStudentRows = estimatedRows;
-  const firstStudentRow = 7; // Degree Students start at row 7
-  const lastStudentRow = firstStudentRow + totalStudentRows - 1;
-  const totalRows = Math.min(lastStudentRow, 25); // Limit to row 25 max (remove row 26)
-
-  // Function to get seats per row - V-SHAPE (reverse tapering)
-  // Last row (row 25) = 50 seats (WIDEST, FULL)
-  // Row 1 (closest to stage) = narrowest
-  // Going UP towards row 1, remove 2 seats TOTAL (1 from each side) every 2 rows
+  // Function to get seats per row - V-SHAPE (reverse tapering) + FIXED front rows
+  // Rows 1-5: FIXED seat counts matching user requirements
+  // Rows 7-28: V-SHAPE tapering (Degree + Parents + College sections)
+  // Row 6: REMOVED (skipped)
   const getSeatsPerRow = (row: number): number => {
-    // Row 25 gets FULL 50 seats (widest)
-    if (row === 25) return 50;
+    // Fixed seats for front rows (actual capacity from user requirements)
+    if (row === 1) return 26; // VIP: 26 seats
+    if (row === 2) return 28; // Guests Row 1: 28 seats
+    if (row === 3) return 28; // Guests Row 2: 28 seats
+    if (row === 4) return 30; // Faculty Row 1: 30 seats
+    if (row === 5) return 30; // Faculty Row 2: 30 seats
+    if (row === 6) return 0; // Row 6 REMOVED - no seats
 
-    // For other rows, calculate from the BACK
-    const rowsFromBack = 25 - row; // 0 for row 25, 1 for row 24, 2 for row 23, etc.
-    const reductionPairs = Math.floor(rowsFromBack / 2); // Remove 2 seats every 2 rows
-    const seatsRemoved = reductionPairs * 2; // Always even (1 from each side)
+    // V-shape tapering for ALL student sections (rows 7-28)
+    // Rows 25-28 get 50 seats (widest back section)
+    // Row 7 gets 32 seats (narrowest front)
+    // Remove 2 seats TOTAL (1 from each side) every 2 rows going UP from row 25
+    if (row >= 25) return 50; // Rows 25-28 all get 50 seats (widest)
+
+    const rowsFromBack = 25 - row; // 0 for row 25, 1 for row 24, etc.
+    const reductionPairs = Math.floor(rowsFromBack / 2);
+    const seatsRemoved = reductionPairs * 2;
     const calculatedSeats = 50 - seatsRemoved;
-    // Ensure even number and minimum of 10
     return Math.max(
       calculatedSeats % 2 === 0 ? calculatedSeats : calculatedSeats - 1,
       10
@@ -164,18 +158,22 @@ export const generateSeats = (): Seat[] => {
         seatNumber = `F${facultyCounter++}`;
         category = "Faculty";
       }
-      // Row 6: Parents (P1 to P50, exactly 50 seats, 1 row)
-      else if (row === 6 && parentsCounter <= maxParents) {
-        seatNumber = `P${parentsCounter++}`;
-        category = "Parents";
+      // Row 6: REMOVED - skip this row entirely
+      else if (row === 6) {
+        continue; // Skip row 6 completely
       }
       // Rows 7-12: Degree Students (all seats in these rows)
       else if (row >= 7 && row <= 12) {
         seatNumber = `D${degreeCounter++}`;
         category = "Degree Students";
       }
-      // Rows 13+: College Students with tapering (max 600)
-      else if (row >= 13 && studentCounter <= maxStudents) {
+      // Rows 13-19: Parents (290 seats total with tapering)
+      else if (row >= 13 && row <= 19 && parentsCounter <= maxParents) {
+        seatNumber = `P${parentsCounter++}`;
+        category = "Parents";
+      }
+      // Rows 20-28: College Students (400 seats with tapering for symmetry)
+      else if (row >= 20 && studentCounter <= maxStudents) {
         seatNumber = `${studentCounter++}`;
         category = "College Students";
       }

@@ -3,34 +3,13 @@ const fs = require("fs");
 const path = require("path");
 const PDFDocument = require("pdfkit");
 const QRCode = require("qrcode");
+const Papa = require("papaparse");
 
 // Read all booked seats
 const bookedSeatsPath = path.join(__dirname, "../data/booked_seats.csv");
 const csvContent = fs.readFileSync(bookedSeatsPath, "utf-8");
-const lines = csvContent.split("\n").slice(1); // Skip header
-
-const tickets = [];
-
-lines.forEach((line) => {
-  if (!line.trim()) return;
-
-  const match = line.match(
-    /"([^"]+)","([^"]+)",(\d+),"([^"]+)","([^"]+)","([^"]+)","([^"]*)"/
-  );
-  if (match) {
-    const [, category, seatNumber, userId, userName, email, phone, notes] =
-      match;
-    tickets.push({
-      category,
-      seatNumber,
-      userId: parseInt(userId),
-      userName,
-      email,
-      phone,
-      notes,
-    });
-  }
-});
+const parsedData = Papa.parse(csvContent, { header: true });
+const tickets = parsedData.data.filter((row) => row.category && row.userName);
 
 console.log(`\n🎫 CONVOCATION TICKET GENERATOR`);
 console.log(

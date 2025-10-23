@@ -1,0 +1,56 @@
+{
+  "processedDate": "2025-10-23T05:39:45.237Z",
+  "newDegreeForm": {
+    "totalResponses": 202,
+    "validStudents": 196,
+    "duplicatesRemoved": 5,
+    "enrollmentConflicts": 2,
+    "skipped": 1
+  },
+  "finalCounts": {
+    "degreeStudents": 196,
+    "collegeStudents": 395,
+    "totalBookings": 591
+  },
+  "duplicates": [
+    {
+      "kept": "Rishabh Pokharna (Row 3)",
+      "removed": "Rishabh Pokharna (Row 30)",
+      "reason": "Same person submitted twice"
+    },
+    {
+      "kept": "Atul Haribhau Kachare (Row 15)",
+      "removed": "Atul Haribhau Kachare (Row 33)",
+      "reason": "Same person submitted twice"
+    },
+    {
+      "kept": "Siddharth Singh (Row 29)",
+      "removed": "Siddharth Singh (Row 111)",
+      "reason": "Same person submitted twice"
+    },
+    {
+      "kept": "Labhanshu vislot (Row 125)",
+      "removed": "Labhanshu vislot (Row 126)",
+      "reason": "Same person submitted twice"
+    },
+    {
+      "kept": "HIMANSHU VYAS (Row 134)",
+      "removed": "HIMANSHU VYAS (Row 184)",
+      "reason": "Same person submitted twice"
+    }
+  ],
+  "conflicts": [
+    {
+      "enrollment": "21CS002302",
+      "personA": "Abhijit Tiwari (abhijittiwari681@gmail.com)",
+      "personB": "Anjali Ahuja (anjaliahuja05002@gmail.com)",
+      "note": "Both kept - manual verification needed"
+    },
+    {
+      "enrollment": "23MBA00385",
+      "personA": "Priyal Dak (dakpriyal5@gmail.com)",
+      "personB": "Esha kothari (eshakothari082001@gmail.com)",
+      "note": "Both kept - manual verification needed"
+    }
+  ]
+}

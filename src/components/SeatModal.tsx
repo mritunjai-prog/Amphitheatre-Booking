@@ -7,7 +7,7 @@ interface SeatModalProps {
   users: User[];
   seats: Seat[];
   onClose: () => void;
-  onAssign: (seatId: string, userId: number) => void;
+  onAssign: (seatId: string, userId: string) => void;
   onRemove: (seatId: string) => void;
 }
 
@@ -19,7 +19,7 @@ const SeatModal: React.FC<SeatModalProps> = ({
   onAssign,
   onRemove,
 }) => {
-  const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
+  const [selectedUserId, setSelectedUserId] = useState<string | null>(null);
 
   if (!seat) return null;
 
@@ -156,7 +156,7 @@ const SeatModal: React.FC<SeatModalProps> = ({
                     value={selectedUserId ?? ""}
                     onChange={(e) =>
                       setSelectedUserId(
-                        e.target.value ? Number(e.target.value) : null
+                        e.target.value ? e.target.value : null
                       )
                     }
                   >

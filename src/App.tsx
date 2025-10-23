@@ -46,16 +46,28 @@ const App: React.FC = () => {
   );
 
   const hydrateFromCsv = useCallback(async () => {
+    console.log("🔄 Starting CSV hydration...");
     const [userData, bookedSeatData] = await Promise.all([
       loadCSVData("/data/users.csv"),
       loadBookedSeatData("/data/booked_seats.csv"),
     ]);
 
+    console.log(`✅ Loaded ${userData.length} users from CSV`);
+    console.log(`✅ Loaded ${bookedSeatData.length} booked seats from CSV`);
+
     const seatLayout = generateSeats();
+    console.log(`✅ Generated ${seatLayout.length} total seats`);
+
     const userById = new Map(userData.map((user) => [user.id, user]));
     const seatByNumber = new Map(
       seatLayout.map((seat) => [seat.seatNumber.toLowerCase(), seat])
     );
+
+    console.log(`📊 User map size: ${userById.size}`);
+    console.log(`📊 Seat map size: ${seatByNumber.size}`);
+
+    let matchedCount = 0;
+    let unmatchedCount = 0;
 
     bookedSeatData.forEach((record) => {
       const seat = seatByNumber.get(record.seatNumber.toLowerCase());
@@ -66,10 +78,19 @@ const App: React.FC = () => {
         seat.assignedUser = user;
         seat.importedFromCsv = true;
         seat.importNotes = record.notes;
+        matchedCount++;
       } else {
-        console.warn("Unable to hydrate booked seat from CSV", record);
+        unmatchedCount++;
+        console.warn("Unable to hydrate booked seat from CSV", {
+          record,
+          foundSeat: !!seat,
+          foundUser: !!user,
+        });
       }
     });
+
+    console.log(`✅ Successfully matched ${matchedCount} booked seats`);
+    console.log(`❌ Failed to match ${unmatchedCount} booked seats`);
 
     setUsers(userData);
     setSeats(seatLayout);
@@ -115,7 +136,7 @@ const App: React.FC = () => {
     setSelectedSeat(seat);
   };
 
-  const handleAssignSeat = (seatId: string, userId: number) => {
+  const handleAssignSeat = (seatId: string, userId: string) => {
     const user = users.find((u) => u.id === userId);
     if (!user) {
       showNotification("User not found!", "error");
@@ -215,7 +236,7 @@ const App: React.FC = () => {
   // Save edited booked assignments from DataViewer
   const handleBookedSaveFromViewer = (
     records: {
-      userId: number | null;
+      userId: string | null;
       seatNumber: string;
       notes?: string;
     }[]

@@ -1,7 +1,7 @@
 // Types for the application
 
 export interface User {
-  id: number;
+  id: string; // Changed from number to string to support "D1", "C1", etc.
   name: string;
   email: string;
   phone: string;
@@ -35,14 +35,14 @@ export interface Seat {
 
 export interface SeatAssignment {
   seatId: string;
-  userId: number;
+  userId: string; // Changed from number to string to support "D1", "C1", etc.
   assignedAt: Date;
 }
 
 export interface BookedSeatRecord {
   category?: string;
   seatNumber: string;
-  userId: number;
+  userId: string; // Changed from number to string to support "D1", "C1", etc.
   userName?: string;
   email?: string;
   phone?: string;

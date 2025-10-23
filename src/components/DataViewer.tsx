@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { User, Seat } from "../types";
 
 interface BookedRecord {
-  userId: number | null;
+  userId: string | null;
   seatNumber: string;
   notes?: string;
 }
@@ -286,7 +286,7 @@ const DataViewer: React.FC<DataViewerProps> = ({
                               copy[idx] = {
                                 ...copy[idx],
                                 userId: e.target.value
-                                  ? parseInt(e.target.value)
+                                  ? e.target.value
                                   : null,
                               };
                               setBookedState(copy);
