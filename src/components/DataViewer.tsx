@@ -285,9 +285,7 @@ const DataViewer: React.FC<DataViewerProps> = ({
                               const copy = [...bookedState];
                               copy[idx] = {
                                 ...copy[idx],
-                                userId: e.target.value
-                                  ? e.target.value
-                                  : null,
+                                userId: e.target.value ? e.target.value : null,
                               };
                               setBookedState(copy);
                             }}

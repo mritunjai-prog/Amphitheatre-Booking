@@ -38,20 +38,21 @@ When you open the system, you'll see four main areas:
 
 This is the visual layout of your entire amphitheater. Think of it as looking down at the venue from above. You'll see:
 
-- 25 rows numbered 1 to 25
-- Each row split into left side and right side with a center aisle
+- **27 rows** numbered 1 to 27 (Row 6 is removed/skipped)
+- Each row split into **left side** and **right side** with a center aisle
 - Small colored squares representing individual seats
-- Row numbers on the left
+- Row numbers displayed on the left
 - Category labels (like "VIP" or "Faculty") on the right
+- **V-shape tapering design**: Rows get wider as you move toward the back (symmetrical design)
 
 ### 2. Summary Cards (Top of Screen)
 
 These show you quick statistics:
 
-- **Total Seats**: 788 seats available in total
-- **Booked Seats**: 570 seats currently assigned
-- **Available Seats**: 218 seats still empty
-- **Utilization**: 72.3% capacity filled
+- **Total Seats**: 1,030 seats available in total
+- **Booked Seats**: 534 seats currently assigned (196 Degree + 338 College)
+- **Available Seats**: 496 seats still empty
+- **Utilization**: 51.8% capacity filled
 
 ### 3. Operations Console (Control Buttons)
 
@@ -72,34 +73,34 @@ Each category of attendee has its own distinctive color. This helps you quickly 
 
 | Color                    | Category             | Location                            | Total Seats | Filled  | Available | Why This Matters                                                  |
 | ------------------------ | -------------------- | ----------------------------------- | ----------- | ------- | --------- | ----------------------------------------------------------------- |
-| 🟣 Purple/Pink Gradient  | **VIP Seats**        | Row 1 (front row, closest to stage) | 50          | 0       | 50        | These are the most prominent seats — easy to spot and direct VIPs |
-| 🟠 Amber/Orange Gradient | **Guest Seats**      | Rows 2-3                            | 100         | 0       | 100       | Keeps guests together near the front for easy coordination        |
-| 🔵 Blue Gradient         | **Faculty Seats**    | Rows 4-5                            | 100         | 0       | 100       | Faculty section is grouped together for protocol and convenience  |
-| 🩷 Pink                   | **Parents Seats**    | Row 6                               | 50          | 0       | 50        | A dedicated section makes it easy for families to find seats      |
-| 🟢 Green Gradient        | **Degree Students**  | Rows 7-12                           | **210**     | **175** | **35**    | Senior students get priority seating in the middle section        |
-| 🔵 Cyan/Teal Gradient    | **College Students** | Rows 13-25 (back section)           | **578**     | **395** | **183**   | This is the largest group and occupies most of the amphitheater   |
+| 🟣 Purple/Pink Gradient  | **VIP Seats**        | Row 1 (front row, closest to stage) | 26          | 0       | 26        | These are the most prominent seats — easy to spot and direct VIPs |
+| 🟠 Amber/Orange Gradient | **Guest Seats**      | Rows 2-3 (28 seats each)            | 56          | 0       | 56        | Keeps guests together near the front for easy coordination        |
+| 🔵 Blue Gradient         | **Faculty Seats**    | Rows 4-5 (30 seats each)            | 60          | 0       | 60        | Faculty section is grouped together for protocol and convenience  |
+| 🩷 Pink Gradient          | **Parents Seats**    | Rows 13-19 (with tapering)          | 290         | 0       | 290       | A dedicated section makes it easy for families to find seats      |
+| 🟢 Green Gradient        | **Degree Students**  | Rows 7-12 (with tapering)           | **210**     | **196** | **14**    | Senior students get priority seating in the middle section        |
+| 🔵 Cyan/Teal Gradient    | **College Students** | Rows 20-27 (back section, tapered)  | **388**     | **338** | **50**    | This is the largest group and occupies the back of amphitheater   |
 
 ### Current Booking Status (as of October 23, 2025)
 
 **Degree Students:**
 
 - Capacity: 210 seats
-- Booked: 175 seats (83.3% full)
-- Available: 35 seats
-- Categories included: M.Tech, MCA, B.Tech final year
+- Booked: 196 seats (93.3% full)
+- Available: 14 seats
+- Categories included: Ph.D., M.Tech, MCA, MBA, B.Tech final year
 
 **College Students:**
 
-- Capacity: 578 seats
-- Booked: 395 seats (68.3% full)
-- Available: 183 seats
+- Capacity: 388 seats
+- Booked: 338 seats (87.1% full)
+- Available: 50 seats
 - Categories included: All undergraduate students, MBA, BBA, BCA
 
 **Overall Status:**
 
-- Total Booked: 570 seats
-- Total Available: 218 seats
-- Utilization: 72.3%
+- Total Booked: 534 seats
+- Total Available: 496 seats
+- Utilization: 51.8%
 
 ### Visual Status Indicators
 
@@ -555,45 +556,46 @@ When you receive new student consent forms:
 
 ### CURRENT STATISTICS (October 23, 2025)
 
-**Total Capacity:** 788 seats  
-**Total Booked:** 570 seats (72.3%)  
-**Total Available:** 218 seats (27.7%)
+**Total Capacity:** 1,030 seats  
+**Total Booked:** 534 seats (51.8%)  
+**Total Available:** 496 seats (48.2%)
 
 **Breakdown by Category:**
 
 | Category             | Capacity | Filled  | Available | % Full    |
 | -------------------- | -------- | ------- | --------- | --------- |
-| VIP                  | 50       | 0       | 50        | 0%        |
-| Guests               | 100      | 0       | 100       | 0%        |
-| Faculty              | 100      | 0       | 100       | 0%        |
-| Parents              | 50       | 0       | 50        | 0%        |
-| **Degree Students**  | **210**  | **175** | **35**    | **83.3%** |
-| **College Students** | **578**  | **395** | **183**   | **68.3%** |
+| VIP                  | 26       | 0       | 26        | 0%        |
+| Guests               | 56       | 0       | 56        | 0%        |
+| Faculty              | 60       | 0       | 60        | 0%        |
+| Parents              | 290      | 0       | 290       | 0%        |
+| **Degree Students**  | **210**  | **196** | **14**    | **93.3%** |
+| **College Students** | **388**  | **338** | **50**    | **87.1%** |
 
 ### SEATING LAYOUT
 
-**Total Rows:** 25  
+**Total Rows:** 27 (Row 6 removed/skipped)  
 **Layout:** Left Section + Center Aisle + Right Section  
-**Row Configuration:** V-shaped tapering (wider at back, narrower at front)
+**Row Configuration:** V-shaped tapering (wider at back, narrower at front for symmetry)
 
 **Row-by-Row Breakdown:**
 
 | Rows  | Category         | Seats per Row | Total Seats |
 | ----- | ---------------- | ------------- | ----------- |
-| 1     | VIP              | 50            | 50          |
-| 2-3   | Guests           | 50 each       | 100         |
-| 4-5   | Faculty          | 50 each       | 100         |
-| 6     | Parents          | 50            | 50          |
-| 7-8   | Degree Students  | 46 each       | 92          |
-| 9-10  | Degree Students  | 44 each       | 88          |
-| 11-12 | Degree Students  | 42 each       | 84          |
-| 13    | College Students | 42            | 42          |
-| 14-15 | College Students | 40 each       | 80          |
-| 16-17 | College Students | 38 each       | 76          |
-| 18-19 | College Students | 36 each       | 72          |
-| 20-21 | College Students | 34 each       | 68          |
-| 22-23 | College Students | 32 each       | 64          |
-| 24-25 | College Students | 30 each       | 60          |
+| 1     | VIP              | 26            | 26          |
+| 2-3   | Guests           | 28 each       | 56          |
+| 4-5   | Faculty          | 30 each       | 60          |
+| 6     | **REMOVED**      | 0             | 0           |
+| 7     | Degree Students  | 32            | 32          |
+| 8-9   | Degree Students  | 34 each       | 68          |
+| 10-11 | Degree Students  | 36 each       | 72          |
+| 12    | Degree Students  | 38            | 38          |
+| 13    | Parents          | 38            | 38          |
+| 14-15 | Parents          | 40 each       | 80          |
+| 16-17 | Parents          | 42 each       | 84          |
+| 18-19 | Parents          | 44 each       | 88          |
+| 20-21 | College Students | 46 each       | 92          |
+| 22-26 | College Students | 50 each       | 250         |
+| 27    | College Students | 46 (388 max)  | 46          |
 
 ### FILE LOCATIONS
 
@@ -606,9 +608,9 @@ When you receive new student consent forms:
 
 **Tickets:**
 
-- `tickets/ticket_D1.pdf` to `tickets/ticket_D175.pdf` - Degree student tickets
-- `tickets/ticket_C1.pdf` to `tickets/ticket_C395.pdf` - College student tickets
-- `tickets/generation_summary.json` - Generation report
+- `tickets/ticket_D1.pdf` to `tickets/ticket_D196.pdf` - Degree student tickets (196 total)
+- `tickets/ticket_C1.pdf` to `tickets/ticket_C338.pdf` - College student tickets (338 total)
+- `tickets/generation_summary.json` - Generation report (534 tickets generated)
 
 **Scripts:**
 

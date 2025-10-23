@@ -155,9 +155,7 @@ const SeatModal: React.FC<SeatModalProps> = ({
                     className="input-field"
                     value={selectedUserId ?? ""}
                     onChange={(e) =>
-                      setSelectedUserId(
-                        e.target.value ? e.target.value : null
-                      )
+                      setSelectedUserId(e.target.value ? e.target.value : null)
                     }
                   >
                     <option value="">Choose a guest…</option>
