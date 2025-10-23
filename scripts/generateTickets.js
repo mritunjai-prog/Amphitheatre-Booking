@@ -95,48 +95,55 @@ async function generateTicket(ticket) {
         margin: 1,
       });
 
-      // HEADER - University Name
+      // Add Logo at top-left
+      const logoPath = path.join(__dirname, "../image/logo.png");
+      if (fs.existsSync(logoPath)) {
+        doc.image(logoPath, 40, 40, { width: 80, height: 80 });
+      }
+
+      // HEADER - University Name (adjusted for logo)
       doc
-        .fontSize(24)
+        .fontSize(20)
         .fillColor("#1a237e")
         .font("Helvetica-Bold")
-        .text("SIR PADAMPAT SINGHANIA UNIVERSITY", { align: "center" });
+        .text("SIR PADAMPAT SINGHANIA", 130, 40, { align: "left", width: 420 });
 
-      doc.moveDown(0.3);
+      doc
+        .fontSize(20)
+        .fillColor("#1a237e")
+        .font("Helvetica-Bold")
+        .text("UNIVERSITY", 130, 63, { align: "left", width: 420 });
+
       doc
         .fontSize(16)
         .fillColor("#283593")
-        .text("CONVOCATION CEREMONY 2025", { align: "center" });
+        .text("CONVOCATION CEREMONY 2025", 130, 90, { align: "left" });
 
-      doc.moveDown(0.2);
       doc
         .fontSize(11)
         .fillColor("#666666")
         .font("Helvetica")
-        .text("Date: 28th December, 2025 | Time: 4:30 PM", { align: "center" });
+        .text("Date: 28th October, 2025 | Time: 4:30 PM", 130, 110, {
+          align: "left",
+        });
 
       // Decorative line
-      doc.moveDown(0.5);
       doc
         .strokeColor("#1a237e")
         .lineWidth(2)
-        .moveTo(40, doc.y)
-        .lineTo(560, doc.y)
+        .moveTo(40, 130)
+        .lineTo(560, 130)
         .stroke();
-
-      doc.moveDown(1);
 
       // TICKET TITLE
       doc
         .fontSize(22)
         .fillColor("#d32f2f")
         .font("Helvetica-Bold")
-        .text("ENTRY TICKET", { align: "center" });
-
-      doc.moveDown(1);
+        .text("ENTRY TICKET", 40, 150, { align: "center" });
 
       // Guest Information Box
-      const boxTop = doc.y;
+      const boxTop = 185;
       doc.rect(40, boxTop, 520, 180).fillAndStroke("#f5f5f5", "#1a237e");
 
       doc.fillColor("#000000");
@@ -161,12 +168,6 @@ async function generateTicket(ticket) {
 
         yPos += 30;
       }
-
-      // Phone
-      doc.fontSize(11).font("Helvetica-Bold").text("CONTACT:", 60, yPos);
-      doc.fontSize(11).font("Helvetica").text(ticket.phone, 180, yPos);
-
-      yPos += 30;
 
       // Category
       doc.fontSize(11).font("Helvetica-Bold").text("CATEGORY:", 60, yPos);
@@ -255,12 +256,9 @@ async function generateTicket(ticket) {
 
       doc
         .fontSize(7)
-        .text(
-          "For queries, contact: convocation@spsu.ac.in | +91-XXXX-XXXXXX",
-          40,
-          755,
-          { align: "center" }
-        );
+        .text("For queries, contact: studentwelfare@spsu.ac.in", 40, 755, {
+          align: "center",
+        });
 
       doc.end();
 
