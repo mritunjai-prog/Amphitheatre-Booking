@@ -8,6 +8,7 @@ export interface User {
   category:
     | "VIP"
     | "Guests"
+    | "Press"
     | "Faculty"
     | "Parents"
     | "Degree Students"
@@ -22,6 +23,7 @@ export interface Seat {
   categoryReserved:
     | "VIP"
     | "Guests"
+    | "Press"
     | "Faculty"
     | "Parents"
     | "Degree Students"
@@ -40,9 +42,9 @@ export interface SeatAssignment {
 }
 
 export interface BookedSeatRecord {
-  category?: string;
+  category?: string; // Optional - can be derived from seatNumber prefix
   seatNumber: string;
-  userId: string; // Changed from number to string to support "D1", "C1", etc.
+  userId?: string; // Optional - defaults to seatNumber if not provided
   userName?: string;
   email?: string;
   phone?: string;

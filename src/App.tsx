@@ -47,9 +47,10 @@ const App: React.FC = () => {
 
   const hydrateFromCsv = useCallback(async () => {
     console.log("🔄 Starting CSV hydration...");
+    const cacheBuster = `?t=${Date.now()}`;
     const [userData, bookedSeatData] = await Promise.all([
-      loadCSVData("/data/users.csv"),
-      loadBookedSeatData("/data/booked_seats.csv"),
+      loadCSVData(`/data/users.csv${cacheBuster}`),
+      loadBookedSeatData(`/data/booked_seats.csv${cacheBuster}`),
     ]);
 
     console.log(`✅ Loaded ${userData.length} users from CSV`);
@@ -68,6 +69,8 @@ const App: React.FC = () => {
 
     let matchedCount = 0;
     let unmatchedCount = 0;
+    let noSeatCount = 0;
+    let noUserCount = 0;
 
     bookedSeatData.forEach((record) => {
       const seat = seatByNumber.get(record.seatNumber.toLowerCase());
@@ -81,16 +84,28 @@ const App: React.FC = () => {
         matchedCount++;
       } else {
         unmatchedCount++;
-        console.warn("Unable to hydrate booked seat from CSV", {
-          record,
-          foundSeat: !!seat,
-          foundUser: !!user,
-        });
+        if (!seat) noSeatCount++;
+        if (!user) noUserCount++;
+
+        // Only log first 5 failures for debugging
+        if (unmatchedCount <= 5) {
+          console.error("❌ Failed to match:", {
+            seatNumber: record.seatNumber,
+            userId: record.userId,
+            userName: record.userName,
+            foundSeat: !!seat,
+            foundUser: !!user,
+          });
+        }
       }
     });
 
     console.log(`✅ Successfully matched ${matchedCount} booked seats`);
     console.log(`❌ Failed to match ${unmatchedCount} booked seats`);
+    if (unmatchedCount > 0) {
+      console.log(`   - ${noSeatCount} seats not found in layout`);
+      console.log(`   - ${noUserCount} users not found in users.csv`);
+    }
 
     setUsers(userData);
     setSeats(seatLayout);
@@ -281,6 +296,7 @@ const App: React.FC = () => {
     const categories: Record<User["category"], number> = {
       VIP: 0,
       Guests: 0,
+      Press: 0,
       Faculty: 0,
       Parents: 0,
       "Degree Students": 0,

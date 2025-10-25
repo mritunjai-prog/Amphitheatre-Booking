@@ -1,389 +1,852 @@
-id,name,email,phone
-1,Anurag 5,anurag.btech2023@spsu.ac.in,9352940030
-2,Lakshya verma,lakshya.verma@spsu.ac.in,8824949506
-3,Y Avanthika,avanthika.btech2024@spsu.ac.in,8309087459
-4,Kapil meghwal,kapil.meghwal@spsu.ac.in,7597790160
-5,Vundekoti Karthik,vundekoti karthik.btech2025@spsu.ac.in,6300833508
-6,Sanjay venkat kumar,venkatkumar.btech2024@spsu.ac.in,8555882350
-7,Dashrath Pal Singh,dashrath.btech2023@spsu.ac.in,8619711639
-8,MANTOORI ROSHINI,roshinimantoori.btech2024@spsu.ac.in,9618727875
-9,Anima Jain,anima.bba2023@spsu.ac.in,8741960353
-10,T Ishwarya,ishwarya.btech2024@spsu.ac.in,8688919936
-11,Rahul Sharma,rahulsharma.mba2024@spsu.ac.in,9407017433
-12,Divya Inani,divya.mba2024@spsu.ac.in,6377967826
-13,M Adarsh,adarsh.btech2024@spsu.ac.in,6302621981
-14,Mohammad Sher Ali,sherali.btech2024@spsu.ac.in,9441132807
-15,K SaiPrakash Reddy,k.btech2023@spsu.ac.in,6300878567
-16,Rahullohar,rahullohar.bca2024@spsu.ac.in,8949118420
-17,Mohammed Shaheed,shaheed.btech2024@spsu.ac.in,9154811747
-18,Pathan Tahasheen,tahasheen.btech2024@spsu.ac.in,9392710711
-19,K.Srinidhi,srinidhi.btech2024@spsu.ac.in,8919575332
-20,Harshil Sharma,harshilsharma.bca2024@spsu.ac.in,6378498638
-21,Nilesh Parmar,nilesh.btech2023@spsu.ac.in,8949487159
-22,Archita Chandna,architachandna.btech2025@spsu.ac.in,8949938943
-23,Bandari Lokesh Goud,lokeshbandari.btech2024@spsu.ac.in,8897650318
-24,Kunchala Srilekha,srilekha.btech2024@spsu.ac.in,9701471188
-25,Vinita Choudhary,vinita.mba2023@spsu.ac.in,8000907628
-26,Abhinaya Mallavarapu,abhinaya.btech2024@spsu.ac.in,9492812191
-27,Shubham Joshi,shubham.joshi@spsu.ac.in,9987074158
-28,Rohan Shekhawat,rohan.mba2023@spsu.ac.in,8875597404
-29,Chitra Malviya,chitra.mba2023@spsu.ac.in,9571314559
-30,Puli Sai Siddartha,siddarthasai.btech2024@spsu.ac.in,7989306080
-31,Harshini,harshini.btech2024@spsu.ac.in,8500824491
-32,Bhavika Sharma,bhavika.sharma@spsu.ac.in,9610994241
-33,Neha rao,neharao.bba2025@spsu.ac.in,6375817563
-34,Anrita Sharma,amritasharma.btech2025@spsu.ac.in,8878603326
-35,Vedika jain,vedikajain.btech2024@spsu.ac.in,8107973350
-36,Krish Jain,krish.jain@spsu.ac.in,77370 64212
-37,UMA SUTHAR,uma.suthar@spsu.ac.in,9106820879
-38,Hardik Nyatee,hardik.nyatee@spsu.ac.in,9119267069
-39,Om prakash Jat,omprakashjat.mba2025@spsu.ac.in,8905625275
-40,Y.SURAJ KUMAR,surajyadav.btech2025@spsu.ac.in,6301436629
-41,Ch T Bhargavi,tirumalabhargavi.btech2024@spsu.ac.in,8247803536
-42,Shubh paliwal,shubh.bba2023@spsu.ac.in,8742022349
-43,Tarun Nagar,tarun.nagar@spsu.ac.in,8949886524
-44,k.udaya vyshnavi,vyshanavikota.btech2025@spsu.ac.in,8519930688
-45,PRANAY JAIN,pranay.btech2024@spsu.ac.in,7427070367
-46,Khushi Sharma,khushisharma.bba2024@spsu.ac.in,9950697575
-47,Harshvardhan Singh Ranawat,harshvardha.mba2024@spsu.ac.in,8583805814
-48,Ajay Dewasi,ajay.btech2023@spsu.ac.in,8824715807
-49,Vanith Kumar,vanithkumar.btech2024@spsu.ac.in,8639425787
-50,MANOGNA.G,manogna.btech2024@spsu.ac.in,9398805104
-51,Mahipal Singh,mahipal.btech2023@spsu.ac.in,9216745567
-52,Kirti Vardhini Vyas,kirti vardhini vyas,7014910488
-53,Shachi Patria,shachipatria.btech2025@spsu.ac.in,9799319556
-54,K.Hasini,hasinikondapalli.btech2025@spsu.ac.in,9603576653
-55,Bhimishetti Lohith,bhimishetti.btech2023@spsu.ac.in,9381892473
-56,Rao Varshith,varshith.btech2024@spsu.ac.in,9121312242
-57,Narisetty Dinesh Kumar,narisetty.btech2023@spsu.ac.in,9618253212
-58,Jumana Hussain,jumanahussain.bca2024@spsu.ac.in,9799100733
-59,Fatema pathan,fatema.bba2024@spsu.ac.in,7976338231
-60,Piyush Sanadhya,piyush.mba2023@spsu.ac.in,8619194050
-61,Dinesh Singh Parmar,dinesh.bca2024@spsu.ac.in,6378910055
-62,Rudra Pratap Singh Chouhan,rudrapratapsingh.bca2024@spsu.ac.in,79769109092
-63,Nidhi jain,nidhijain.mba2025@spsu.ac.in,7597897898
-64,Tripti Joshi,tripti.mba2023@spsu.ac.in,9166992833
-65,Dhruv Sen,dhruv.bca2023@spsu.ac.in,7058731006
-66,Aadi Jain,aadi.btech2023@spsu.ac.in,7850951927
-67,Mohammad Kaif,mohammad.kaif@spsu.ac.in,9509343438
-68,Kartik sharma,kartiksharma.mba2023@spsu.ac.in,8005988291
-69,AMGOTH UMESH NAIK,umeshnaik.btech2024@spsu.ac.in,9347736161
-70,Gouri soni,gouri.mba2024@spsu.ac.in,83026 33976
-71,Mayank Parihar,mayank.parihar@spsu.ac.in,8290627397
-72,Madhavan Bohra,madhavan.btech2023@spsu.ac.in,6367879784
-73,Shaleen Bapna,shaleenbapna.btech2025@spsu.ac.in,8279177571
-74,Ismail murtaza,ismail.bca2023@spsu.ac.in,9587053147
-75,Yuvraj Patidar,yuvrajpatidar.btech2024@spsu.ac.in,9521464117
-76,Ayan Akhtar,ayan.bca2023@spsu.ac.in,8005723537
-77,Dhruv Jain,dhruvjain.btech2023@spsu.ac.in,7041631023
-78,Siddharth Singh,siddharth.singh@spsu.ac.in,9413679746
-79,Rahul,rahul.btech2023@spsu.ac.in,7665214091
-80,C.Ram Charan,chadarasipalli.btech2023@spsu.ac.in,8639202608
-81,Neeraj Kumawat,neeraj.betch2023@spsu.ac.in,8000310974
-82,Kasula Shiva,kasula.shiva@spsu.ac.in,9866543713
-83,Srikar samala,samala.btech2023@spsu.ac.in,8008076124
-84,Rishith,rishithbadikala.btech2024@spsu.ac.in,8688457886
-85,Param Taimni,param.mba2023@spsu.ac.in,8279140515
-86,S.Prasanthi,prasanthi.btech2024@spsu.ac.in,9391108096
-87,Yogita Chauhan,yogita.chauhan@spsu.ac.in,6354972974
-88,Survendra Nayak,survendra.nayak@spsu.ac.in,6377126053
-89,Aradhya.S,aradhya.btech2024@spsu.ac.in,9392752996
-90,Rakshit joshi,rakshit.btech2023@spsu.ac.in,9216772715
-91,Divyaraj sharma,divyaraj.sharma@spsu.ac.in,7374974585
-92,Ofori Kelvin Junior,mailto:oforijnrkelvin.mtech2025@spsu.ac.in,+91 99836 14465/ +233 0558269377
-93,Rinkal ranka,rinkal.bca2024@spsu.ac.in,6367493839
-94,Vaibhav Chaturvedi,vaibhavchaturvedi.btech2025@spsu.ac.in,7239914495
-95,Natwar kumawat,natwar.btech2023@spsu.ac.in,6367612886
-96,Mohammed Kazim,kazim.mba2023@spsu.ac.in,9602021277
-97,Sanjivini kanojia,sanjivini.mba2024@spsu.ac.in,8905373602
-98,Kanak Sharma,kanaksharma.bba2024@spsu.ac.in,8669054649
-99,Yogender Sharma,yogendersharma.btech2023@spsu.ac.in,9805197007
-100,Divya Raj Lohar,divyarajlohar.btech2025@spsu.ac.in,7426086889
-101,Paripelli.bhanuteja,bhanutejaparipelli.btech2025@spsu.ac.in,8520050235
-102,Kartik Shrimali,kartik.mba2023@spsu.ac.in,8619140226
-103,Dhruv Jethi,dhruvjethi.btech2023@spsu.ac.in,7878044107
-104,Shivbhagawan janu,shivbhagwan.btech2023@spsu.ac.in,9057565071
-105,Puran Dangi,puran.btech2023@spsu.ac.in,8619139063
-106,Manish Kumar MIshra,manishmishra.mba2024@spsu.ac.in,9310810548
-107,Rohit Vaishnav,rohitvaishnav.btech2023@spsu.ac.in,6350285908
-108,K.Kavya,katarukavya.btech2024@spsu.ac.in,6302972931
-109,M.sri vivek,srivivek.btech2024@spsu.ac.in,9346513123
-110,Anugu Rishidhar,rishidhar.btech2024@spsu.ac.in,6300228789
-111,YARASANI PRATHAP REDDY,prathap.btech2024@spsu.ac.in,9281449494
-112,Siddharth Singh,siddharth.mba2023@spsu.ac.in,8130633956
-113,Ritik Prajapat,ritik.bca2024@spsu.ac.in,9672552009
-114,Gopesh mathur,gopesh.mathur@spsu.ac.in,7850942941
-115,Akshith reddy tenaty,akshith.btech2024@spsu.ac.in,9849538466
-116,Mohit singh bhati,mohit.bhati@spsu.ac.in,7300221339
-117,Kasiralla Meghana,meghana.btech2024@spsu.ac.in,6301602697
-118,Lavina Sharma,lavina.sharma@spsu.ac.in,7297087763
-119,Vandana Goyal,vandana.goyal@spsu.ac.in,9509198592
-120,Muskan Choudhary,muskan.choudhary@spsu.ac.in,8306827056
-121,P sai,saiponduri.btech2024@spsu.ac.in,7993862605
-122,P.VARSHANTH,varshanthperumalla.btech2024@spsu.ac.in,9000232852
-123,Vaibhavi jain,vaibhavi.btech2023@spsu.ac.in,8000532015
-124,Ajay Singh Ranawat,ajayranawat.mba2023@spsu.ac.in,9887932478
-125,Raghav Jhawar,raghav.jhawar@spsu.ac.in,8107299993
-126,Anurag mishra,anuragmishra.bba2023@spsu.ac.in,6207684699
-127,Yashvendra pal Singh,yashvendrasingh.bballb2025@spsu.ac.in,6376416239
-128,Murtaza Kanor,murtaza.kanor@spsu.ac.in,7737728354
-129,Anisha Raju,anisharaju.bca2025@spsu.ac.in,8209433605
-130,Gautam sahitya,gautam.sahitya@spsu.ac.in,6367456934
-131,Anuj bharadia,anuj.bharadia@spsu.ac.in,8529209765
-132,Udit Soni,udit.btech2024@spsu.ac.in,8302308101
-133,Hatim Sidhpur wala,hatsid000@gmail.com,74270 68253
-134,Narendra Singh Deora,narendra.deora@spsu.ac.in,9166567735
-135,SADDAM HUSAIN,saddam.mba2023@spsu.ac.in,9001447676
-136,Parakh Shah,parakh.mba2023@spsu.ac.in,9549205393
-137,A.Kotireddy,kotireddyannapureddy21@gmail.com,8977426798
-138,Arpit Sharma,arpit.btech2023@spsu.ac.in,8107008254
-139,Priyanka Prajapati,priyanka.mba2023@spsu.ac.in,7984600981
-140,Harsh jaiswal,harsh.jaiswal@spsu.ac.in,8955445299
-141,M Bhanu Reddy,bhanuprakash.reddy@spsu.ac.in,9000653367
-142,KASIREDDY SRINADH REDDY,srinath.reddy@spsu.ac.in,7981186068
-143,N Naveen,naveen.n@spsu.ac.in,9347580741
-144,N Sai Kiran Reddy,saikiran.reddy@spsu.ac.in,7569241793
-145,Laasyasri.Veeravelli,laasyasri.btech2025@spsu.ac.in,8985758071
-146,Choda.Jyothi swarupa,jyothiswarupa.btech2025@spsu.ac.in,7670859154
-147,Doyal Dangi,doyaldangi.btech2025@2025.ac.in,7728828892
-148,Bhavyanshi paliwal,bhavyanshipaliwal.btech2025@spsu.ac.in,9079717972
-149,Garima Rathore,garima.bba2024@spsu.ac.in,8209718078
-150,MAHENDRA H,mahendra.mtech2023@spsu.ac.in,9502524396
-151,HARINI AYUNUGU,hariniayunugu.btech2025@spsu.ac.in,9399953949
-152,Khushi garg,khushi.garg@spsu.ac.in,9166958932
-153,A.maniswaritha,ankireddymaniswaritha.btech2025@spsu.ac.in,8341086814
-154,Nakirikanti kiran kumar,kirankumar.btech2025@spsu.ac.in,6281467537
-155,CHINTA PRUTHVI MAHESH,pruthvimahesh.btech2025@spsu.ac.in,9959653983
-156,Palepu Karthik,palepu.btech2023@spsu.ac.in,7995436027
-157,Tanishka Sharma,tanishka.sharma@spsu.ac.in,9351068561
-158,Khushbu chouhan,khushbuchouhan.bca2024@spsu.ac.in,7976635183
-159,G. Jashwika,jashwikagujjala.btech2025@spsu.ac.in,9000428484
-160,Ovesh Raza,ovesh.raza@spsu.ac.in,7296834666
-161,Patti Sriram,srirampatti.btech2025@spsu.ac.in,8897076869
-162,Tosif Ahmed Sheikh,tosifahmed.sheikh@spsu.ac.in,9829028338
-163,Monis Ali,monis.mba2023@spsu.ac.in,8109847100
-164,Anish Dhing,anishdhing.mba2023@spsu.ac.in,6377138593
-165,Anurag Mishra,anurag.mishra@spsu.ac.in,9461132447
-166,Vinay jonwal,vinayjonwal.bca2025@spsu.ac.in,9928850930
-167,NEELESH SOLANKI,neelesh.bca2023@spsu.ac.in,8058694001
-168,Harshita Pagariya,harshitapagariya.mba2024@spsu.ac.in,8107855548
-169,Rinku Mundel,rinkumundel.mba2024@ spsu.ac.in,6375433434
-170,Jahnavi modi,jahnavimodi.mba2024@spsu.ac.in,8764078895
-171,Jeevraj jaanu,jeevraj.btech2023@spsu.ac.in,8005652938
-172,Shubhanshi Jain,shubhanshi.jain@spsu.ac.in,7697312222
-173,Naveen Kumar,naveenkumar.btech2024@spsu.ac.in,9603899038
-174,Gaurav saragara,gaurav.btech2023@spsu.ac.in,9509852653
-175,Jeet Dave,jeet.btech2024@spsu.ac.in,9664204658
-176,Nikhilesh sriram Ruthala,ruthala.btech2023@spsu.ac.in,9391518657
-177,V.Tejaswini,tejaswini.btech2024@spsu.ac.in,6305695156
-178,Manish Shivavtar Sharma,manish.sharma@spsu.ac.in,9405412259
-179,Hitesh Suthar,hitesh.suthar@spsu.ac.in,9079659450
-180,Harshvardhan singh dulawat,harshvardhan.mtech2023@spsu.ac.in,7229887373
-181,Alfez ali,alfezali.bba2024@spsu.ac.in,7300078386
-182,Pradumna Tiwari,pradumnatiwari.mba2024@spsu.ac.in,7880566357
-183,Joginder pratap singh hada,joginderhada.mba2025@spsu.ac.in,7877050033
-184,Bharat Vaishnav,bharat.btech2024@spsu.ac.in,6378585448
-185,Varkalameghana,meghanavarkala.btech2024@spsu.ac.in,7793946968
-186,Yuvraj lohar,yuvraj.lohar@spsu.ac.in,7627085906
-187,K.GOWRINATH REDDY,gowrinath.btech2024@spsu.ac.in,9618518818
-188,K.Sandeep Reddy,katreddysandeep.btech2025@spsu.ac.in,7569780307
-189,Chhavi Singh,chhavi.btech2023@spsu.ac.in,7522848311
-190,Dewanshi Karnawat,dewanshi.btech2023@spsu.ac.in,7357019273
-191,Ajay Singh kumawat,ajaykumawat.mtech2023@spsu.ac.in,8005858349
-192,Harkirat Kaur Dhillon,kaurdhillon.bdes2024@spsu.ac.in,8441999555
-193,Priya Jagetiya,priya.jagetiya@spsu.ac.in,7413828541
-194,Neha Nayak,neha.nayak@spsu.ac.in,7023711739
-195,Dhruv Dwivedi,dhruv.btech2023@spsu.ac.in,6367186447
-196,Saloni Suhalka,saloni.mba2023@spsu.ac.in,6378329968
-197,Harshith,harshith.surishetty@spsu.ac.in,8639356616
-198,Aniruddha Modi,aniruddha.mba2023@spsu.ac.in,9111010296
-199,Pradhuman Dadhich,pradhuman.dadhich@spsu.ac.in,8949429914
-200,Sakshi,sakshi.kachchawah@spsu.ac.in,74838782899
-201,Danisha Fatima,fatimadanisha.btech2025@spsu.ac.in,9636099066
-202,Dev Ameta,devameta.btech2025@spsu.ac.in,8824931738
-203,Mohit Teli,mohit.teli@spsu.ac.in,7877644198
-204,Ayancha Lohith Sai Manikanta,ayanchabtech2023@spsu.ac.in,8187830698
-205,Sama Adithya Reddy,adithiya.reddy@spsu.ac.in,9370054038
-206,Thakur Akshay Singh,akshay.thakur@spsu.ac.in,7675838243
-207,Neha patidar,nehapatidar.bba2025@spsu.ac.in,7879487196
-208,Michael Okoye,michaelchiemerieokoye.phd2025@spsu.ac.in,+91 7413-054645
-209,Vishal Bandhu Tiwari,vishal.tiwari@spsu.ac.in,7340034460
-210,Vishesh vaishnav,visheshvaishnav.btech2025@spsu.ac.in,9928912535
-211,Lakshya choudhary,lakshyachoudhary.btech2025@spsu.ac.in,9352142642
-212,Hemshree Sharma,hemshree.bca2024@spsu.ac.in,8079063990
-213,Khushi Soni,khushisoni.btech2024@spsu.ac.in,8824080112
-214,Kavish Mali,kavishmali.btech2025@spsu.ac.in,7877978309
-215,Khushbu Solanki,khushbusolanki.btech2025@spsu.ac.in,9588958330
-216,Kunal Keer,kunalkeer.btech2025@spsu.ac.in,9460182768
-217,Khwahish sharma,khwahishsharma.btech2025@spsu.ac.in,9001870086
-218,Ekta Chauhan,ektachauhan.btech2025@spsu.ac.in,9929222749
-219,Ritish Maroo,ritishmaroo.btech2025@spsu.ac.in,9024615355
-220,Ditya saini,ditya.saini@spsu.ac.in,9001472795
-221,Khushi ameta,khushi.ameta@spsu.ac.in,8849497734
-222,Kanishka Kunwar,kanishka.kunwar@spsu.ac.in,8426908583
-223,Laxminivas reddy,laxminivas.reddy@spsu.ac.in,9390536136
-224,N Rishitha,nagareddy.btech2023@spsu.ac.in,7075007561
-225,Shrey Khandelwal,shrey.bba2024@spsu.ac.in,9407145933
-226,Nitesh Rathore,nitesh.btech2024@spsu.ac.in,9201449093
-227,Yashsavi Paliwal,yashsavipaliwal.btech2025@spsu.ac.in,8209127115
-228,Tanisha soni,tanishasoni.btech2025@spsu.ac.in,9462749133
-229,Rashi Ranjan,rashiranjan.btech2024@spsu.ac.in,7291036078
-230,Ankitha Reddy,ankitha.btech2024@spsu.ac.in,8688025039
-231,Yugvi Jain,yugvi.bdes2024@spsu.ac.in,8949775183
-232,Ansh shrotriya,anshshrotriya.btech2024@spsu.ac.in,8319523538
-233,K Pavankumar,pavankomati.btech2025@spsu.ac.in,9490295522
-234,Varshini dumne,varshinidumne.btech2025@spsu.ac.in,7801082442
-235,K rama siddhardha,sidharshakomminapally.btech2025@spsu.ac.in,8121240398
-236,Khwaish jain,khwaishjain.bca2025@spsu.ac.in,9116426627
-237,Yuvraj Singh,yuvrajsingh.btech2023@spsu.ac.in,9828945229
-238,Prachi Menaria,prachi.bca2023@spsu.ac.in,6375692335
-239,Daksha Mali,daksha.bca2023@spsu.ac.in,7023698627
-240,Nitesh Athwal,nitesh.athwal@spsu.ac.in,8302931910
-241,Prakash Kumar,prakashkumar.bballb2025@spsu.ac.in,6376845373
-242,Khushi Mukesh Modi,khushi.modi@spsu.ac.in,7977440728
-243,Joelrex Barrey,joelrex.btech2024@spsu.ac.in,9963529479
-244,Tanisha Mehta,tanisha.mehta@spsu.ac.in,9799236368
-245,Jahanvi Rajsoni,rajsoni.btech2024@spsu.ac.in,9001123985
-246,Harshit Yadav,harshitjatav.btech2024@spsu.ac.in,9509708505
-247,KONDA SREEVARDHAN REDDY,sreevardhanreddy.btech2024@spsu.ac.in,7780641200
-248,Prashanthi Vadlamudi,prashanthivadlamudi.btech2025@spsu.ac.in,8688240342
-249,V.Meghana,vaddepalli.btech2023@spsu.ac.in,9440538067
-250,Anchal ghawari,anchal.ghawari@spsu.ac.in,7742230732
-251,Murtaza Prithviraj,murtaza.mba2024@spsu.ac.in,8003876754
-252,Sai rahul chingram,sairahul.btech2024@spsu.ac.in,7981003299
-253,Bukke Ramesh Naik,ramesh.naik@spsu.ac.in,6302542194
-254,Marcel kaatuu,marcelkaatuu.btech2025@spsu.ac.in,87694 42709
-255,Nagaboina Naveen,naveennagaboina.btech2024@spsu.ac.in,9347453958
-256,S.Abhinay,abhinay.btech2024@spsu.ac.in,7013909239
-257,Jyoti Singh,jyoti.mba2023@spsu.ac.in,8529312583
-258,Debbeta Vishali,vishalidebbeta.btech2024@spsu.ac.in,9866933217
-259,Shaik Kathija Firdos,kathijafirdos.btech2024@spsu.ac.in,6301939614
-260,Suvarna.b,suvarnab.btech2024@spsu.ac.in,8302131400
-261,Ryali Divyanagaprathibha,divyanagaprathibha.btech2024@spsu.ac.in,8464057333
-262,Manvi Rawal,manvi.mba2023@spsu.ac.in,9672644741
-263,Dakshita Maheshwari,dakshita.mba2023@spsu.ac.in,8209376536
-264,Bethu Harshith,harshithbethu.btech2024@spsu.ac.in,7569566582
-265,Bhoga Sriram,sriram.btech2024@spsu.ac.in,8520024398
-266,Saroj Choudhary,saroj.mba2023@spsu.ac.in,8209815696
-267,PATNAM CHANDRA SHEKAR,chandrashekar.btech2024@spsu.ac.in,6301371559
-268,Mahesh Suthar,mahesh.mtech2023@spsu.ac.in,8078640347
-269,Manish Kharol,manishkharol.mtech2023@spsu.ac.in,7014192697
-270,Mohammad Sameer,sameer.mtech2023@spsu.ac.in,9460392669
-271,Ashish Kumar Dixit,ashishdixit.mtech2023@spsu.ac.in,8003899692
-272,Arindam nagora,arindam.btech2024@spsu.ac.in,9413272647
-273,Yash Aditya saxena,yashadityasaxena.bba2024@spsu.ac.in,7300222820
-274,Anjali lunj,anjali.mba2023@spsu.ac.in,8239171250
-275,Bhupendra Choudhary,bhupendra.metch2023@spsu.ac.in,8949321635
-276,Indumathi G,indumathi.btech2024@spsu.ac.in,9392744539
-277,Riya shrimali,riya.mba2023@spsu.ac.in,"7014092258, 7023212455"
-278,T.Lakshmi Nandita,lakshmi.btech2024@spsu.ac.in,6302616425
-279,Inaganti Chetan,chetan.btech2024@spsu.ac.in,7569035309
-280,Kishan mali,kishan.mali@spsu.ac.in,7339737049
-281,Banala Sreelaxmi,sreelaxmi.btech2024@spsu.ac.in,9963109644
-282,Madala Venkata Rohith Teja,venkatarohith.btech2024@spsu.ac.in,9391797274
-283,Rinku,rinku.rao@spsu.ac.in,7340543545
-284,Abhishek k joshi,abhishek.joshi@spsu.ac.in,7414010171
-285,Medagam Hansika Reddy,hansika.btech2024@spsu.ac.in,9908654642
-286,R.Falguni,falgunirangisetty.btech2024@spsu.ac.in,8886408484
-287,Rakshita Singh,rakshitasingh.btech2025@spsu.ac.in,9669219774
-288,Yug Nyati,yugnyati.btech2025@spsu.ac.in,9214064750
-289,Divyanshi Kaneria,divyanshikaneria.btech2025@spsu.ac.in,9799676180
-290,jaivardhan singh chundawat,jaivardhanchundawat.btech2025@spsu.ac.in,9509945677
-291,Yashvardhan singh hada,yashvardhanhada.btech2025@spsu.ac.in,8290225480
-292,Divyansh Singh Chouhan,divyanshchouhan.btech2025@spsu.ac.in,9685827117
-293,Aryan Singh Thakur,aryanthakur.btech2025@spsu.ac.in,7357544494
-294,Riya,riya.btech2023@gmail.com,7015290911
-295,Bhavesh,bhavesh.bba2024@spsu.ac.in,9950811911
-296,Kathula Rakshith Kumar,rakshith.btech2024@spsu.ac.in,6305312912
-297,Anshul Kumar ameta,anshul.btech2024@spsu.ac.in,9352341108
-298,Garvit Legha,garvitlegha.btech2025@spsu.ac.in,9509777500
-299,Harshit Suthar,harshit.btech2023@spsu.ac.in,7878868197
-300,Sumitra Ahir,sumitra.mba2023@spsu.ac.in,9998824650
-301,Sujal Suthar,sujal.btech2023@spsu.ac.in,9024902312
-302,Arvind Singh Jhala,arvindsingh.btech2024@spsu.ac.in,8955638341
-303,Shaik Sameer Ali,sameerali.btech2024@spsu.ac.in,6304199629
-304,Chetan Paliwal,chetan.btech2023@spsu.ac.in,9799963416
-305,Himanshu vyas,himanshuvyas.mba2023@spsu.ac.in,7597699664
-306,SHAAZ,shaazahmed.btech2024@spsu.ac.in,9618453178
-307,Dipesh Jain,dipesh.btech2024@spsu.ac.in,8209494379
-308,Nikita Menaria,nikita.btech2024@spsu.ac.in,9137580109
-309,Konne Sreeshanth,sreeshanthkonne.btech2025@spsu.ac.in,9154882707
-310,mahendar,mandu.btech2023@spsu.ac.in,7997011670
-311,Jahnavi.m,jahnavimeka.btech2025@spsu.ac.in,8247730611
-312,Divyanshu Chhaganlal Parmar,divyanshu.btech2023@spsu.ac.in,8758841276
-313,Shivasanketh Bhore,shivasanketh.btech2024@spsu.ac.in,8074727157
-314,Mitali sharma,mitalisharma.btech2025@spsu.ac.in,9826651266
-315,Daksh Jain,dakshjain.bba2025@spsu.ac.in,8619374608
-316,Tejaswi padala,tejaswi.btech2024@spsu.ac.in,9949248825
-317,Mayank kansagara,mayank.bba2023@spsu.ac.in,7891014280
-318,M Venkateshwarlu,venkateshwarlu.btech2024@spsu.ac.in,9014679773
-319,A.Harinath,harinathannaram.btech2024@spsu.ac.in,7386828178
-320,Patnala Trilokesh,patnalatrilokesh.btech2025@spsu.ac.in,7995023178
-321,Tanmay Pareek,tanmay.btech2023@spsu.ac.in,7412976640
-322,Bassi Ramsingh,bassi.btech2023@spsu.ac.in,9346374137
-323,B.Haritha Reddy,haritha.btech2024@spsu.ac.in,8919832483
-324,Dhruvan vempala,vempala.btech2023@spsu.ac.in,9985974919
-325,Devendra singh kitawat,devendra.mba2023@spsu.net.in,8824788289
-326,Pooja Kumari luhar,poojaluhar.mba2024@spsu.ac.in,9079056262
-327,Riya joshi,riyajoshi.bca2024@spsu.ac.in,99502 29939
-328,Gorakala akhil,akhilgorakala.btech2025@spsu.ac.in,9182216440
-329,Vijay patidar,vijay.patidar@spsu.ac.in,7426089711
-330,Bhavya Chandnani,bhavya.bba2023@spsu.ac.in,9468905369
-331,Priyal Dak,priyal.mba2023@spsu.ac.in,9982740404
-332,Hussain bohra,hussainbohra.btech2024@spsu.ac.in,9799126638
-333,SANIDHYA MOYAL,sanidhyamoyal.bba2025@spsu.ac.in,7374071872
-334,Adepu Vennela,vennelaadepu.btech2024@spsu.ac.in,8328661472
-335,Tanvi Pareek,tanvi.btech2023@spsu.ac.in,9352087371
-336,P.Durga Prasanna,durgaprasanna.btech2025@spsu.ac.in,7671974504
-337,Haiman Vaishnav,haiman.mtech2023@spsu.ac.in,9462922344
-338,Mayank Samota,mayanksamota.bba2023@gmail.com,7742570465
-339,Rahul Pushkarna,rahulpushkarna.btech2023@spsu.ac.in,8000715976
-340,Gadwal Charan Teja Sphoorthi,spoorthigadwal.btech2025@spsu.ac.in,8977572666
-341,Kagita Mathosh,mathosh.btech2024@spsu.ac.in,8074173279
-342,Prateek Singh Kushwaha,prateek.bca2023@spsu.ac.in,9636574062
-343,Anushka Gupta,anushka.gupta@spsu.ac.in,6378821270
-344,Dushyant Jat,dushyant.btech2023@spsu.ac.in,6376260344
-345,Renu,renu.btech2024@spsu.ac.in,9182704369
-346,Smita Rathore,smita.mba2024@spsu.ac.in,9680650120
-347,Kontham Jagadeesh,jagadeeshkontham.btech2025@spsu.ac.in,8886831104
-348,Ediga Akshaya,akshayadiga.btech2025@spsu.ac.in,7981611004
-349,Kodanda Pani Nakkina,kodandapani.btech2024@spsu.ac.in,6304536682
-350,Hemasai sri pardhav mada,hemasaisripardhav.btec2025@spsu.ac.in,9347166518
-351,A.siri,addula.btech2024@spsu.ac.in,9392710454
-352,Chetikam Tejasree,tejasreechetikam.bba2024@spsu.ac.in,8367555522
-353,B.Rahul,busa.btech2023@spsu.ac.in,9182267528
-354,Alugubelly Gayathry,gayathry.btech2024@spsu.ac.in,9177318023
-355,T.Rajasri,rajasri.btech2024@spsu.ac.in,9676526562
-356,Brishti maji,brishtimaji.bba2025@spsu.ac.in,8306944399
-357,Manan jain,mananjain.btech2025@spsu.ac.in,9772581583
-358,Devraj Singh Rathore,devrajrathore.bba2025@spsu.ac.in,7568571928
-359,Narendra Singh sarangdevot,narendrasarangdevot.bba2025@spsu.ac.in,6367698090
-360,Harshi Pande,harshi.bba2023@spsu.ac.in,6376273378
-361,Riddham maroo,riddham.bba2023@spsu.ac.in,7597172111
-362,Juluri Sri Tej,sritejjuluri.btech2025@spsu.ac.in,7981797429
-363,Gunnam Jahnavi,gunnam.btech2023@spsu.ac.in,8328064115
-364,Navya Manda,navya.btech2024@spsu.ac.in,7989369240
-365,Vamshi kore,vamshikore.btech2024@spsu.ac.in,9908931630
-366,Anushka Berwal,anushka.btech2023@spsu.ac.in,7073186189
-367,Pranav Sankhla,pranav.btech2023@spsu.ac.in,7073576344
-368,Telukuntla sai manikanta,saimanikanta.btech2024@spsu.ac.in,9441177355
-369,Ramakrishna,ramakrishna.btech2024@spsu.ac.in,9390223908
-370,Aryan bunkar,aryan.btech2023@spsu.ac.in,9024095290
-371,Ramya pambala,ramyapambala.btech2025@spsu.ac.in,7780571789
-372,Harshraj singh rao,harshraj.btech2024@spsu.ac.in,9509115293
-373,Jayesh patidar,jayesh.mtech2023@spsu.ac.in,9840423899
-374,DASARI VISHNU VARDHAN,vishnuvardhan.btech2024@spsu.ac.in,9573694561
-375,Khushi gopawat,khushigopawat.bca2025@spsu.ac.in,9079725045
-376,shivansh Shukla,shivansh.shukla@spsu.ac.in,7990377493
-377,Gadarla Jashwanth,jashwanthgadarla.btech2025@spsu.ac.in,9398787641
-378,Niyati khandelwal,niyati.btech2023@spsu.ac.in,8005501469
-379,Y Yasaswinichowdary,yashaswinichowdary.btech2025@spsu.ac.in,8885005712
-380,Aman Sisodiya,amansisodiya.btech2024@spsu.ac.in,9399695610
-381,M sai vardhan,saivardhanmulpuri.btech2025@spsu.ac.in,7997116555
-382,Mahipal Singh Rao,mahipalrao.btech2023@spsu.ac.in,8209644099
-383,Ashish jat,ashishjat.btech2025@spsu.ac.in,9216588805
-384,Bhupendra Mali,bhupendra.mali@spsu.ac.in,8058691199
-385,Shamas sheikh,shamas.bca2024@spsu.ac.in,7231025004
-386,Dishant Jain,dishantdhanpaljain.mba2025@spsu.ac.in,9890040015
-387,Manvendra Singh Chouhan,manvendra.bba2023@spsu.ac.in,8233866412
-388,Priyank Dhankar,priyankdhankar.btech2023@spsu.ac.in,9799326142
+id,name,email,phone,category
+VIP1,Hon'ble Haribhau Bagade,honbleharibhaubagade@vip.com,N/A,VIP
+VIP2,Dr. Nidhipati Singhania,drnidhipatisinghania@vip.com,N/A,VIP
+VIP3,Dr. Sanjay Sinha,drsanjaysinha@vip.com,N/A,VIP
+VIP4,Prof. Prithvi Yadav,profprithviyadav@vip.com,N/A,VIP
+VIP5,Prof. Prasun Chakrabarti,profprasunchakrabarti@vip.com,N/A,VIP
+VIP6,Prof. (Dr.) Udayprakash R. Singh,profdrudayprakashrsingh@vip.com,N/A,VIP
+VIP7,Mr. Cedric D'souza,mrcedricdsouza@vip.com,N/A,VIP
+VIP8,Shri Manoj Singhal,shrimanojsinghal@vip.com,N/A,VIP
+VIP9,Smt Archana Puran Singh,smtarchanapuransingh@vip.com,N/A,VIP
+VIP10,Dr. Raghavpat Singhania,drraghavpatsinghania@vip.com,N/A,VIP
+VIP11,Mr. Madhavkrishna Singhania,mrmadhavkrishnasinghania@vip.com,N/A,VIP
+VIP12,Mr. Ajay Kumar Saraogi,mrajaykumarsaraogi@vip.com,N/A,VIP
+VIP13,Dr. Dhruv Aggrawal,drdhruvaggrawal@vip.com,N/A,VIP
+VIP14,Mr. Mangal Dev,mrmangaldev@vip.com,N/A,VIP
+VIP15,Prof. Nalinaksh S. Vyas,profnalinakshsvyas@vip.com,N/A,VIP
+VIP16,Prof. Sadananda Prusty,profsadanandaprusty@vip.com,N/A,VIP
+VIP17,Mr. Manish Toshniwal,mrmanishtoshniwal@vip.com,N/A,VIP
+VIP18,Mr.�Prabhakar�Mishra,mrprabhakarmishra@vip.com,N/A,VIP
+VIP19,Mr. Kishan Joshi,mrkishanjoshi@vip.com,N/A,VIP
+VIP20,Mr. Ravindra Kumar Garg,mrravindrakumargarg@vip.com,N/A,VIP
+VIP21,Mr. Rajesh Soni,mrrajeshsoni@vip.com,N/A,VIP
+VIP22,Mr. Murli Manohar Lodha,mrmurlimanoharlodha@vip.com,N/A,VIP
+VIP23,Shri Anuj Khandelwal,shrianujkhandelwal@vip.com,N/A,VIP
+VIP24,Shri Sanjeev Garg,shrisanjeevgarg@vip.com,N/A,VIP
+VIP25,Shri Yagyesh Gupta,shriyagyeshgupta@vip.com,N/A,VIP
+VIP26,Shri Anil Badgotri,shrianilbadgotri@vip.com,N/A,VIP
+VIP27,Mr. Parmeet Singh Sethi,mrparmeetsinghsethi@vip.com,N/A,VIP
+VIP28,Mr. Aaryaman Sethi,mraaryamansethi@vip.com,N/A,VIP
+VIP29,Ms. Yogita Bihani,msyogitabihani@vip.com,N/A,VIP
+VIP30,Ms. Akarsha Jagtiani,msakarshajagtiani@vip.com,N/A,VIP
+VIP31,Ms. Savita Yadav,mssavitayadav@vip.com,N/A,VIP
+VIP40,Col. N.K. Bhagasra,colnkbhagasra@vip.com,N/A,VIP
+VIP41,Col. Ambresh,colambresh@vip.com,N/A,VIP
+VIP42,Col. Prakash Kumar N,colprakashkumarn@vip.com,N/A,VIP
+VIP43,Ms. Pragya Kewalramani�,mspragyakewalramani@vip.com,N/A,VIP
+VIP44,Mr. Namit Mehta,mrnamitmehta@vip.com,N/A,VIP
+VIP46,Mr.Yogesh Goyal,mryogeshgoyal@vip.com,N/A,VIP
+VIP47,Mr . Gaurav Srivastava,mrgauravsrivastava@vip.com,N/A,VIP
+VIP48,Mr. Rajenndra Jain,mrrajenndrajain@vip.com,N/A,VIP
+G1,Hon'ble Haribhau Bagade,honbleharibhaubagade@vip.com,N/A,Guests
+G2,Dr. Nidhipati Singhania,drnidhipatisinghania@vip.com,N/A,Guests
+G3,Dr. Sanjay Sinha,drsanjaysinha@vip.com,N/A,Guests
+G4,Prof. Prithvi Yadav,profprithviyadav@vip.com,N/A,Guests
+G5,Prof. Prasun Chakrabarti,profprasunchakrabarti@vip.com,N/A,Guests
+G6,Prof. (Dr.) Udayprakash R. Singh,profdrudayprakashrsingh@vip.com,N/A,Guests
+G7,Mr. Cedric D'souza,mrcedricdsouza@vip.com,N/A,Guests
+G8,Shri Manoj Singhal,shrimanojsinghal@vip.com,N/A,Guests
+G9,Smt Archana Puran Singh,smtarchanapuransingh@vip.com,N/A,Guests
+G10,Dr. Raghavpat Singhania,drraghavpatsinghania@vip.com,N/A,Guests
+G11,Mr. Madhavkrishna Singhania,mrmadhavkrishnasinghania@vip.com,N/A,Guests
+G12,Mr. Ajay Kumar Saraogi,mrajaykumarsaraogi@vip.com,N/A,Guests
+G13,Dr. Dhruv Aggrawal,drdhruvaggrawal@vip.com,N/A,Guests
+G14,Mr. Mangal Dev,mrmangaldev@vip.com,N/A,Guests
+G15,Prof. Nalinaksh S. Vyas,profnalinakshsvyas@vip.com,N/A,Guests
+G16,Prof. Sadananda Prusty,profsadanandaprusty@vip.com,N/A,Guests
+G17,Mr. Manish Toshniwal,mrmanishtoshniwal@vip.com,N/A,Guests
+G18,Mr.�Prabhakar�Mishra,mrprabhakarmishra@vip.com,N/A,Guests
+G19,Mr. Kishan Joshi,mrkishanjoshi@vip.com,N/A,Guests
+G20,Mr. Ravindra Kumar Garg,mrravindrakumargarg@vip.com,N/A,Guests
+G21,Mr. Rajesh Soni,mrrajeshsoni@vip.com,N/A,Guests
+G22,Mr. Murli Manohar Lodha,mrmurlimanoharlodha@vip.com,N/A,Guests
+G23,Shri Anuj Khandelwal,shrianujkhandelwal@vip.com,N/A,Guests
+G24,Shri Sanjeev Garg,shrisanjeevgarg@vip.com,N/A,Guests
+G25,Shri Yagyesh Gupta,shriyagyeshgupta@vip.com,N/A,Guests
+G26,Shri Anil Badgotri,shrianilbadgotri@vip.com,N/A,Guests
+G27,Mr. Parmeet Singh Sethi,mrparmeetsinghsethi@vip.com,N/A,Guests
+G28,Mr. Aaryaman Sethi,mraaryamansethi@vip.com,N/A,Guests
+G29,Ms. Yogita Bihani,msyogitabihani@vip.com,N/A,Guests
+G30,Ms. Akarsha Jagtiani,msakarshajagtiani@vip.com,N/A,Guests
+G31,Ms. Savita Yadav,mssavitayadav@vip.com,N/A,Guests
+G32,Prof. Ashok Banerjee,profashokbanerjee@vip.com,N/A,Guests
+G33,Prof. B.P. Sharma,profbpsharma@vip.com,N/A,Guests
+G34,Prof. Pratap Singh Dhakar,profpratapsinghdhakar@vip.com,N/A,Guests
+G35,Prof. U.S. Sharma,profussharma@vip.com,N/A,Guests
+G37,Prof. S.S. Sarangdevot,profsssarangdevot@vip.com,N/A,Guests
+G38,Prof. S.K. Sharma,profsksharma@vip.com,N/A,Guests
+G39,Dr. S. M. Prasanna Kumar,drsmprasannakumar@vip.com,N/A,Guests
+G40,Col. N.K. Bhagasra,colnkbhagasra@vip.com,N/A,Guests
+G41,Col. Ambresh,colambresh@vip.com,N/A,Guests
+G42,Col. Prakash Kumar N,colprakashkumarn@vip.com,N/A,Guests
+G43,Ms. Pragya Kewalramani�,mspragyakewalramani@vip.com,N/A,Guests
+G44,Mr. Namit Mehta,mrnamitmehta@vip.com,N/A,Guests
+G45,Mrs. Nirma Bishnoi,mrsnirmabishnoi@vip.com,N/A,Guests
+G46,Mr.Yogesh Goyal,mryogeshgoyal@vip.com,N/A,Guests
+G47,Mr . Gaurav Srivastava,mrgauravsrivastava@vip.com,N/A,Guests
+G48,Mr. Rajenndra Jain,mrrajenndrajain@vip.com,N/A,Guests
+1,23me002781,Anurag 5,anurag.btech2023@spsu.ac.in,College Students
+2,22cs002475,Lakshya verma,lakshya.verma@spsu.ac.in,College Students
+3,24CS003141,Y Avanthika,avanthika.btech2024@spsu.ac.in,College Students
+4,22cs002613,Kapil meghwal,kapil.meghwal@spsu.ac.in,College Students
+5,25cs003757,Vundekoti Karthik,vundekoti karthik.btech2025@spsu.ac.in,College Students
+6,24CS002916,Sanjay venkat kumar,venkatkumar.btech2024@spsu.ac.in,College Students
+7,23ce002791,Dashrath Pal Singh,dashrath.btech2023@spsu.ac.in,College Students
+8,24cs003433,MANTOORI ROSHINI,roshinimantoori.btech2024@spsu.ac.in,College Students
+9,23BBA00322,Anima Jain,anima.bba2023@spsu.ac.in,College Students
+10,24CS003154,T Ishwarya,ishwarya.btech2024@spsu.ac.in,College Students
+11,24MBA00502,Rahul Sharma,rahulsharma.mba2024@spsu.ac.in,College Students
+12,24MBA00455,Divya Inani,divya.mba2024@spsu.ac.in,College Students
+13,24cs002929,M Adarsh,adarsh.btech2024@spsu.ac.in,College Students
+14,24CS003027,Mohammad Sher Ali,sherali.btech2024@spsu.ac.in,College Students
+15,23CS002701,K SaiPrakash Reddy,k.btech2023@spsu.ac.in,College Students
+16,24bca00047,Rahullohar,rahullohar.bca2024@spsu.ac.in,College Students
+17,24CS003286,Mohammed Shaheed,shaheed.btech2024@spsu.ac.in,College Students
+18,24EC002937,Pathan Tahasheen,tahasheen.btech2024@spsu.ac.in,College Students
+19,24CS003025,K.Srinidhi,srinidhi.btech2024@spsu.ac.in,College Students
+20,24bca00067,Harshil Sharma,harshilsharma.bca2024@spsu.ac.in,College Students
+21,23CS002819,Nilesh Parmar,nilesh.btech2023@spsu.ac.in,College Students
+22,25EC003752,Archita Chandna,architachandna.btech2025@spsu.ac.in,College Students
+23,24CS003066,Bandari Lokesh Goud,lokeshbandari.btech2024@spsu.ac.in,College Students
+24,24CS003342,Kunchala Srilekha,srilekha.btech2024@spsu.ac.in,College Students
+25,23MBA00372,Vinita Choudhary,vinita.mba2023@spsu.ac.in,College Students
+26,24CS003327,Abhinaya Mallavarapu,abhinaya.btech2024@spsu.ac.in,College Students
+27,22CS002524,Shubham Joshi,shubham.joshi@spsu.ac.in,College Students
+28,23mba00389,Rohan Shekhawat,rohan.mba2023@spsu.ac.in,College Students
+29,23mba00422,Chitra Malviya,chitra.mba2023@spsu.ac.in,College Students
+30,24CS003155,Puli Sai Siddartha,siddarthasai.btech2024@spsu.ac.in,College Students
+31,24cs003281,Harshini,harshini.btech2024@spsu.ac.in,College Students
+32,22MBA00307,Bhavika Sharma,bhavika.sharma@spsu.ac.in,College Students
+33,25bba00430,Neha rao,neharao.bba2025@spsu.ac.in,College Students
+34,25CS003491,Anrita Sharma,amritasharma.btech2025@spsu.ac.in,College Students
+35,24BT003424,Vedika jain,vedikajain.btech2024@spsu.ac.in,College Students
+36,22cs002623,Krish Jain,krish.jain@spsu.ac.in,College Students
+37,22CS002532,UMA SUTHAR,uma.suthar@spsu.ac.in,College Students
+38,22BBA00220,Hardik Nyatee,hardik.nyatee@spsu.ac.in,College Students
+39,25MBA00534,Om prakash Jat,omprakashjat.mba2025@spsu.ac.in,College Students
+40,25CS003706,Y.SURAJ KUMAR,surajyadav.btech2025@spsu.ac.in,College Students
+41,24CS002977,Ch T Bhargavi,tirumalabhargavi.btech2024@spsu.ac.in,College Students
+42,23bba00328,Shubh paliwal,shubh.bba2023@spsu.ac.in,College Students
+43,22CS002547,Tarun Nagar,tarun.nagar@spsu.ac.in,College Students
+44,25CS003722,k.udaya vyshnavi,vyshanavikota.btech2025@spsu.ac.in,College Students
+45,24CS003224,PRANAY JAIN,pranay.btech2024@spsu.ac.in,College Students
+46,24BBA00409,Khushi Sharma,khushisharma.bba2024@spsu.ac.in,College Students
+47,24MBA00446,Harshvardhan Singh Ranawat,harshvardha.mba2024@spsu.ac.in,College Students
+48,23CE002816,Ajay Dewasi,ajay.btech2023@spsu.ac.in,College Students
+49,24BT003442,Vanith Kumar,vanithkumar.btech2024@spsu.ac.in,College Students
+50,24EC002948,MANOGNA.G,manogna.btech2024@spsu.ac.in,College Students
+51,23ce002823,Mahipal Singh,mahipal.btech2023@spsu.ac.in,College Students
+52,25CS003656,Kirti Vardhini Vyas,kirti vardhini vyas,College Students
+53,25CS003502,Shachi Patria,shachipatria.btech2025@spsu.ac.in,College Students
+54,25EC003675,K.Hasini,hasinikondapalli.btech2025@spsu.ac.in,College Students
+55,23CS002633,Bhimishetti Lohith,bhimishetti.btech2023@spsu.ac.in,College Students
+56,24EC002940,Rao Varshith,varshith.btech2024@spsu.ac.in,College Students
+57,23CS002679,Narisetty Dinesh Kumar,narisetty.btech2023@spsu.ac.in,College Students
+58,24BCA00043,Jumana Hussain,jumanahussain.bca2024@spsu.ac.in,College Students
+59,24bba00362,Fatema pathan,fatema.bba2024@spsu.ac.in,College Students
+60,23mba00358,Piyush Sanadhya,piyush.mba2023@spsu.ac.in,College Students
+61,24bca00037,Dinesh Singh Parmar,dinesh.bca2024@spsu.ac.in,College Students
+62,24BCA00060,Rudra Pratap Singh Chouhan,rudrapratapsingh.bca2024@spsu.ac.in,College Students
+63,25mba00532,Nidhi jain,nidhijain.mba2025@spsu.ac.in,College Students
+64,23MBA00393,Tripti Joshi,tripti.mba2023@spsu.ac.in,College Students
+65,23bca00003,Dhruv Sen,dhruv.bca2023@spsu.ac.in,College Students
+66,23MN002846,Aadi Jain,aadi.btech2023@spsu.ac.in,College Students
+67,22CS002561,Mohammad Kaif,mohammad.kaif@spsu.ac.in,College Students
+68,23mba00409,Kartik sharma,kartiksharma.mba2023@spsu.ac.in,College Students
+69,24CS003395,AMGOTH UMESH NAIK,umeshnaik.btech2024@spsu.ac.in,College Students
+70,24MBA00462,Gouri soni,gouri.mba2024@spsu.ac.in,College Students
+71,22cs002512,Mayank Parihar,mayank.parihar@spsu.ac.in,College Students
+72,23cs002744,Madhavan Bohra,madhavan.btech2023@spsu.ac.in,College Students
+73,25L3CS3777,Shaleen Bapna,shaleenbapna.btech2025@spsu.ac.in,College Students
+74,23bca00013,Ismail murtaza,ismail.bca2023@spsu.ac.in,College Students
+75,24EC003300,Yuvraj Patidar,yuvrajpatidar.btech2024@spsu.ac.in,College Students
+76,23bca00030,Ayan Akhtar,ayan.bca2023@spsu.ac.in,College Students
+77,23mn002834,Dhruv Jain,dhruvjain.btech2023@spsu.ac.in,College Students
+78,22CS002527,Siddharth Singh,siddharth.singh@spsu.ac.in,College Students
+79,23CS002628,Rahul,rahul.btech2023@spsu.ac.in,College Students
+80,23CS002751,C.Ram Charan,chadarasipalli.btech2023@spsu.ac.in,College Students
+81,23CE002799,Neeraj Kumawat,neeraj.betch2023@spsu.ac.in,College Students
+82,22cs002580,Kasula Shiva,kasula.shiva@spsu.ac.in,College Students
+83,23CS002671,Srikar samala,samala.btech2023@spsu.ac.in,College Students
+84,24cs003316,Rishith,rishithbadikala.btech2024@spsu.ac.in,College Students
+85,23MBA00348,Param Taimni,param.mba2023@spsu.ac.in,College Students
+86,24CS002954,S.Prasanthi,prasanthi.btech2024@spsu.ac.in,College Students
+87,22MBA00300,Yogita Chauhan,yogita.chauhan@spsu.ac.in,College Students
+88,22CS002543,Survendra Nayak,survendra.nayak@spsu.ac.in,College Students
+89,24CS003011,Aradhya.S,aradhya.btech2024@spsu.ac.in,College Students
+90,23CS002787,Rakshit joshi,rakshit.btech2023@spsu.ac.in,College Students
+91,22BBA00218,Divyaraj sharma,divyaraj.sharma@spsu.ac.in,College Students
+92,25MMN00273,Ofori Kelvin Junior,mailto:oforijnrkelvin.mtech2025@spsu.ac.in,College Students
+93,24bca00050,Rinkal ranka,rinkal.bca2024@spsu.ac.in,College Students
+94,25CS003476,Vaibhav Chaturvedi,vaibhavchaturvedi.btech2025@spsu.ac.in,College Students
+95,23ce002766,Natwar kumawat,natwar.btech2023@spsu.ac.in,College Students
+96,23mba00427,Mohammed Kazim,kazim.mba2023@spsu.ac.in,College Students
+97,24Mba00450,Sanjivini kanojia,sanjivini.mba2024@spsu.ac.in,College Students
+98,24bba00415,Kanak Sharma,kanaksharma.bba2024@spsu.ac.in,College Students
+99,24L3MN3471,Yogender Sharma,yogendersharma.btech2023@spsu.ac.in,College Students
+100,25CS003481,Divya Raj Lohar,divyarajlohar.btech2025@spsu.ac.in,College Students
+101,25CS003560,Paripelli.bhanuteja,bhanutejaparipelli.btech2025@spsu.ac.in,College Students
+102,23mba00425,Kartik Shrimali,kartik.mba2023@spsu.ac.in,College Students
+103,23CS002738,Dhruv Jethi,dhruvjethi.btech2023@spsu.ac.in,College Students
+104,23CE002755,Shivbhagawan janu,shivbhagwan.btech2023@spsu.ac.in,College Students
+105,23ME002767,Puran Dangi,puran.btech2023@spsu.ac.in,College Students
+106,24MBA00503,Manish Kumar MIshra,manishmishra.mba2024@spsu.ac.in,College Students
+107,23CS002734,Rohit Vaishnav,rohitvaishnav.btech2023@spsu.ac.in,College Students
+108,24bt003472,K.Kavya,katarukavya.btech2024@spsu.ac.in,College Students
+109,24CS003412,M.sri vivek,srivivek.btech2024@spsu.ac.in,College Students
+110,24CS02991,Anugu Rishidhar,rishidhar.btech2024@spsu.ac.in,College Students
+111,24CS003044,YARASANI PRATHAP REDDY,prathap.btech2024@spsu.ac.in,College Students
+112,23mba00352,Siddharth Singh,siddharth.mba2023@spsu.ac.in,College Students
+113,24bca00048,Ritik Prajapat,ritik.bca2024@spsu.ac.in,College Students
+114,22l3cs2463,Gopesh mathur,gopesh.mathur@spsu.ac.in,College Students
+115,24cs002926,Akshith reddy tenaty,akshith.btech2024@spsu.ac.in,College Students
+116,22cs002513,Mohit singh bhati,mohit.bhati@spsu.ac.in,College Students
+117,24cs002908,Kasiralla Meghana,meghana.btech2024@spsu.ac.in,College Students
+118,22bba00225,Lavina Sharma,lavina.sharma@spsu.ac.in,College Students
+119,22cs002535,Vandana Goyal,vandana.goyal@spsu.ac.in,College Students
+120,22bba00229,Muskan Choudhary,muskan.choudhary@spsu.ac.in,College Students
+121,24cs003259,P sai,saiponduri.btech2024@spsu.ac.in,College Students
+122,24CS003386,P.VARSHANTH,varshanthperumalla.btech2024@spsu.ac.in,College Students
+123,23CS002778,Vaibhavi jain,vaibhavi.btech2023@spsu.ac.in,College Students
+124,23mba00412,Ajay Singh Ranawat,ajayranawat.mba2023@spsu.ac.in,College Students
+125,22BBA00238,Raghav Jhawar,raghav.jhawar@spsu.ac.in,College Students
+126,23bba00341,Anurag mishra,anuragmishra.bba2023@spsu.ac.in,College Students
+127,25BLB00004,Yashvendra pal Singh,yashvendrasingh.bballb2025@spsu.ac.in,College Students
+128,23L5CS2878,Murtaza Kanor,murtaza.kanor@spsu.ac.in,College Students
+129,25BCA00082,Anisha Raju,anisharaju.bca2025@spsu.ac.in,College Students
+130,22bba00269,Gautam sahitya,gautam.sahitya@spsu.ac.in,College Students
+131,22BBA00259,Anuj bharadia,anuj.bharadia@spsu.ac.in,College Students
+132,24ME003101,Udit Soni,udit.btech2024@spsu.ac.in,College Students
+133,22CS002476,Hatim Sidhpur wala,hatsid000@gmail.com,College Students
+134,22BBA00231,Narendra Singh Deora,narendra.deora@spsu.ac.in,College Students
+135,23MBA00424,SADDAM HUSAIN,saddam.mba2023@spsu.ac.in,College Students
+136,23MBA00413,Parakh Shah,parakh.mba2023@spsu.ac.in,College Students
+137,23CS002632,A.Kotireddy,kotireddyannapureddy21@gmail.com,College Students
+138,23CS002740,Arpit Sharma,arpit.btech2023@spsu.ac.in,College Students
+139,23mba00439,Priyanka Prajapati,priyanka.mba2023@spsu.ac.in,College Students
+140,22bba00272,Harsh jaiswal,harsh.jaiswal@spsu.ac.in,College Students
+141,22CS002571,M Bhanu Reddy,bhanuprakash.reddy@spsu.ac.in,College Students
+142,22CS002587,KASIREDDY SRINADH REDDY,srinath.reddy@spsu.ac.in,College Students
+143,22CS002481,N Naveen,naveen.n@spsu.ac.in,College Students
+144,22CS002469,N Sai Kiran Reddy,saikiran.reddy@spsu.ac.in,College Students
+145,25CS003525,Laasyasri.Veeravelli,laasyasri.btech2025@spsu.ac.in,College Students
+146,25CS003530,Choda.Jyothi swarupa,jyothiswarupa.btech2025@spsu.ac.in,College Students
+147,25BT003723,Doyal Dangi,doyaldangi.btech2025@2025.ac.in,College Students
+148,25BT003483,Bhavyanshi paliwal,bhavyanshipaliwal.btech2025@spsu.ac.in,College Students
+149,24bba00398,Garima Rathore,garima.bba2024@spsu.ac.in,College Students
+150,23MMN00208,MAHENDRA H,mahendra.mtech2023@spsu.ac.in,College Students
+151,25CS003597,HARINI AYUNUGU,hariniayunugu.btech2025@spsu.ac.in,College Students
+152,22bba00223,Khushi garg,khushi.garg@spsu.ac.in,College Students
+153,25CS003505,A.maniswaritha,ankireddymaniswaritha.btech2025@spsu.ac.in,College Students
+154,25CS003527,Nakirikanti kiran kumar,kirankumar.btech2025@spsu.ac.in,College Students
+155,25CS003532,CHINTA PRUTHVI MAHESH,pruthvimahesh.btech2025@spsu.ac.in,College Students
+156,23CS002668,Palepu Karthik,palepu.btech2023@spsu.ac.in,College Students
+157,22bba00244,Tanishka Sharma,tanishka.sharma@spsu.ac.in,College Students
+158,24bca00065,Khushbu chouhan,khushbuchouhan.bca2024@spsu.ac.in,College Students
+159,25CS003605,G. Jashwika,jashwikagujjala.btech2025@spsu.ac.in,College Students
+160,22bba00234,Ovesh Raza,ovesh.raza@spsu.ac.in,College Students
+161,25CS003771,Patti Sriram,srirampatti.btech2025@spsu.ac.in,College Students
+162,22BBA00245,Tosif Ahmed Sheikh,tosifahmed.sheikh@spsu.ac.in,College Students
+163,23MBA00426,Monis Ali,monis.mba2023@spsu.ac.in,College Students
+164,23MBA00436,Anish Dhing,anishdhing.mba2023@spsu.ac.in,College Students
+165,22CS002539,Anurag Mishra,anurag.mishra@spsu.ac.in,College Students
+166,25BCA00086,Vinay jonwal,vinayjonwal.bca2025@spsu.ac.in,College Students
+167,23BCA00022,NEELESH SOLANKI,neelesh.bca2023@spsu.ac.in,College Students
+168,24mba00487,Harshita Pagariya,harshitapagariya.mba2024@spsu.ac.in,College Students
+169,24MBA00473,Rinku Mundel,rinkumundel.mba2024@ spsu.ac.in,College Students
+170,24mba00492,Jahnavi modi,jahnavimodi.mba2024@spsu.ac.in,College Students
+171,23CE002788,Jeevraj jaanu,jeevraj.btech2023@spsu.ac.in,College Students
+172,22CS002525,Shubhanshi Jain,shubhanshi.jain@spsu.ac.in,College Students
+173,24cs002898,Naveen Kumar,naveenkumar.btech2024@spsu.ac.in,College Students
+174,23MN002765,Gaurav saragara,gaurav.btech2023@spsu.ac.in,College Students
+175,24cs003136,Jeet Dave,jeet.btech2024@spsu.ac.in,College Students
+176,23CS002696,Nikhilesh sriram Ruthala,ruthala.btech2023@spsu.ac.in,College Students
+177,24cs003142,V.Tejaswini,tejaswini.btech2024@spsu.ac.in,College Students
+178,22EC002594,Manish Shivavtar Sharma,manish.sharma@spsu.ac.in,College Students
+179,22CS002604,Hitesh Suthar,hitesh.suthar@spsu.ac.in,College Students
+180,23MCE00218,Harshvardhan singh dulawat,harshvardhan.mtech2023@spsu.ac.in,College Students
+181,24BBA00363,Alfez ali,alfezali.bba2024@spsu.ac.in,College Students
+182,24mba00482,Pradumna Tiwari,pradumnatiwari.mba2024@spsu.ac.in,College Students
+183,25Mba00558,Joginder pratap singh hada,joginderhada.mba2025@spsu.ac.in,College Students
+184,24CS003133,Bharat Vaishnav,bharat.btech2024@spsu.ac.in,College Students
+185,24EC003030,Varkalameghana,meghanavarkala.btech2024@spsu.ac.in,College Students
+186,22cs002538,Yuvraj lohar,yuvraj.lohar@spsu.ac.in,College Students
+187,24EC003200,K.GOWRINATH REDDY,gowrinath.btech2024@spsu.ac.in,College Students
+188,25EC003667,K.Sandeep Reddy,katreddysandeep.btech2025@spsu.ac.in,College Students
+189,23cs002853,Chhavi Singh,chhavi.btech2023@spsu.ac.in,College Students
+190,23CS002836,Dewanshi Karnawat,dewanshi.btech2023@spsu.ac.in,College Students
+191,23MCE00217,Ajay Singh kumawat,ajaykumawat.mtech2023@spsu.ac.in,College Students
+192,24BDS00014,Harkirat Kaur Dhillon,kaurdhillon.bdes2024@spsu.ac.in,College Students
+193,22CS002562,Priya Jagetiya,priya.jagetiya@spsu.ac.in,College Students
+194,22CS002517,Neha Nayak,neha.nayak@spsu.ac.in,College Students
+195,23CS002757,Dhruv Dwivedi,dhruv.btech2023@spsu.ac.in,College Students
+196,23mba00355,Saloni Suhalka,saloni.mba2023@spsu.ac.in,College Students
+197,22CS002482,Harshith,harshith.surishetty@spsu.ac.in,College Students
+198,23MBA00370,Aniruddha Modi,aniruddha.mba2023@spsu.ac.in,College Students
+199,22CS002590,Pradhuman Dadhich,pradhuman.dadhich@spsu.ac.in,College Students
+200,22cs002494,Sakshi,sakshi.kachchawah@spsu.ac.in,College Students
+201,25BT003498,Danisha Fatima,fatimadanisha.btech2025@spsu.ac.in,College Students
+202,28BT003745,Dev Ameta,devameta.btech2025@spsu.ac.in,College Students
+203,22CS002514,Mohit Teli,mohit.teli@spsu.ac.in,College Students
+204,23CS002635,Ayancha Lohith Sai Manikanta,ayanchabtech2023@spsu.ac.in,College Students
+205,22CS002563,Sama Adithya Reddy,adithiya.reddy@spsu.ac.in,College Students
+206,22CS002567,Thakur Akshay Singh,akshay.thakur@spsu.ac.in,College Students
+207,25bba00454,Neha patidar,nehapatidar.bba2025@spsu.ac.in,College Students
+208,25DP000233,Michael Okoye,michaelchiemerieokoye.phd2025@spsu.ac.in,College Students
+209,23L3ME2752,Vishal Bandhu Tiwari,vishal.tiwari@spsu.ac.in,College Students
+210,25BT003518,Vishesh vaishnav,visheshvaishnav.btech2025@spsu.ac.in,College Students
+211,25bt003551,Lakshya choudhary,lakshyachoudhary.btech2025@spsu.ac.in,College Students
+212,24bca00057,Hemshree Sharma,hemshree.bca2024@spsu.ac.in,College Students
+213,24bt003423,Khushi Soni,khushisoni.btech2024@spsu.ac.in,College Students
+214,2BT003495,Kavish Mali,kavishmali.btech2025@spsu.ac.in,College Students
+215,25BT003514,Khushbu Solanki,khushbusolanki.btech2025@spsu.ac.in,College Students
+216,25BT003645,Kunal Keer,kunalkeer.btech2025@spsu.ac.in,College Students
+217,25CS003759,Khwahish sharma,khwahishsharma.btech2025@spsu.ac.in,College Students
+218,25CS003746,Ekta Chauhan,ektachauhan.btech2025@spsu.ac.in,College Students
+219,25CS003701,Ritish Maroo,ritishmaroo.btech2025@spsu.ac.in,College Students
+220,22cs002497,Ditya saini,ditya.saini@spsu.ac.in,College Students
+221,22bba00222,Khushi ameta,khushi.ameta@spsu.ac.in,College Students
+222,22bba00274,Kanishka Kunwar,kanishka.kunwar@spsu.ac.in,College Students
+223,22cs002586,Laxminivas reddy,laxminivas.reddy@spsu.ac.in,College Students
+224,23CS002730,N Rishitha,nagareddy.btech2023@spsu.ac.in,College Students
+225,24BBA00373,Shrey Khandelwal,shrey.bba2024@spsu.ac.in,College Students
+226,24ME003219,Nitesh Rathore,nitesh.btech2024@spsu.ac.in,College Students
+227,25CS003731,Yashsavi Paliwal,yashsavipaliwal.btech2025@spsu.ac.in,College Students
+228,25CS003730,Tanisha soni,tanishasoni.btech2025@spsu.ac.in,College Students
+229,24CS003466,Rashi Ranjan,rashiranjan.btech2024@spsu.ac.in,College Students
+230,24CS003083,Ankitha Reddy,ankitha.btech2024@spsu.ac.in,College Students
+231,24BDS00007,Yugvi Jain,yugvi.bdes2024@spsu.ac.in,College Students
+232,24ME003418,Ansh shrotriya,anshshrotriya.btech2024@spsu.ac.in,College Students
+233,25CS003600,K Pavankumar,pavankomati.btech2025@spsu.ac.in,College Students
+234,25EC003617,Varshini dumne,varshinidumne.btech2025@spsu.ac.in,College Students
+235,25cs003602,K rama siddhardha,sidharshakomminapally.btech2025@spsu.ac.in,College Students
+236,25bca00096,Khwaish jain,khwaishjain.bca2025@spsu.ac.in,College Students
+237,23CE002783,Yuvraj Singh,yuvrajsingh.btech2023@spsu.ac.in,College Students
+238,23BCA00005,Prachi Menaria,prachi.bca2023@spsu.ac.in,College Students
+239,23bca00023,Daksha Mali,daksha.bca2023@spsu.ac.in,College Students
+240,23L5CS2877,Nitesh Athwal,nitesh.athwal@spsu.ac.in,College Students
+241,25BLB00008,Prakash Kumar,prakashkumar.bballb2025@spsu.ac.in,College Students
+242,22CS002496,Khushi Mukesh Modi,khushi.modi@spsu.ac.in,College Students
+243,24EC003103,Joelrex Barrey,joelrex.btech2024@spsu.ac.in,College Students
+244,22bba00243,Tanisha Mehta,tanisha.mehta@spsu.ac.in,College Students
+245,24CS003243,Jahanvi Rajsoni,rajsoni.btech2024@spsu.ac.in,College Students
+246,24CS003439,Harshit Yadav,harshitjatav.btech2024@spsu.ac.in,College Students
+247,24cs003311,KONDA SREEVARDHAN REDDY,sreevardhanreddy.btech2024@spsu.ac.in,College Students
+248,25CS003606,Prashanthi Vadlamudi,prashanthivadlamudi.btech2025@spsu.ac.in,College Students
+249,23cs002711,V.Meghana,vaddepalli.btech2023@spsu.ac.in,College Students
+250,22bba00210,Anchal ghawari,anchal.ghawari@spsu.ac.in,College Students
+251,24MBA00452,Murtaza Prithviraj,murtaza.mba2024@spsu.ac.in,College Students
+252,24CS003208,Sai rahul chingram,sairahul.btech2024@spsu.ac.in,College Students
+253,22BBA00268,Bukke Ramesh Naik,ramesh.naik@spsu.ac.in,College Students
+254,25MN003568,Marcel kaatuu,marcelkaatuu.btech2025@spsu.ac.in,College Students
+255,24CS003310,Nagaboina Naveen,naveennagaboina.btech2024@spsu.ac.in,College Students
+256,24CS003207,S.Abhinay,abhinay.btech2024@spsu.ac.in,College Students
+257,23MBA00402,Jyoti Singh,jyoti.mba2023@spsu.ac.in,College Students
+258,24CS003085,Debbeta Vishali,vishalidebbeta.btech2024@spsu.ac.in,College Students
+259,24cs003150,Shaik Kathija Firdos,kathijafirdos.btech2024@spsu.ac.in,College Students
+260,24Cs003216,Suvarna.b,suvarnab.btech2024@spsu.ac.in,College Students
+261,24EC002983,Ryali Divyanagaprathibha,divyanagaprathibha.btech2024@spsu.ac.in,College Students
+262,23MBA00416,Manvi Rawal,manvi.mba2023@spsu.ac.in,College Students
+263,23MBA00351,Dakshita Maheshwari,dakshita.mba2023@spsu.ac.in,College Students
+264,24cs003260,Bethu Harshith,harshithbethu.btech2024@spsu.ac.in,College Students
+265,24CS003041,Bhoga Sriram,sriram.btech2024@spsu.ac.in,College Students
+266,23mba00368,Saroj Choudhary,saroj.mba2023@spsu.ac.in,College Students
+267,24CS003110,PATNAM CHANDRA SHEKAR,chandrashekar.btech2024@spsu.ac.in,College Students
+268,23MCE00206,Mahesh Suthar,mahesh.mtech2023@spsu.ac.in,College Students
+269,23MCE00230,Manish Kharol,manishkharol.mtech2023@spsu.ac.in,College Students
+270,23MME00228,Mohammad Sameer,sameer.mtech2023@spsu.ac.in,College Students
+271,23MEE00210,Ashish Kumar Dixit,ashishdixit.mtech2023@spsu.ac.in,College Students
+272,24CS003134,Arindam nagora,arindam.btech2024@spsu.ac.in,College Students
+273,24BBA00395,Yash Aditya saxena,yashadityasaxena.bba2024@spsu.ac.in,College Students
+274,23MBA00367,Anjali lunj,anjali.mba2023@spsu.ac.in,College Students
+275,23mmn00249,Bhupendra Choudhary,bhupendra.metch2023@spsu.ac.in,College Students
+276,24CS002905,Indumathi G,indumathi.btech2024@spsu.ac.in,College Students
+277,23MBA00410,Riya shrimali,riya.mba2023@spsu.ac.in,College Students
+278,24CS002896,T.Lakshmi Nandita,lakshmi.btech2024@spsu.ac.in,College Students
+279,24CS002902,Inaganti Chetan,chetan.btech2024@spsu.ac.in,College Students
+280,22MBA00245,Kishan mali,kishan.mali@spsu.ac.in,College Students
+281,24CS003015,Banala Sreelaxmi,sreelaxmi.btech2024@spsu.ac.in,College Students
+282,24cs003009,Madala Venkata Rohith Teja,venkatarohith.btech2024@spsu.ac.in,College Students
+283,22bba00239,Rinku,rinku.rao@spsu.ac.in,College Students
+284,22bba00209,Abhishek k joshi,abhishek.joshi@spsu.ac.in,College Students
+285,24CS003023,Medagam Hansika Reddy,hansika.btech2024@spsu.ac.in,College Students
+286,24CS003275,R.Falguni,falgunirangisetty.btech2024@spsu.ac.in,College Students
+287,25CS003477,Rakshita Singh,rakshitasingh.btech2025@spsu.ac.in,College Students
+288,25CE003473,Yug Nyati,yugnyati.btech2025@spsu.ac.in,College Students
+289,25MN003484,Divyanshi Kaneria,divyanshikaneria.btech2025@spsu.ac.in,College Students
+290,25MN003781,jaivardhan singh chundawat,jaivardhanchundawat.btech2025@spsu.ac.in,College Students
+291,25MN003490,Yashvardhan singh hada,yashvardhanhada.btech2025@spsu.ac.in,College Students
+292,25CS003784,Divyansh Singh Chouhan,divyanshchouhan.btech2025@spsu.ac.in,College Students
+293,25CS003614,Aryan Singh Thakur,aryanthakur.btech2025@spsu.ac.in,College Students
+294,23CS002792,Riya,riya.btech2023@gmail.com,College Students
+295,Paliwal,Bhavesh,bhavesh.bba2024@spsu.ac.in,College Students
+296,24EC003140,Kathula Rakshith Kumar,rakshith.btech2024@spsu.ac.in,College Students
+297,24CS003247,Anshul Kumar ameta,anshul.btech2024@spsu.ac.in,College Students
+298,25MN003779,Garvit Legha,garvitlegha.btech2025@spsu.ac.in,College Students
+299,23CS002724,Harshit Suthar,harshit.btech2023@spsu.ac.in,College Students
+300,23mba00388,Sumitra Ahir,sumitra.mba2023@spsu.ac.in,College Students
+301,23cs002790,Sujal Suthar,sujal.btech2023@spsu.ac.in,College Students
+302,24CS003215,Arvind Singh Jhala,arvindsingh.btech2024@spsu.ac.in,College Students
+303,24cs002953,Shaik Sameer Ali,sameerali.btech2024@spsu.ac.in,College Students
+304,23CE002855,Chetan Paliwal,chetan.btech2023@spsu.ac.in,College Students
+305,23MBA00420,Himanshu vyas,himanshuvyas.mba2023@spsu.ac.in,College Students
+306,24CSOO2941,SHAAZ,shaazahmed.btech2024@spsu.ac.in,College Students
+307,24CS003122,Dipesh Jain,dipesh.btech2024@spsu.ac.in,College Students
+308,24cs003254,Nikita Menaria,nikita.btech2024@spsu.ac.in,College Students
+309,25CS003556,Konne Sreeshanth,sreeshanthkonne.btech2025@spsu.ac.in,College Students
+310,23cs002658,mahendar,mandu.btech2023@spsu.ac.in,College Students
+311,25BDS00027,Jahnavi.m,jahnavimeka.btech2025@spsu.ac.in,College Students
+312,23CS002831,Divyanshu Chhaganlal Parmar,divyanshu.btech2023@spsu.ac.in,College Students
+313,24me003170,Shivasanketh Bhore,shivasanketh.btech2024@spsu.ac.in,College Students
+314,25cs003712,Mitali sharma,mitalisharma.btech2025@spsu.ac.in,College Students
+315,25bba00445,Daksh Jain,dakshjain.bba2025@spsu.ac.in,College Students
+316,24cs002910,Tejaswi padala,tejaswi.btech2024@spsu.ac.in,College Students
+317,23bba00307,Mayank kansagara,mayank.bba2023@spsu.ac.in,College Students
+318,24CS003309,M Venkateshwarlu,venkateshwarlu.btech2024@spsu.ac.in,College Students
+319,24cs003282,A.Harinath,harinathannaram.btech2024@spsu.ac.in,College Students
+320,25CS003589,Patnala Trilokesh,patnalatrilokesh.btech2025@spsu.ac.in,College Students
+321,23cs002736,Tanmay Pareek,tanmay.btech2023@spsu.ac.in,College Students
+322,23cs002675,Bassi Ramsingh,bassi.btech2023@spsu.ac.in,College Students
+323,24cs002909,B.Haritha Reddy,haritha.btech2024@spsu.ac.in,College Students
+324,23CS002636,Dhruvan vempala,vempala.btech2023@spsu.ac.in,College Students
+325,23MBA00357,Devendra singh kitawat,devendra.mba2023@spsu.net.in,College Students
+326,24mba00500,Pooja Kumari luhar,poojaluhar.mba2024@spsu.ac.in,College Students
+327,24BCA00062,Riya joshi,riyajoshi.bca2024@spsu.ac.in,College Students
+328,25CS003563,Gorakala akhil,akhilgorakala.btech2025@spsu.ac.in,College Students
+329,22cs002621,Vijay patidar,vijay.patidar@spsu.ac.in,College Students
+330,23bba00310,Bhavya Chandnani,bhavya.bba2023@spsu.ac.in,College Students
+331,23MBA00385,Priyal Dak,priyal.mba2023@spsu.ac.in,College Students
+332,24cs003444,Hussain bohra,hussainbohra.btech2024@spsu.ac.in,College Students
+333,25BBA00452,SANIDHYA MOYAL,sanidhyamoyal.bba2025@spsu.ac.in,College Students
+334,24CS003165,Adepu Vennela,vennelaadepu.btech2024@spsu.ac.in,College Students
+335,23cs002737,Tanvi Pareek,tanvi.btech2023@spsu.ac.in,College Students
+336,25EC003510,P.Durga Prasanna,durgaprasanna.btech2025@spsu.ac.in,College Students
+337,23MCE00221,Haiman Vaishnav,haiman.mtech2023@spsu.ac.in,College Students
+338,23bba00309,Mayank Samota,mayanksamota.bba2023@gmail.com,College Students
+339,23mn002881,Rahul Pushkarna,rahulpushkarna.btech2023@spsu.ac.in,College Students
+340,25CS003640,Gadwal Charan Teja Sphoorthi,spoorthigadwal.btech2025@spsu.ac.in,College Students
+341,24CS002986,Kagita Mathosh,mathosh.btech2024@spsu.ac.in,College Students
+342,23bca00002,Prateek Singh Kushwaha,prateek.bca2023@spsu.ac.in,College Students
+343,22CS002504,Anushka Gupta,anushka.gupta@spsu.ac.in,College Students
+344,23me002785,Dushyant Jat,dushyant.btech2023@spsu.ac.in,College Students
+345,24CS003086,Renu,renu.btech2024@spsu.ac.in,College Students
+346,24MBA00458,Smita Rathore,smita.mba2024@spsu.ac.in,College Students
+347,25CS003552,Kontham Jagadeesh,jagadeeshkontham.btech2025@spsu.ac.in,College Students
+348,25CS003575,Ediga Akshaya,akshayadiga.btech2025@spsu.ac.in,College Students
+349,24cs003115,Kodanda Pani Nakkina,kodandapani.btech2024@spsu.ac.in,College Students
+350,25L3CS3735,Hemasai sri pardhav mada,hemasaisripardhav.btec2025@spsu.ac.in,College Students
+351,24cs003091,A.siri,addula.btech2024@spsu.ac.in,College Students
+352,24bba00390,Chetikam Tejasree,tejasreechetikam.bba2024@spsu.ac.in,College Students
+353,23CS002652,B.Rahul,busa.btech2023@spsu.ac.in,College Students
+354,24CS003039,Alugubelly Gayathry,gayathry.btech2024@spsu.ac.in,College Students
+355,24CS002947,T.Rajasri,rajasri.btech2024@spsu.ac.in,College Students
+356,25BBA00491,Brishti maji,brishtimaji.bba2025@spsu.ac.in,College Students
+357,25CS003595,Manan jain,mananjain.btech2025@spsu.ac.in,College Students
+358,25BBA00477,Devraj Singh Rathore,devrajrathore.bba2025@spsu.ac.in,College Students
+359,25BBA00437,Narendra Singh sarangdevot,narendrasarangdevot.bba2025@spsu.ac.in,College Students
+360,23bba00291,Harshi Pande,harshi.bba2023@spsu.ac.in,College Students
+361,23bba00345,Riddham maroo,riddham.bba2023@spsu.ac.in,College Students
+362,25CS003695,Juluri Sri Tej,sritejjuluri.btech2025@spsu.ac.in,College Students
+363,23CS002806,Gunnam Jahnavi,gunnam.btech2023@spsu.ac.in,College Students
+364,24CS003026,Navya Manda,navya.btech2024@spsu.ac.in,College Students
+365,24cs003093,Vamshi kore,vamshikore.btech2024@spsu.ac.in,College Students
+366,23cs002735,Anushka Berwal,anushka.btech2023@spsu.ac.in,College Students
+367,23cs002723,Pranav Sankhla,pranav.btech2023@spsu.ac.in,College Students
+368,24CS002989,Telukuntla sai manikanta,saimanikanta.btech2024@spsu.ac.in,College Students
+369,24cs003293,Ramakrishna,ramakrishna.btech2024@spsu.ac.in,College Students
+370,23cs002741,Aryan bunkar,aryan.btech2023@spsu.ac.in,College Students
+371,25CS003679,Ramya pambala,ramyapambala.btech2025@spsu.ac.in,College Students
+372,24cs003113,Harshraj singh rao,harshraj.btech2024@spsu.ac.in,College Students
+373,23MCE00222,Jayesh patidar,jayesh.mtech2023@spsu.ac.in,College Students
+374,24CS003339,DASARI VISHNU VARDHAN,vishnuvardhan.btech2024@spsu.ac.in,College Students
+375,25bca00079,Khushi gopawat,khushigopawat.bca2025@spsu.ac.in,College Students
+376,22cs002551,shivansh Shukla,shivansh.shukla@spsu.ac.in,College Students
+377,25CS003554,Gadarla Jashwanth,jashwanthgadarla.btech2025@spsu.ac.in,College Students
+378,23cs002829,Niyati khandelwal,niyati.btech2023@spsu.ac.in,College Students
+379,25EC003501,Y Yasaswinichowdary,yashaswinichowdary.btech2025@spsu.ac.in,College Students
+380,24CS003363,Aman Sisodiya,amansisodiya.btech2024@spsu.ac.in,College Students
+381,25CS003642,M sai vardhan,saivardhanmulpuri.btech2025@spsu.ac.in,College Students
+382,23CS002864,Mahipal Singh Rao,mahipalrao.btech2023@spsu.ac.in,College Students
+383,25CS003753,Ashish jat,ashishjat.btech2025@spsu.ac.in,College Students
+384,22CS002570,Bhupendra Mali,bhupendra.mali@spsu.ac.in,College Students
+385,24bca00039,Shamas sheikh,shamas.bca2024@spsu.ac.in,College Students
+386,25MBA00517,Dishant Jain,dishantdhanpaljain.mba2025@spsu.ac.in,College Students
+387,23bba00317,Manvendra Singh Chouhan,manvendra.bba2023@spsu.ac.in,College Students
+388,24L3CS3319,Priyank Dhankar,priyankdhankar.btech2023@spsu.ac.in,College Students
+P1,Mr ayush sahu,parent2@family.com,7339737049,Parents
+P2,Mr. SHRIMAN TAIMNI,parent3@family.com,8270140515,Parents
+P3,Mrs. ANUPAMA TAIMNI,parent4@family.com,8270140515,Parents
+P4,Mr.Preetham,parent5@family.com,8520808532,Parents
+P5,Aryan garg,parent6@family.com,9166958932,Parents
+P6,Saloni garg,parent7@family.com,9166958932,Parents
+P7,Mr. Faizal Khan,parent8@family.com,9001447676,Parents
+P8,Mrs Tasneem Kanor,parent9@family.com,7737728354,Parents
+P9,Arwa Miyaji,parent10@family.com,7737728354,Parents
+P10,K. Sai Charan,parent11@family.com,9347723603,Parents
+P11,Varsha Mahesh Magar,parent12@family.com,"9,96,79,16,158",Parents
+P12,Mrs. Santosh,parent13@family.com,8209322006,Parents
+P13,Miss Palak,parent14@family.com,8209322006,Parents
+P14,Mr. Nazeer Haider Kazmi,parent15@family.com,7427017137,Parents
+P15,Mrs. Farheen Kazmi,parent16@family.com,7427017137,Parents
+P16,Mr shankar lal sharma,parent17@family.com,8005988291,Parents
+P17,Mrs ratna sharma,parent18@family.com,8005988291,Parents
+P18,Mr. Basanti Lal Choudhary,parent19@family.com,8000907628,Parents
+P19,Mrs Lalita Choudhary,parent20@family.com,8000907628,Parents
+P20,Mr. Rajkumar Pokharna,parent21@family.com,8209226194,Parents
+P21,Mr. Sudhir chordia,parent22@family.com,8209226194,Parents
+P22,Mr.Pravin Bhole,parent23@family.com,9209171513,Parents
+P23,Mr. Rajendra Patwa,parent24@family.com,7976918958,Parents
+P24,Mrs.Seema Patwa,parent25@family.com,7976918958,Parents
+P25,MR. Ram singh sarangdevot,parent26@family.com,8619331949,Parents
+P26,Mrs. Prem kunwar,parent27@family.com,8619331949,Parents
+P27,Mr. Anirudh Joshi,parent28@family.com,9414254569,Parents
+P28,Mr. Indra Kumar Joshi,parent29@family.com,9414254569,Parents
+P29,Chitra Malviya,parent30@family.com,9571314559,Parents
+P30,Heena malviya,parent31@family.com,9571314559,Parents
+P31,Mr. Saurabh Vyas,parent32@family.com,8850958016,Parents
+P32,Mrs. Vimla Shrimali,parent33@family.com,8850958016,Parents
+P33,Purnima Sen.  Mother,parent34@family.com,7891613369,Parents
+P34,Lal Chandra sen,parent35@family.com,7891613369,Parents
+P35,Mrs. Priti Ganna,parent36@family.com,9461100155,Parents
+P36,Mrs. Rajkumari Ganna,parent37@family.com,9461100155,Parents
+P37,Husband,parent38@family.com,7984600981,Parents
+P38,Mr.Mohan Pandurang Salunkhe,parent39@family.com,9967916158,Parents
+P39,Mahesh Bhagwan Magar,parent40@family.com,9967916158,Parents
+P40,Khemraj Mali,parent41@family.com,6376683099,Parents
+P41,Narayani mali,parent42@family.com,6376683099,Parents
+P42,Mr Devi Lal Sharma,parent43@family.com,9166992833,Parents
+P43,Mrs. Sunita Sharma,parent44@family.com,9166992833,Parents
+P44,Cousin M preetham,parent45@family.com,8520808532,Parents
+P45,Jayansh Brother,parent46@family.com,6350316402,Parents
+P46,Mr. Punam chnad janwa,parent47@family.com,6350316402,Parents
+P47,Miss Kareena Teli,parent48@family.com,8849590311,Parents
+P48,Miss Geetanjali Teli,parent49@family.com,8849590311,Parents
+P49,Sarita singh chauhan,parent50@family.com,7987277057,Parents
+P50,Parth singh chauhan,parent51@family.com,7987277057,Parents
+P51,Mr. Harshit Lodha,parent52@family.com,9725539527,Parents
+P52,Mrs. Dilkhush Lodha,parent53@family.com,9725539527,Parents
+P53,Mr. Bhanwarlal Bhati,parent54@family.com,9351719165,Parents
+P54,Mrs. Pani bhati,parent55@family.com,9351719165,Parents
+P55,Mrs. Santosh Devi,parent56@family.com,8302931910,Parents
+P56,Miss Priya Athwal,parent57@family.com,8302931910,Parents
+P57,Mrs. Anuradha Devi,parent58@family.com,8529312583,Parents
+P58,Mr. Sikander Singh,parent59@family.com,8529312583,Parents
+P59,Harmesh Suhalka,parent60@family.com,6378329968,Parents
+P60,Vandana Suhalka,parent61@family.com,6378329968,Parents
+P61,MRS. SANTOSH ATHWAL,parent62@family.com,8302931910,Parents
+P62,MISS PRIYA ATHWAL,parent63@family.com,8302931910,Parents
+P63,Tasneem Kanor,parent64@family.com,7737728354,Parents
+P64,Arwa Miyaji,parent65@family.com,7737728354,Parents
+P65,Mr. Arjun das bairagi,parent66@family.com,8305389398,Parents
+P66,Mr. Murali das bairagi,parent67@family.com,8305389398,Parents
+P67,Pooja Singh,parent68@family.com,8209815696,Parents
+P68,Rinku mundel,parent69@family.com,8209815696,Parents
+P69,Mr. Dharmendra Mundra [Father],parent70@family.com,9057212951,Parents
+P70,Mrs.Lalita Mundra,parent71@family.com,9057212951,Parents
+P71,Mr.Nanak Ram Lunj,parent72@family.com,8239171250,Parents
+P72,Mrs. Jaya Lunj,parent73@family.com,8239171250,Parents
+P73,"Grand father - MS khan , mother Shadab Sheikh , brother - Saihaan Sheikh",parent74@family.com,7597576568,Parents
+P74,Father,parent75@family.com,8130633956,Parents
+P75,Mr. Nischal Sharma,parent76@family.com,9016857404,Parents
+P76,Mr Vinod Rawat,parent77@family.com,9352366478,Parents
+P77,Mrs Anju Rawat,parent78@family.com,9352366478,Parents
+P78,Mr. Sanjay,parent79@family.com,9024839688,Parents
+P79,Mrs. Asha,parent80@family.com,9024839688,Parents
+P80,Mr. Harsh khamesra,parent81@family.com,7229887373,Parents
+P81,Bheru singh kitawat,parent82@family.com,8824788289,Parents
+P82,Kailash kunwar,parent83@family.com,8824788289,Parents
+P83,Mr. DEEPAK KUMAR TOLAMBIYA,parent84@family.com,9351112545,Parents
+P84,Mrs. Krishna Tolambiya,parent85@family.com,9351112545,Parents
+P85,Mr. Kishor pancholi   father,parent86@family.com,9610766834,Parents
+P86,Mrs. Maya pancholi mother,parent87@family.com,9610766834,Parents
+P87,Mr lalit shrimali,parent88@family.com,7023212455,Parents
+P88,Mrs Deepika shrimali,parent89@family.com,7023212455,Parents
+P89,Mr ayush sahu,parent2@family.com,7339737049,Parents
+P90,Mr. SHRIMAN TAIMNI,parent3@family.com,8270140515,Parents
+P91,Mrs. ANUPAMA TAIMNI,parent4@family.com,8270140515,Parents
+P92,Mr.Preetham,parent5@family.com,8520808532,Parents
+P93,Aryan garg,parent6@family.com,9166958932,Parents
+P94,Saloni garg,parent7@family.com,9166958932,Parents
+P95,Mr. Faizal Khan,parent8@family.com,9001447676,Parents
+P96,Mrs Tasneem Kanor,parent9@family.com,7737728354,Parents
+P97,Arwa Miyaji,parent10@family.com,7737728354,Parents
+P98,K. Sai Charan,parent11@family.com,9347723603,Parents
+P99,Varsha Mahesh Magar,parent12@family.com,"9,96,79,16,158",Parents
+P100,Mrs. Santosh,parent13@family.com,8209322006,Parents
+P101,Miss Palak,parent14@family.com,8209322006,Parents
+P102,Mr. Nazeer Haider Kazmi,parent15@family.com,7427017137,Parents
+P103,Mrs. Farheen Kazmi,parent16@family.com,7427017137,Parents
+P104,Mr shankar lal sharma,parent17@family.com,8005988291,Parents
+P105,Mrs ratna sharma,parent18@family.com,8005988291,Parents
+P106,Mr. Basanti Lal Choudhary,parent19@family.com,8000907628,Parents
+P107,Mrs Lalita Choudhary,parent20@family.com,8000907628,Parents
+P108,Mr. Rajkumar Pokharna,parent21@family.com,8209226194,Parents
+P109,Mr. Sudhir chordia,parent22@family.com,8209226194,Parents
+P110,Mr.Pravin Bhole,parent23@family.com,9209171513,Parents
+P111,Mr. Rajendra Patwa,parent24@family.com,7976918958,Parents
+P112,Mrs.Seema Patwa,parent25@family.com,7976918958,Parents
+P113,MR. Ram singh sarangdevot,parent26@family.com,8619331949,Parents
+P114,Mrs. Prem kunwar,parent27@family.com,8619331949,Parents
+P115,Mr. Anirudh Joshi,parent28@family.com,9414254569,Parents
+P116,Mr. Indra Kumar Joshi,parent29@family.com,9414254569,Parents
+P117,Chitra Malviya,parent30@family.com,9571314559,Parents
+P118,Heena malviya,parent31@family.com,9571314559,Parents
+P119,Mr. Saurabh Vyas,parent32@family.com,8850958016,Parents
+P120,Mrs. Vimla Shrimali,parent33@family.com,8850958016,Parents
+P121,Purnima Sen.  Mother,parent34@family.com,7891613369,Parents
+P122,Lal Chandra sen,parent35@family.com,7891613369,Parents
+P123,Mrs. Priti Ganna,parent36@family.com,9461100155,Parents
+P124,Mrs. Rajkumari Ganna,parent37@family.com,9461100155,Parents
+P125,Husband,parent38@family.com,7984600981,Parents
+P126,Mr.Mohan Pandurang Salunkhe,parent39@family.com,9967916158,Parents
+P127,Mahesh Bhagwan Magar,parent40@family.com,9967916158,Parents
+P128,Khemraj Mali,parent41@family.com,6376683099,Parents
+P129,Narayani mali,parent42@family.com,6376683099,Parents
+P130,Mr Devi Lal Sharma,parent43@family.com,9166992833,Parents
+P131,Mrs. Sunita Sharma,parent44@family.com,9166992833,Parents
+P132,Cousin M preetham,parent45@family.com,8520808532,Parents
+P133,Jayansh Brother,parent46@family.com,6350316402,Parents
+P134,Mr. Punam chnad janwa,parent47@family.com,6350316402,Parents
+P135,Miss Kareena Teli,parent48@family.com,8849590311,Parents
+P136,Miss Geetanjali Teli,parent49@family.com,8849590311,Parents
+P137,Sarita singh chauhan,parent50@family.com,7987277057,Parents
+P138,Parth singh chauhan,parent51@family.com,7987277057,Parents
+P139,Mr. Harshit Lodha,parent52@family.com,9725539527,Parents
+P140,Mrs. Dilkhush Lodha,parent53@family.com,9725539527,Parents
+P141,Mr. Bhanwarlal Bhati,parent54@family.com,9351719165,Parents
+P142,Mrs. Pani bhati,parent55@family.com,9351719165,Parents
+P143,Mrs. Santosh Devi,parent56@family.com,8302931910,Parents
+P144,Miss Priya Athwal,parent57@family.com,8302931910,Parents
+P145,Mrs. Anuradha Devi,parent58@family.com,8529312583,Parents
+P146,Mr. Sikander Singh,parent59@family.com,8529312583,Parents
+P147,Harmesh Suhalka,parent60@family.com,6378329968,Parents
+P148,Vandana Suhalka,parent61@family.com,6378329968,Parents
+P149,MRS. SANTOSH ATHWAL,parent62@family.com,8302931910,Parents
+P150,MISS PRIYA ATHWAL,parent63@family.com,8302931910,Parents
+P151,Tasneem Kanor,parent64@family.com,7737728354,Parents
+P152,Arwa Miyaji,parent65@family.com,7737728354,Parents
+P153,Mr. Arjun das bairagi,parent66@family.com,8305389398,Parents
+P154,Mr. Murali das bairagi,parent67@family.com,8305389398,Parents
+P155,Pooja Singh,parent68@family.com,8209815696,Parents
+P156,Rinku mundel,parent69@family.com,8209815696,Parents
+P157,Mr. Dharmendra Mundra [Father],parent70@family.com,9057212951,Parents
+P158,Mrs.Lalita Mundra,parent71@family.com,9057212951,Parents
+P159,Mr.Nanak Ram Lunj,parent72@family.com,8239171250,Parents
+P160,Mrs. Jaya Lunj,parent73@family.com,8239171250,Parents
+P161,"Grand father - MS khan , mother Shadab Sheikh , brother - Saihaan Sheikh",parent74@family.com,7597576568,Parents
+P162,Father,parent75@family.com,8130633956,Parents
+P163,Mr. Nischal Sharma,parent76@family.com,9016857404,Parents
+P164,Mr Vinod Rawat,parent77@family.com,9352366478,Parents
+P165,Mrs Anju Rawat,parent78@family.com,9352366478,Parents
+P166,Mr. Sanjay,parent79@family.com,9024839688,Parents
+P167,Mrs. Asha,parent80@family.com,9024839688,Parents
+P168,Mr. Harsh khamesra,parent81@family.com,7229887373,Parents
+P169,Bheru singh kitawat,parent82@family.com,8824788289,Parents
+P170,Kailash kunwar,parent83@family.com,8824788289,Parents
+P171,Mr. DEEPAK KUMAR TOLAMBIYA,parent84@family.com,9351112545,Parents
+P172,Mrs. Krishna Tolambiya,parent85@family.com,9351112545,Parents
+P173,Mr. Kishor pancholi   father,parent86@family.com,9610766834,Parents
+P174,Mrs. Maya pancholi mother,parent87@family.com,9610766834,Parents
+P175,Mr lalit shrimali,parent88@family.com,7023212455,Parents
+P176,Mrs Deepika shrimali,parent89@family.com,7023212455,Parents
+D1,PARAM TAIMNI,paramtaimni41@gmail.com,8279140515,Degree Students
+D2,Vinita Choudhary,vinitachoudhary1003@gmail.com,8000907628,Degree Students
+D3,MANAN JAIN,mananjain6121@gmail.com,6377060965,Degree Students
+D4,Dakshita Maheshwari,dakshitamaheshwari14@gmail.com,8209376536,Degree Students
+D5,Ritesh Maheshwari,maheshwariritesh86@gmail.com,9460670280,Degree Students
+D6,RAHUL,WWW.LIBRARYNTD01@GMAIL.COM,9632587410,Degree Students
+D7,Ishika Ganna,riwaayat206@gmail.com,9461100155,Degree Students
+D8,Kishan mali,kishanm0012@gmail.com,7339737049,Degree Students
+D9,Saloni Suhalka,salonisuhalka2003@gmail.com,6378329968,Degree Students
+D10,Rishabh Pokharna,rishabhpokharna04@gmail.com,8209226194,Degree Students
+D11,SADDAM HUSAIN,saddamhussainchisti@gmail.com,9001447676,Degree Students
+D12,Basant Kalla,Basantkalla22@gmail.com,7792925977,Degree Students
+D13,Deepesh vyas,deepesh.vyas@spsu.ac.in,7597942646,Degree Students
+D14,Jyoti Singh,jyotirathore0250@gmail.com,8529312583,Degree Students
+D15,Manisha sen,manishasen601@gmail.com,9694124006,Degree Students
+D16,Manvi Rawal,manvirawal15@gmail.com,9001218859,Degree Students
+D17,Saroj Choudhary,Saroj29200005@gmail.com,8209815696,Degree Students
+D18,Yogendra Singh,Rathoreyogendr68@gmail.com,8290891382,Degree Students
+D19,Sumitra Ahir,sumitraahir28@gmail.com,9998824650,Degree Students
+D20,Anish Dhing,anishjain800@gmail.com,6377138593,Degree Students
+D21,Tripti,joshitripti852@gmail.com,9166992833,Degree Students
+D22,Anjali lunj,anjalilunj@gmail.com,8239171250,Degree Students
+D23,Isha Patwa,ishapatwa06@gmail.com,7976918958,Degree Students
+D24,Priyanka Prajapati,Prajapatipriyanka130@gmail.com,7984600981,Degree Students
+D25,Aakash Prajapati,aakashprajapatibwr2001@gmail.com,9352570176,Degree Students
+D26,Suruchi Sharma,suruchisharma10012@gmail.com,9016857404,Degree Students
+D27,Parakh shah,parakhshah57@gmail.com,9549205393,Degree Students
+D28,Riya Shrimali,riyashrimali0@gmail.com,7023212455,Degree Students
+D29,Rachit Porwal,Rachit2002porwal@gmail.com,9929966837,Degree Students
+D30,Devendra singh kitawat,devsa123k@gmail.com,8824788289,Degree Students
+D31,Vanshika bajaj,Vanshikabajaj683@gmail.com,7357859333,Degree Students
+D32,Prateek Modi,prateekmodi7777@gmail.com,9617467777,Degree Students
+D33,Esha kothari,Eshakothari082001@gmail.com,7976463182,Degree Students
+D34,Chitra Malviya,chitramalviya60@gmail.com,9571314559,Degree Students
+D35,Shwet Mishra,shwetm44@gmail.com,9588792274,Degree Students
+D36,Kartik sharma,Kartiksharma2610@hotmail.com,8005988291,Degree Students
+D37,Chirag Choubisa,chiragchoubisa8@gmail.com,6378108753,Degree Students
+D38,Labhanshu vislot,Vislotlabhanshu@gmail.com,9024827149,Degree Students
+D39,Ankita joshi,ankita.mba2023@spsu.ac.in,8955719277,Degree Students
+D40,Balram kumawat,Kumawatb974@gmail.com,6353605214,Degree Students
+D41,Bhanupratap Singh Chouhan,singhbhanupratap394@gmail.com,7742839207,Degree Students
+D42,Dimpal joshi,dimplejoshi372@gmail.com,9009696353,Degree Students
+D43,Archit patwa,architpatwa01@gmail.com,8112274144,Degree Students
+D44,Gautam Chordia,gautamchordia18@gmail.com,8769808930,Degree Students
+D45,Rajveer Singh Rathore,rajveer123e@gmail.com,9001905467,Degree Students
+D46,Payal Dhaker,piyuudhaker123@gmail.com,8306482676,Degree Students
+D47,Jen Abraham Kuruvilla,jenabraham771800@gmail.com,9526331900,Degree Students
+D48,Hritik sen,hritiksen2531@gmail.com,7891613369,Degree Students
+D49,Subam singh,shubhamsinghdeopa00@gmail.com,9528972006,Degree Students
+D50,Ajay Singh Ranawat,ajayranawat132@gmail.com,9887932478,Degree Students
+D51,Vikas Purohit,vikupurohit91@gmail.com,9166985222,Degree Students
+D52,Suhani Maheshvari,suhanimaheshvari1610@gmail.com,7240768894,Degree Students
+D53,Aastha Jagetia,ajaastha2001@gmail.com,6378477615,Degree Students
+D54,Sanidhya Chashta,sanidhya.mba2023@spsu.ac.in,80057 16659,Degree Students
+D55,Jitendra Lohar,jitendra.mba2023@spsu.ac.in,+91 80030 41713,Degree Students
+D56,Himanshu Nyati,Himanshunyati1201@gmail.com,8947927602,Degree Students
+D57,Tanishka sharma t,stanishka458@gmail.com,9351068561,Degree Students
+D58,Narendra Singh Deora,narendrasingh162005@gmail.com,9166567735,Degree Students
+D59,Gautam Sahitya,Gautamsahitya77@gmail.com,6367456934,Degree Students
+D60,Nagaram Deekshitha,deekshithanagaram@gmail.com,8520808532,Degree Students
+D61,Hardik Nyatee,hardiknyatee@gmail.com,9119267069,Degree Students
+D62,Kartik Jain,chavhankartik85@gmail.com,9829941309,Degree Students
+D63,Pavan Kumar,Gehlotpawan344@gmail.com,8824542306,Degree Students
+D64,Harsh Chandaliya,harsh.chandaliya988@gmail.com,09024839688,Degree Students
+D65,DEVIK MUNDRA,devikmundra18@gmail.com,9057212951,Degree Students
+D66,Janhvi singh chauhan,janhvisinghchauhan3@gmail.com,7987277057,Degree Students
+D67,Khushi garg,gargkhushi1001@gmail.com,9166958932,Degree Students
+D68,Siddharth Singh,sshekhawat183@gmail.com,8130633956,Degree Students
+D69,Mahesh Dhakad,mohitiyo@zohomail.in,6375905311,Degree Students
+D70,Shivlal jat,Shivlaljat508@gmail.com,8949108217,Degree Students
+D71,Harsh Jaiswal,jaiswalharsh0911@gmail.com,8955445299,Degree Students
+D72,Sujal soni,Sujalsoni2299@gmail.com,8209812315,Degree Students
+D73,Abhishek k joshi,a31joshi31@gmail.com,7414010171,Degree Students
+D74,Tanisha Mehta,tanishamehta251@gamil.com,9799236368,Degree Students
+D75,Maya Joshi,Joshimaya11@yahoo.com,9.18619E+11,Degree Students
+D76,Tosif Ahmed Sheikh,Sheikhtosif5252@gmail.com,9829028338,Degree Students
+D77,Anmol Acharya,anmolacharya555@gmail.com,9772458871,Degree Students
+D78,HIMANSHU VYAS,vyashimanshu1611@gmail.com,7597699664,Degree Students
+D79,Bukke Ramesh Naik,rameshnaik2914@gmail.com,6302542194,Degree Students
+D80,MADDILI NAMITH PHANI,namithyadav27@gmail.com,7396910958,Degree Students
+D81,Manav kothari,Manavkothari789@gmail.com,7976420037,Degree Students
+D82,Dr.Chitra Bhole,chitrab839@gmail.com,9209171513,Degree Students
+D83,Jotiram Krishna Deshmukh,jkdeshmukh75@gmail.com,8097224085,Degree Students
+D84,Varsha Mahesh Magar,var31jul@gmail.com,9967916158,Degree Students
+D85,Pallavi Purohit,purohit.pallavi@gmail.com,9414254569,Degree Students
+D86,Dr. Ruchita Shrimali,shrimaliruchita1306@gmail.com,8425907764,Degree Students
+D87,Manisha Vivek Mane,manishamane.sakec@gmail.com,9860962216,Degree Students
+D88,Maruf Sadriwala,marufsadri@gmail.com,+91 9588862583,Degree Students
+D89,Atul Haribhau Kachare,atulhkachare@gmail.com,9867718014,Degree Students
+D90,Sonali Bhati,sonalibhati05@gmail.com,9351719165,Degree Students
+D91,Mudit Joshi,Dr.muditjoshi1@gmail.com,7036442264,Degree Students
+D92,Roshni  Suresh Padate,roshnilad.123@gmail.com,9820847217,Degree Students
+D93,Shital K Dhamal,dhamalsk@gmail.com,9892872002,Degree Students
+D94,MAHENDRA H,mahendra30131@gmail.com,9502524396,Degree Students
+D95,KADARABADARA RAMESH,kbrr.hpt@gmail.com,7702790501,Degree Students
+D96,Bhupendra Choudhary,bhupendrajat1435@gmail.com,8949321635,Degree Students
+D97,Yuvraj Singh Bhati,yuvraj.mtech2023@spsu.ac.in,9460943008,Degree Students
+D98,Chetan Sankhla,sankhla.chetan@gmail.com,9785971032,Degree Students
+D99,Ajay Singh kumawat,ajaysingh.kumawat1999@gmail.com,8005858349,Degree Students
+D100,Harshvardhan singh dulawat,dulawatharshvardhansingh31@gmail.com,7229887373,Degree Students
+D101,Tanmay Madanlal Jain,tanmayjain907@gmail.com,9782612485,Degree Students
+D102,JAYESH PATIDAR,jayeshp23@gmail.com,9840423899,Degree Students
+D103,Tanay Devpura,Tanaydepura@gmail.com,9782830014,Degree Students
+D104,Haiman Vaishnav,vaishnav1999.haiman@gmail.com,9462922344,Degree Students
+D105,Manish kharol,kharolmanish5july@gmail.com,7014192697,Degree Students
+D106,Mahesh Suthar,maheshgjs10@gmail.com,8078640347,Degree Students
+D107,Chetan Sharma,jangidchetan342@gmail.com,8441926439,Degree Students
+D108,Diksha Rajpal,diksharajpal7023@gmsil.com,7014426002,Degree Students
+D109,Avinash Kumar Mourya,Avinash.Mourya@outlook.com,8299010928,Degree Students
+D110,MOHAMMAD SAMEER,squadri031@gmail.com,9460392669,Degree Students
+D111,Lakhvir Singh,lakhvirdhindsa90@gmail.com,9079167806,Degree Students
+D112,Kiran Raj,kiranraj1er@gmail.com,8292605707,Degree Students
+D113,Suraj Pratap Singh Rao,princerao882016@gmail.com,9680117735,Degree Students
+D114,Naman jain,namanjain2002qw@gmail.com,8905924424,Degree Students
+D115,Prithviraj Singh Ranawat,prithvirajsr003@gmail.com,8005618316,Degree Students
+D116,Mukesh Prajapat,mprajapat20050@gmail.com,8209162880,Degree Students
+D117,GobindaGhoshal,ghoshalgobinda789@gmail.com,9382239735,Degree Students
+D118,Devendra pratap singh Sarangdevot,Sarangdevotdevendra128@gmail.com,8619331949,Degree Students
+D119,Vikas Suthar,vikassutharvk83066@gmail.com,8306656297,Degree Students
+D120,Shubham saragara,shubhamsaragara9@gmail.com,8000442637,Degree Students
+D121,Gaurav mishra,gauravmishra4021@gmail.com,7722912195,Degree Students
+D122,Ketan Sharma,ketan4232@gmail.com,9352100610,Degree Students
+D123,Raja Rawat,rajarawat1107@gmail.com,9351366478,Degree Students
+D124,Umesh Chandra Reddy,umeshreddy149@gmail.com,9963984603,Degree Students
+D125,M.Nithish kumar,nithish015xyz@gmail.com,7300372853,Degree Students
+D126,Mohit Swami,mohitgl12391swami@gmail.com,7727894737,Degree Students
+D127,Harsh Vardhan Pujari,harshvardhanpujari7@gmail.com,7737771906,Degree Students
+D128,Karina,karinabairagee@gmail.com,8305389398,Degree Students
+D129,Lavanya Mali,lavanyamali60@gmail.com,6376683099,Degree Students
+D130,Kaithy Yashwanth nadesh,yashwanthnadesh354@gmail.com,7702336440,Degree Students
+D131,Vikram Mali,vikrammali2345@gmail.com,6378482381,Degree Students
+D132,Aatmagya Upadhyay,aatmagyaupadhyay@gmail.com,7014306321,Degree Students
+D133,Lokesh Chouhan,ilokeshonly@gmail.com,8209322006,Degree Students
+D134,Shifa Shafat Sheikh,shifa12udr@gmail.com,7597576568,Degree Students
+D135,Raghav Joshi,rj327joshi04@gmail.com,8239709288,Degree Students
+D136,Shrihari Gudapelly,gudapellyshrihari@gmail.com,07416317436,Degree Students
+D137,Anamika Gupta,ganamika019@gmail.com,9179802663,Degree Students
+D138,Princy Paliwal,princypaliwal081@gmail.com,9461616685,Degree Students
+D139,Kapil patel,Kp4233461@gmail.com,8824176349,Degree Students
+D140,Stuti Kataria,stutikataria1711@gmail.com,9588088193,Degree Students
+D141,Sidhartha Mishra,sidharthamishra6@gmail.com,7023410960,Degree Students
+D142,Chordiya Laxita,chordiyalaxita19@gmail.com,9725539527,Degree Students
+D143,Anjali Teli,anjaliteli1112@gmail.com,8849590311,Degree Students
+D144,Prince Yadav,py5029295@gmail.com,9696929933,Degree Students
+D145,Vidhi Mehta,chavidhi15@gmail.com,9462224480,Degree Students
+D146,Naman gour,namangour18@gmail.com,6376593911,Degree Students
+D147,Himanshu Sen,senhimanshu860@gmail.com,7597767082,Degree Students
+D148,Anjali Ahuja,anjaliahuja05002@gmail.com,9079152786,Degree Students
+D149,Tushar Rajubhai Virwal,Tusharvirwal2812@gmail.com,9662726319,Degree Students
+D150,Kajal tiwari,kajaltiwari7408@gmail.com,6260908162,Degree Students
+D151,Kavita Shaktawat,shaktawatkavita8@gmail.com,7878129331,Degree Students
+D152,Lavanya Agrawal,lavanyaagrawal1602@gmail.com,9460570540,Degree Students
+D153,Aadhya gajjar,aadhya.gajjar@gmail.com,9509504106,Degree Students
+D154,Ravi Paliwal,ravipaliwal885078@gmail.com,9521885078,Degree Students
+D155,Rakhi pancholi,rakhipancholi9@gmail.com,9610766834,Degree Students
+D156,Vedant Vardia,vardiavedant2003@gmail.com,6375115926,Degree Students
+D157,Priyanshi Maheshwari,Priyanshim2004@gmail.com,6375542380,Degree Students
+D158,R.Yashwanth,mintuyashwanth014@gmail.com,9347203892,Degree Students
+D159,Yash Choudhary,choudharyyash9649@gmail.com,6376138397,Degree Students
+D160,Gaddam Karthik Reddy,karthikreddykarthikreddy01@gmail.com,8367375781,Degree Students
+D161,Palak Choudhary,palak0306choudhary@gmail.com,8890620903,Degree Students
+D162,Nikhil Cheryala,nikhilcheryala4@gmail.com,9573979821,Degree Students
+D163,Ramansh Tolambiya,ramanshtolambiya@gmail.com,+91 9351112545,Degree Students
+D164,Pabba Advik,adviklucky@gmail.com,9346771539,Degree Students
+D165,Priyanka Joshi,Priyankajoshi2300@gmail.com,8619277126,Degree Students
+D166,Lakshmi Rajput,rajputlaxmi2002@gmail.com,8619650475,Degree Students
+D167,Bhupendra Singh Deora,bhupendrasinghdeora24@gmail.com,7976631658,Degree Students
+D168,Chennuru Giridhar,giridhar.chennuru3105@gmail.com,9398839789,Degree Students
+D169,Vivek panchal,panchalbittu98@gmail.com,9116301029,Degree Students
+D170,Jonnadula Naga Samba Siva Rao,sivajonnadula99@gmail.com,6300883412,Degree Students
+D171,Tati Sai Raghava,sai5179260@gmail.com,8247286726,Degree Students
+D172,Omprakash patidar,omprakashpatidar1121@gmail.com,9001282211,Degree Students
+D173,Bairagoni Manikanth,bairagonimanikanth@gmail.com,7416513829,Degree Students
+D174,Muppala Jeethu,muppalajeethu20@gmail.com,9573338365,Degree Students
+D175,Vishnu Vardhan Reddy Kandada,vishnuvardhankandada169@gmail.com,8712136235,Degree Students
+D176,Miqdad Dalal,miqdaddalal03@gmail.com,6350052940,Degree Students
+D177,Shaik Mohammad Ayub,mahammadayub29@gmail.com,9392395936,Degree Students
+D178,ABBU SRIDHAR,abbusridhar6@gmail.com,9347723603,Degree Students
+D179,POLAGANI NAGABABU,polaganibabu666@gmail.com,9392967018,Degree Students
+D180,Valuvajjala Maheshwar rao,maheshwarfeeds@gmail.com,8309874271,Degree Students
+D181,Kondra Sharath Reddy,Kondrasharathreddy729@gmail.com,7569967563,Degree Students
+D182,Gaddam Kalyan Teja,kalyanteja18@gmail.com,8985381228,Degree Students
+D183,Murtaza Kanor,murtazakanor123@gmail.com,7737728354,Degree Students
+D184,Syed Roshan,roshansyed1223@gmail.com,9347050435,Degree Students
+D185,Kajal janwa,Kajaljanwa219@gmail.com,6350316402,Degree Students
+D186,Vikas Lohar,vikaslohar0294@gmail.com,8949288403,Degree Students
+D187,Areeb Haider Kazmi,areebhaiderkazmi@gmail.com,7427017137,Degree Students
+D188,Gopesh mathur,gopeshmathur892@gmail.com,7850942941,Degree Students
+D189,Himanshu choudhary,Choudharyhimanshu9990@gmail.com,6367629990,Degree Students
+D190,Saurabh Jawaria,sj1360087@gmail.com,7742939430,Degree Students
+D191,Harshit Purohit,harshitpurohit44@gmail.com,8619130695,Degree Students
+D192,Nitesh Athwal,niteshathwal754@gmail.com,8302931910,Degree Students
+D193,M. Vimal Kumar,vimal.kumar@spsu.ac.in,9929329673,Degree Students
+D194,Siddharth Kumawat,siddharthkumawat2004@gmail.com,9351045484,Degree Students
+D195,Vaduguri Chandra Suresh Reddy,Chandrasuresh.reddy@gmail.com,9392573203,Degree Students
+D196,KATANKUR UDAY KUMAR,udaysmart9078@gmail.com,8919863598,Degree Students
+D197,Abbu Nithees Reddy,nithish.7098@gmail.com,8886228882,Degree Students
+D198,Mandava Vasu,mandavavasu@gmail.com,9347447163,Degree Students
+D199,PERAPU MADHU,madhuperapu9392@gmail.com,9392475175,Degree Students
+D200,Sangepu Siddhartha,siddhusangsid@gmail.com,8522950702,Degree Students
+D201,Komal sen,senkomal387@gmail.com,9636599236,Degree Students

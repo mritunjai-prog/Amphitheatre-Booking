@@ -43,10 +43,12 @@ export const parseBookedSeatsData = (csvText: string): BookedSeatRecord[] => {
   });
 
   return results.data
-    .filter((record) => Boolean(record.seatNumber) && Boolean(record.userId))
+    .filter((record) => Boolean(record.seatNumber))
     .map((record) => ({
       ...record,
       seatNumber: normalizeSeatNumber(record.seatNumber as string),
+      // If userId is not provided, default to seatNumber (new CSV format)
+      userId: record.userId || record.seatNumber,
     }));
 };
 
@@ -74,11 +76,13 @@ export const generateSeats = (): Seat[] => {
   let parentsCounter = 1;
   let degreeCounter = 1;
   let studentCounter = 1;
+  let pressCounter = 1;
 
   // Total seats to allocate (actual capacity per user requirements)
-  const maxGuests = 56; // 2 rows of Guests (28 + 28)
+  const maxGuests = 14; // Row 2 right side: 14 seats for Guests
+  const maxPress = 14; // Row 2 left side: 14 seats for Press
   const maxFaculty = 60; // 2 rows of Faculty (30 + 30)
-  const maxParents = 290; // Parents section (rows 13-19, with tapering)
+  const maxParents = 202; // Parents section expanded to 202 seats (rows 13-17: 38+40+40+42+42)
   const maxStudents = 388; // College Students (rows 20-27, with tapering for symmetry)
 
   // V-SHAPE TAPERING (REVERSE TAPERING)
@@ -88,34 +92,35 @@ export const generateSeats = (): Seat[] => {
 
   // Total rows configuration:
   // Row 1: VIP (26 seats)
-  // Rows 2-3: Guests (28 seats each)
-  // Rows 4-5: Faculty (30 seats each)
+  // Row 2: Press (left) + Guests (right) (28 seats)
+  // Row 3: REMOVED (0 seats)
+  // Rows 4-5: Faculty (30 seats each) - display as rows 3-4
   // Row 6: REMOVED (0 seats)
-  // Rows 7-12: Degree Students (210 seats)
-  // Rows 13-19: Parents (290 seats)
-  // Rows 20-27: College Students (388 seats)
-  const totalRows = 27; // Fixed to row 27 to accommodate all sections
+  // Rows 7-12: Degree Students (210 seats) - display as rows 5-10
+  // Rows 13-17: Parents (202 seats: 38+40+40+42+42) - display as rows 11-15
+  // Rows 18-19: SKIPPED (no seats)
+  // Rows 20-27: College Students (388 seats) - display as rows 16-23
+  const totalRows = 27; // Keep original to 27 for seat generation
 
   // Function to get seats per row - V-SHAPE (reverse tapering) + FIXED front rows
-  // Rows 1-5: FIXED seat counts matching user requirements
-  // Rows 7-28: V-SHAPE tapering (Degree + Parents + College sections)
-  // Row 6: REMOVED (skipped)
+  // Original row numbers for seat calculation
   const getSeatsPerRow = (row: number): number => {
-    // Fixed seats for front rows (actual capacity from user requirements)
+    // Fixed seats for front rows
     if (row === 1) return 26; // VIP: 26 seats
-    if (row === 2) return 28; // Guests Row 1: 28 seats
-    if (row === 3) return 28; // Guests Row 2: 28 seats
+    if (row === 2) return 28; // Row 2: 28 seats (14 Guests left + 14 Press right)
+    if (row === 3) return 0; // Row 3: REMOVED - no more guests
     if (row === 4) return 30; // Faculty Row 1: 30 seats
     if (row === 5) return 30; // Faculty Row 2: 30 seats
     if (row === 6) return 0; // Row 6 REMOVED - no seats
 
-    // V-shape tapering for ALL student sections (rows 7-28)
-    // Rows 25-28 get 50 seats (widest back section)
-    // Row 7 gets 32 seats (narrowest front)
-    // Remove 2 seats TOTAL (1 from each side) every 2 rows going UP from row 25
-    if (row >= 25) return 50; // Rows 25-28 all get 50 seats (widest)
+    // Rows 17-19: SKIPPED (no seats) - but row 17 now used for parents
+    if (row >= 18 && row <= 19) return 0;
 
-    const rowsFromBack = 25 - row; // 0 for row 25, 1 for row 24, etc.
+    // V-shape tapering for student sections (rows 7-27, excluding 16-19)
+    // Rows 25-27 get 50 seats (widest back section)
+    if (row >= 25) return 50; // Rows 25-27 all get 50 seats (widest)
+
+    const rowsFromBack = 25 - row;
     const reductionPairs = Math.floor(rowsFromBack / 2);
     const seatsRemoved = reductionPairs * 2;
     const calculatedSeats = 50 - seatsRemoved;
@@ -125,11 +130,26 @@ export const generateSeats = (): Seat[] => {
     );
   };
 
-  // Degree Students fill rows 8-13
+  // Map physical row to display row (continuous numbering)
+  const getDisplayRow = (physicalRow: number): number => {
+    if (physicalRow <= 2) return physicalRow; // Rows 1-2 stay same
+    if (physicalRow === 3) return 3; // Skip row 3 (0 seats)
+    if (physicalRow === 4) return 3; // Faculty row 1 → display row 3
+    if (physicalRow === 5) return 4; // Faculty row 2 → display row 4
+    if (physicalRow === 6) return 5; // Skip row 6 (0 seats)
+    if (physicalRow >= 7 && physicalRow <= 12) return physicalRow - 2; // Degree rows 7-12 → display 5-10
+    if (physicalRow >= 13 && physicalRow <= 17) return physicalRow - 2; // Parents rows 13-17 → display 11-15
+    if (physicalRow >= 18 && physicalRow <= 19) return physicalRow - 2; // Skip rows 18-19
+    if (physicalRow >= 20) return physicalRow - 4; // College rows 20-27 → display 16-23
+    return physicalRow;
+  };
 
   // Now generate the actual seats
   for (let row = 1; row <= totalRows; row++) {
     const seatsInThisRow = getSeatsPerRow(row);
+    if (seatsInThisRow === 0) continue; // Skip rows with 0 seats
+
+    const displayRow = getDisplayRow(row);
     const seatsPerSide = Math.floor(seatsInThisRow / 2);
     const hasOddSeat = seatsInThisRow % 2 === 1;
 
@@ -143,37 +163,51 @@ export const generateSeats = (): Seat[] => {
         section = "left"; // Middle seat goes to left
       }
 
-      // Row 1: VIP (numbered VIP-1 to VIP-50)
+      // Row 1: VIP - Alternating pattern (VIP-L1, VIP-R1, VIP-L2, VIP-R2, ...)
       if (row === 1) {
-        seatNumber = `VIP-${position}`;
+        const vipNumber = Math.ceil(position / 2);
+        if (position % 2 === 1) {
+          seatNumber = `VIP-L${vipNumber}`;
+        } else {
+          seatNumber = `VIP-R${vipNumber}`;
+        }
         category = "VIP";
       }
-      // Rows 2-3: Guests (G1 to G100, 2 rows)
-      else if (row >= 2 && row <= 3 && guestCounter <= maxGuests) {
-        seatNumber = `G${guestCounter++}`;
-        category = "Guests";
+      // Row 2: Left side = Press, Right side = Guests
+      else if (row === 2) {
+        if (section === "left" && pressCounter <= maxPress) {
+          // Left side: Press numbered from right to left (P-L14 to P-L1)
+          const leftSeatNum = seatsPerSide - (position - 1);
+          seatNumber = `P-L${leftSeatNum}`;
+          category = "Press";
+          pressCounter++;
+        } else if (section === "right" && guestCounter <= maxGuests) {
+          // Right side: Guests numbered from left to right (G-R1 to G-R14)
+          const rightSeatNum = position - seatsPerSide;
+          seatNumber = `G-R${rightSeatNum}`;
+          category = "Guests";
+          guestCounter++;
+        } else {
+          continue;
+        }
       }
-      // Rows 4-5: Faculty (F1 to F100, exactly 100 seats, 2 rows)
+      // Rows 4-5: Faculty (F1 to F60, exactly 60 seats, 2 rows)
       else if (row >= 4 && row <= 5 && facultyCounter <= maxFaculty) {
         seatNumber = `F${facultyCounter++}`;
         category = "Faculty";
-      }
-      // Row 6: REMOVED - skip this row entirely
-      else if (row === 6) {
-        continue; // Skip row 6 completely
       }
       // Rows 7-12: Degree Students (all seats in these rows)
       else if (row >= 7 && row <= 12) {
         seatNumber = `D${degreeCounter++}`;
         category = "Degree Students";
       }
-      // Rows 13-19: Parents (290 seats total with tapering)
-      else if (row >= 13 && row <= 19 && parentsCounter <= maxParents) {
+      // Rows 13-17: Parents (176 seats total with tapering)
+      else if (row >= 13 && row <= 17 && parentsCounter <= maxParents) {
         seatNumber = `P${parentsCounter++}`;
         category = "Parents";
       }
-      // Rows 20-27: College Students (all seats in these rows)
-      else if (row >= 20 && row <= 27) {
+      // Rows 20-27: College Students (all seats in these rows, max 388)
+      else if (row >= 20 && row <= 27 && studentCounter <= maxStudents) {
         seatNumber = `${studentCounter++}`;
         category = "College Students";
       }
@@ -185,7 +219,7 @@ export const generateSeats = (): Seat[] => {
       seats.push({
         id: `seat-${seatNumber}`,
         seatNumber,
-        row,
+        row: displayRow, // Use display row for continuous numbering
         section,
         categoryReserved: category,
         status: "available",
@@ -274,7 +308,9 @@ export const exportBookedSeatsCSV = (seats: Seat[]) => {
 
   // Group by category
   const categorized: Record<string, Seat[]> = {
+    VIP: [],
     Guests: [],
+    Press: [],
     Faculty: [],
     "Degree Students": [],
     "College Students": [],
@@ -287,17 +323,20 @@ export const exportBookedSeatsCSV = (seats: Seat[]) => {
     }
   });
 
-  // Build CSV content with category headers
-  let csvContent = "category,seatNumber,userId,userName,email,phone,notes\n";
+  // Build CSV content with simplified format (no category or userId columns)
+  let csvContent = "seatNumber,userName,email,phone,notes\n";
 
   Object.entries(categorized).forEach(([category, seats]) => {
     if (seats.length > 0) {
       csvContent += `\n# ${category.toUpperCase()}\n`;
       seats.forEach((seat) => {
         const user = seat.assignedUser;
-        const row = `${user?.category},${seat.seatNumber},${user?.id},${
-          user?.name
-        },${user?.email},${user?.phone},${seat.importNotes || ""}`;
+        // Only output: seatNumber, userName, email, phone, notes
+        // Category can be derived from seat prefix (VIP-, D, P, G-, etc.)
+        // userId was redundant (always same as seatNumber)
+        const row = `${seat.seatNumber},${user?.name},${user?.email},${
+          user?.phone
+        },${seat.importNotes || ""}`;
         csvContent += row + "\n";
       });
     }
