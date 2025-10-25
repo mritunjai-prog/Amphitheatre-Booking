@@ -1,0 +1,36 @@
+Seat Number,Row,Guest Name,User ID,Email,Phone
+VIP-L13,Row 1 (VIP),Ms. Yogita Bihani,VIP29,msyogitabihani@vip.com,N/A
+VIP-R13,Row 1 (VIP),Mr. Rajenndra Jain,VIP48,mrrajenndrajain@vip.com,N/A
+VIP-L12,Row 1 (VIP),Mr. Aaryaman Sethi,VIP28,mraaryamansethi@vip.com,N/A
+VIP-R12,Row 1 (VIP),Ms. Savita Yadav,VIP31,mssavitayadav@vip.com,N/A
+VIP-L11,Row 1 (VIP),Mr. Parmeet Singh Sethi,VIP27,mrparmeetsinghsethi@vip.com,N/A
+VIP-R11,Row 1 (VIP),Ms. Akarsha Jagtiani,VIP30,msakarshajagtiani@vip.com,N/A
+VIP-L10,Row 1 (VIP),Mr. Murli Manohar Lodha,VIP22,mrmurlimanoharlodha@vip.com,N/A
+VIP-R10,Row 1 (VIP),Shri Anil Badgotri,VIP26,shrianilbadgotri@vip.com,N/A
+VIP-L9,Row 1 (VIP),Mr. Rajesh Soni,VIP21,mrrajeshsoni@vip.com,N/A
+VIP-R9,Row 1 (VIP),Shri Yagyesh Gupta,VIP25,shriyagyeshgupta@vip.com,N/A
+VIP-L8,Row 1 (VIP),Mr. Ravindra Kumar Garg,VIP20,mrravindrakumargarg@vip.com,N/A
+VIP-R8,Row 1 (VIP),Shri Sanjeev Garg,VIP24,shrisanjeevgarg@vip.com,N/A
+VIP-L7,Row 1 (VIP),Mr. Kishan Joshi,VIP19,mrkishanjoshi@vip.com,N/A
+VIP-R7,Row 1 (VIP),Shri Anuj Khandelwal,VIP23,shrianujkhandelwal@vip.com,N/A
+VIP-L6,Row 1 (VIP),Mr.�Prabhakar�Mishra,VIP18,mrprabhakarmishra@vip.com,N/A
+VIP-R6,Row 1 (VIP),Prof. Nalinaksh S. Vyas,VIP15,profnalinakshsvyas@vip.com,N/A
+VIP-L5,Row 1 (VIP),Mr. Manish Toshniwal,VIP17,mrmanishtoshniwal@vip.com,N/A
+VIP-R5,Row 1 (VIP),Mr. Mangal Dev,VIP14,mrmangaldev@vip.com,N/A
+VIP-L4,Row 1 (VIP),Mr . Gaurav Srivastava,VIP47,mrgauravsrivastava@vip.com,N/A
+VIP-R4,Row 1 (VIP),Dr. Dhruv Aggrawal,VIP13,drdhruvaggrawal@vip.com,N/A
+VIP-L3,Row 1 (VIP),Mr.Yogesh Goyal,VIP46,mryogeshgoyal@vip.com,N/A
+VIP-R3,Row 1 (VIP),Mr. Ajay Kumar Saraogi,VIP12,mrajaykumarsaraogi@vip.com,N/A
+VIP-L2,Row 1 (VIP),Mr. Namit Mehta,VIP44,mrnamitmehta@vip.com,N/A
+VIP-R2,Row 1 (VIP),Mr. Madhavkrishna Singhania,VIP11,mrmadhavkrishnasinghania@vip.com,N/A
+VIP-L1,Row 1 (VIP),Ms. Pragya Kewalramani�,VIP43,mspragyakewalramani@vip.com,N/A
+VIP-R1,Row 1 (VIP),Dr. Raghavpat Singhania,VIP10,drraghavpatsinghania@vip.com,N/A
+G-L9,Row 3 (Guests),Col. N.K. Bhagasra,G40,colnkbhagasra@vip.com,N/A
+G-L8,Row 3 (Guests),Mrs. Nirma Bishnoi,G45,mrsnirmabishnoi@vip.com,N/A
+G-L7,Row 3 (Guests),Dr. S. M. Prasanna Kumar,G39,drsmprasannakumar@vip.com,N/A
+G-L6,Row 3 (Guests),Prof. S.K. Sharma,G38,profsksharma@vip.com,N/A
+G-L5,Row 3 (Guests),Prof. S.S. Sarangdevot,G37,profsssarangdevot@vip.com,N/A
+G-L4,Row 3 (Guests),Prof. U.S. Sharma,G35,profussharma@vip.com,N/A
+G-L3,Row 3 (Guests),Prof. Pratap Singh Dhakar,G34,profpratapsinghdhakar@vip.com,N/A
+G-L2,Row 3 (Guests),Prof. B.P. Sharma,G33,profbpsharma@vip.com,N/A
+G-L1,Row 3 (Guests),Prof. Ashok Banerjee,G32,profashokbanerjee@vip.com,N/A

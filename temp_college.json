@@ -1,0 +1,92 @@
+[
+  {
+    "category": "College Students",
+    "seatNumber": "126",
+    "userId": "301",
+    "userName": "M Bhanu Reddy",
+    "email": "bhanuprakash.reddy@spsu.ac.in",
+    "phone": "9000653367",
+    "notes": "\"B- Tech - 22CS002571"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "127",
+    "userId": "302",
+    "userName": "KASIREDDY SRINADH REDDY",
+    "email": "srinath.reddy@spsu.ac.in",
+    "phone": "7981186068",
+    "notes": "CSE - 22CS002587"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "128",
+    "userId": "303",
+    "userName": "N Naveen",
+    "email": "naveen.n@spsu.ac.in",
+    "phone": "9347580741",
+    "notes": "B.Tech CSE - 22CS002481"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "129",
+    "userId": "304",
+    "userName": "N Sai Kiran Reddy",
+    "email": "saikiran.reddy@spsu.ac.in",
+    "phone": "7569241793",
+    "notes": "CSE - 22CS002469"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "130",
+    "userId": "305",
+    "userName": "Laasyasri.Veeravelli",
+    "email": "laasyasri.btech2025@spsu.ac.in",
+    "phone": "8985758071",
+    "notes": "Btech - 25CS003525"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "131",
+    "userId": "306",
+    "userName": "Choda.Jyothi swarupa",
+    "email": "jyothiswarupa.btech2025@spsu.ac.in",
+    "phone": "7670859154",
+    "notes": "CSE(AIML) - 25CS003530"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "132",
+    "userId": "307",
+    "userName": "Doyal Dangi",
+    "email": "doyaldangi.btech2025@2025.ac.in",
+    "phone": "7728828892",
+    "notes": "Biotech btech - 25BT003723"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "133",
+    "userId": "308",
+    "userName": "Bhavyanshi paliwal",
+    "email": "bhavyanshipaliwal.btech2025@spsu.ac.in",
+    "phone": "9079717972",
+    "notes": "B-tech - 25BT003483"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "134",
+    "userId": "309",
+    "userName": "Garima Rathore",
+    "email": "garima.bba2024@spsu.ac.in",
+    "phone": "8209718078",
+    "notes": "Bba - 24bba00398"
+  },
+  {
+    "category": "College Students",
+    "seatNumber": "135",
+    "userId": "310",
+    "userName": "HARINI AYUNUGU",
+    "email": "hariniayunugu.btech2025@spsu.ac.in",
+    "phone": "9399953949",
+    "notes": "B.tech CSE-AIML - 25CS003597"
+  }
+]
