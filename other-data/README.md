@@ -1,8 +1,6 @@
-# Confidential Data - Degree Students
+# Other Data - Student Information
 
-## ⚠️ CONFIDENTIAL - RESTRICTED ACCESS
-
-This folder contains sensitive student information for the convocation ceremony.
+This folder contains student information files for the convocation ceremony.
 
 ### Files in this folder:
 
@@ -16,7 +14,18 @@ This folder contains sensitive student information for the convocation ceremony.
   - `phone` - Contact phone number
   - `degree` - Degree type
 
-### Degree Distribution:
+#### `college-students-data.csv`
+
+- **Purpose:** Quick reference for college students
+- **Contains:** 338 college students
+- **Columns:**
+  - `seatNumber` - Seat assignment (1-338)
+  - `name` - Student full name
+  - `email` - Student email address
+  - `phone` - Contact phone number
+  - `program` - Academic program/course
+
+### Degree Students Distribution:
 
 | Degree Type                               | Count | Seat Range |
 | ----------------------------------------- | ----- | ---------- |
@@ -27,40 +36,47 @@ This folder contains sensitive student information for the convocation ceremony.
 | Bachelor of Technology (B.Tech)           | 80    | D95-D174   |
 | Bachelor of Business Administration (BBA) | 22    | D175-D196  |
 
+### College Students:
+
+- **Total:** 338 students
+- **Seat Range:** 1-338
+- **Order:** As allocated (alphabetically organized)
+
 ### Data Organization:
 
-Students are organized by:
+**Degree Students:**
 
 1. **Degree Priority:** Ph.D. → M.Tech → MBA → MCA → B.Tech → BBA
 2. **Alphabetical Order:** Within each degree level, students are sorted alphabetically by name
 
-### Security Notes:
+**College Students:**
 
-🔒 **This folder is protected:**
-
-- Added to `.gitignore` - will NOT be committed to git
-- Contains personal phone numbers and contact information
-- Should only be accessible to authorized event organizers
+- Maintained in original allocation order
 
 ### Usage:
 
-This file can be used for:
+These files can be used for:
 
 - Quick lookup of student seat assignments
 - Contact information for last-minute communications
 - Verification during student check-in
 - Seating arrangement coordination
+- Printing for event staff reference
 
-### Regenerating this file:
+### Regenerating these files:
 
 To regenerate or update this data:
 
 ```bash
+# For degree students
 node scripts/generateConfidentialData.js
+
+# For college students
+node scripts/generateCollegeData.js
 ```
 
 ---
 
 **Last Updated:** October 24, 2025  
-**Total Students:** 196 Degree Students  
+**Total Students:** 534 (196 Degree + 338 College)  
 **Event:** Convocation Ceremony
