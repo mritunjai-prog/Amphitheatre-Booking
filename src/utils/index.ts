@@ -172,8 +172,8 @@ export const generateSeats = (): Seat[] => {
         seatNumber = `P${parentsCounter++}`;
         category = "Parents";
       }
-      // Rows 20-28: College Students (400 seats with tapering for symmetry)
-      else if (row >= 20 && studentCounter <= maxStudents) {
+      // Rows 20-27: College Students (all seats in these rows)
+      else if (row >= 20 && row <= 27) {
         seatNumber = `${studentCounter++}`;
         category = "College Students";
       }
