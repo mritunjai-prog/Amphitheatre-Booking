@@ -163,13 +163,16 @@ export const generateSeats = (): Seat[] => {
         section = "left"; // Middle seat goes to left
       }
 
-      // Row 1: VIP - Alternating pattern (VIP-L1, VIP-R1, VIP-L2, VIP-R2, ...)
+      // Row 1: VIP - Numbering from center outward
+      // Left side: position 1 (far left) = L13, position 13 (center) = L1
+      // Right side: position 14 (center) = R1, position 26 (far right) = R13
       if (row === 1) {
-        const vipNumber = Math.ceil(position / 2);
-        if (position % 2 === 1) {
-          seatNumber = `VIP-L${vipNumber}`;
+        if (section === "left") {
+          // Reverse numbering: position 1 = L13, position 13 = L1
+          seatNumber = `VIP-L${seatsPerSide - position + 1}`;
         } else {
-          seatNumber = `VIP-R${vipNumber}`;
+          // Normal numbering: position 14 = R1, position 26 = R13
+          seatNumber = `VIP-R${position - seatsPerSide}`;
         }
         category = "VIP";
       }
