@@ -26,5 +26,8 @@ Thumbs.db
 # Vercel
 .vercel
 
+# Tickets - PDF files not needed in repository
+tickets/
+
 # Confidential data - DO NOT COMMIT
 confidential-data/
